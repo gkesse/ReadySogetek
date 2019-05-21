@@ -1,0 +1,40 @@
+//===============================================
+#include "GProcessAscii.h"
+//===============================================
+static GProcessO* m_GProcessAsciiO = 0;
+//===============================================
+void GProcessAscii_Run(int argc, char** argv);
+//===============================================
+GProcessO* GProcessAscii_New() {
+    GProcessO* lParent = GProcess_New();
+    GProcessAsciiO* lChild = (GProcessAsciiO*)malloc(sizeof(GProcessAsciiO));
+    lChild->m_parent = lParent;
+    lParent->m_child = lChild;
+    lParent->Delete = GProcessAscii_Delete;
+    lParent->Run = GProcessAscii_Run;
+    return lParent;
+}
+//===============================================
+void GProcessAscii_Delete(GProcessO* obj) {
+    GProcess_Delete(obj);
+}
+//===============================================
+GProcessO* GProcessAscii() {
+    if(m_GProcessAsciiO == 0) {
+        m_GProcessAsciiO = GProcessAscii_New();
+    }
+    return m_GProcessAsciiO;
+}
+
+//===============================================
+void GProcessAscii_Run(int argc, char** argv) {
+	char lPrint[128];
+	char lZero = 0x30;
+
+	for(int i = 0; i < 10; i++) {
+		char lChar = lZero + i;
+		sprintf(lPrint, "caractere = %c\tcode = %d", lChar, lChar);
+		printf("%s\n", lPrint);
+	}
+}
+//===============================================
