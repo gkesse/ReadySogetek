@@ -13,6 +13,8 @@ int GSocketWindows_Accept();
 void GSocketWindows_Connect();
 void GSocketWindows_Clean();
 //===============================================
+#ifdef __WIN32
+//===============================================
 GSocketO* GSocketWindows_New() {
 	GSocketO* lParent = GSocket_New();
 	GSocketWindowsO* lChild = (GSocketWindowsO*)malloc(sizeof(GSocketWindowsO));
@@ -98,4 +100,6 @@ void GSocketWindows_Clean() {
 	printf("[ SOCKET ] Clean...\n");
 	WSACleanup();
 }
+//===============================================
+#endif
 //===============================================
