@@ -1,0 +1,65 @@
+22:26:25 **** Rebuild of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GConfig.o" "..\\src\\manager\\GConfig.c" 
+gcc -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcess.o" "..\\src\\manager\\GProcess.c" 
+..\src\manager\GProcess.c:4:10: fatal error: GProcessInheritance.h: No such file or directory
+ #include "GProcessInheritance.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+22:35:38 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GConfigNormal.o" "..\\src\\manager\\GConfigNormal.c" 
+gcc -O3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c:2:10: fatal error: GSetting.h: No such file or directory
+ #include "GSetting.h"
+          ^~~~~~~~~~~~
+compilation terminated.
+23:11:13 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessClass.o" "..\\src\\manager\\GProcessClass.c" 
+..\src\manager\GProcessClass.c:3:10: fatal error: GPerson.h: No such file or directory
+ #include "GPerson.h"
+          ^~~~~~~~~~~
+compilation terminated.
+23:14:43 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessClass.o" "..\\src\\manager\\GProcessClass.c" 
+..\src\manager\GProcessClass.c:3:10: fatal error: GPerson.h: No such file or directory
+ #include "GPerson.h"
+          ^~~~~~~~~~~
+compilation terminated.
+23:16:32 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcess.o" "..\\src\\manager\\GProcess.c" 
+gcc -O3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c:2:10: fatal error: GSetting.h: No such file or directory
+ #include "GSetting.h"
+          ^~~~~~~~~~~~
+compilation terminated.
+02:37:29 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessClass.o" "..\\src\\manager\\GProcessClass.c" 
+gcc: error: ..\src\manager\GProcessClass.c: No such file or directory
+gcc: fatal error: no input files
+compilation terminated.
+02:53:25 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GConfig.o" "..\\src\\manager\\GConfig.c" 
+gcc -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSocket.o" "..\\src\\manager\\GProcessSocket.c" 
+gcc -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSetting.o" "..\\src\\manager\\GSetting.c" 
+gcc -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GString.o" "..\\src\\manager\\GString.c" 
+gcc -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GConfigNormal.o" "..\\src\\manager\\GConfigNormal.c" 
+gcc -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocket.o" "..\\src\\manager\\GSocket.c" 
+gcc -O3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c:2:10: fatal error: GSetting.h: No such file or directory
+ #include "GSetting.h"
+          ^~~~~~~~~~~~
+compilation terminated.
+07:09:48 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcess.o" "..\\src\\manager\\GProcess.c" 
+gcc -O3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c:2:10: fatal error: GSetting.h: No such file or directory
+ #include "GSetting.h"
+          ^~~~~~~~~~~~
+compilation terminated.
