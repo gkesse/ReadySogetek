@@ -16,9 +16,9 @@ GOBJS = \
 all: $(GOBJS)
 	gcc -o $(GTARGET) $(GOBJS) $(GLIBS)
 $(GBUILD)/%.o: $(GSRC)/%.c
-	gcc -c $< -o $@ $(GINCS)
+	gcc -c -std=gnu++14 $< -o $@ $(GINCS)
 $(GBUILD)/%.o: $(GSRC)/manager/%.c
-	gcc -c $< -o $@ $(GINCS)
+	gcc -c -std=gnu++14 $< -o $@ $(GINCS)
 clean:
 	rm -f $(GBUILD)/*.o $(GBIN)/*.exe
 	
