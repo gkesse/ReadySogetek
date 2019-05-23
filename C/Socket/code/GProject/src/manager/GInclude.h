@@ -12,6 +12,8 @@
 #define G_PLATEFORM_OS "WINDOWS"
 #else
 #define G_PLATEFORM_OS "UNIX"
+#define FALSE (0)
+#define TRUE (!FALSE)
 #endif
 //===============================================
 typedef unsigned char uchar;
