@@ -7,7 +7,9 @@
 #include <string.h>
 #include <ctype.h>
 //===============================================
+#ifdef __WIN32
 #include <winsock2.h>
+#endif
 //===============================================
 typedef unsigned char uchar;
 typedef unsigned int uint;
