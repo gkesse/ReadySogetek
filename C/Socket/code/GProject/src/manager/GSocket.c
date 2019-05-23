@@ -1,6 +1,7 @@
 //===============================================
 #include "GSocket.h"
 #include "GSocketWindows.h"
+#include "GSocketUnix.h"
 #include "GString.h"
 #include "GConfig.h"
 //===============================================
@@ -23,8 +24,9 @@ void GSocket_Delete(GSocketO* obj) {
 //===============================================
 GSocketO* GSocket() {
 	printf("%s\n", G_PLATEFORM_OS);
-    char* lKey = GConfig()->Get_Data("PROCESS");
-    if(GString()->Is_Equal(lKey, "SOCKET")) return GSocketWindows();
-    return GSocketWindows();
+    /*char* lKey = "UNIX";
+    if(GString()->Is_Equal(lKey, "WINDOWS")) return GSocketWindows();
+    if(GString()->Is_Equal(lKey, "UNIX")) return GSocketUnix();*/
+    return 0;
 }
 //===============================================

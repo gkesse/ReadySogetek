@@ -1,9 +1,7 @@
-18:28:44 **** Incremental Build of configuration Release for project GProject ****
+18:37:03 **** Incremental Build of configuration Release for project GProject ****
 Info: Internal Builder is used for build
-gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSocket.o" "..\\src\\manager\\GProcessSocket.c" 
-gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketWindows.o" "..\\src\\manager\\GSocketWindows.c" 
 gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocket.o" "..\\src\\manager\\GSocket.c" 
-gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessSocket.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessSocket.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
 
-18:28:47 Build Finished. 0 errors, 0 warnings. (took 2s.781ms)
+18:37:04 Build Finished. 0 errors, 0 warnings. (took 1s.234ms)
 
