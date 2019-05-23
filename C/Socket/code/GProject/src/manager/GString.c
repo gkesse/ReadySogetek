@@ -20,6 +20,8 @@ GStringO* GString_New() {
     lObj->Copy = GString_Copy;
     lObj->Trim = GString_Trim;
     lObj->Split = GString_Split;
+    lObj->To_Int = atoi;
+    lObj->To_Float = atof;
     lObj->Free = GString_Free;
     lObj->Free2 = GString_Free2;
     return lObj; 

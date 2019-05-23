@@ -1,11 +1,8 @@
-07:09:48 **** Incremental Build of configuration Release for project GProject ****
+11:23:14 **** Incremental Build of configuration Release for project GProject ****
 Info: Internal Builder is used for build
-gcc -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcess.o" "..\\src\\manager\\GProcess.c" 
-gcc -O3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-..\src\main.c:2:10: fatal error: GSetting.h: No such file or directory
- #include "GSetting.h"
-          ^~~~~~~~~~~~
-compilation terminated.
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSocket.o" "..\\src\\manager\\GProcessSocket.c" 
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocket.o" "..\\src\\manager\\GSocket.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessSocket.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GString.o" -lws2_32 
 
-07:09:59 Build Failed. 1 errors, 0 warnings. (took 11s.689ms)
+11:23:17 Build Finished. 0 errors, 0 warnings. (took 2s.512ms)
 

@@ -9,11 +9,12 @@ typedef struct _GSocketO GSocketO;
 struct _GSocketO {
     void* m_child;
     void (*Delete)();
-    void (*Start)();
-    void (*Socket)();
-    void (*Bind)();
+    void (*Start)(const int major, const int minor);
+    void (*Socket)(const int addressFamily, const int type, const int protocol);
+    void (*Bind)(const int addressFamily, const ulong ipAddress, const int port);
+    void (*Bind2)(const int addressFamily, const char* ipAddress, const int port);
     void (*Listen)();
-    void (*Accept)();
+    int (*Accept)();
     void (*Connect)();
     void (*Clean)();
 

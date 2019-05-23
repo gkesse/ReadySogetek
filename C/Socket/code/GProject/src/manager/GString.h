@@ -14,6 +14,8 @@ struct _GStringO {
     char* (*Copy)(const char* str);
     char* (*Trim)(const char* str);
     char** (*Split)(const char* str, const char* sep, int* count);
+    int (*To_Int)(const char* str);
+    double (*To_Float)(const char* str);
     void (*Free)(char* ptr);
     void (*Free2)(char** ptr, const int size);
 };

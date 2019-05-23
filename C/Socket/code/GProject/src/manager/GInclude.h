@@ -9,8 +9,9 @@
 //===============================================
 #include <winsock2.h>
 //===============================================
-// #define TRUE (1)
-// #define FALSE (!TRUE)
+typedef unsigned char uchar;
+typedef unsigned int uint;
+typedef unsigned long ulong;
 //===============================================
 #endif
 //===============================================
