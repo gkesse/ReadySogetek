@@ -16,6 +16,9 @@ struct _GSocketO {
     void (*Listen)();
     int (*Accept)();
     void (*Connect)();
+    int (*Send)(SOCKET socket, const char* buffer, const int length, const int flags);
+    void (*Read)();
+    void (*Close)();
     void (*Clean)();
 
     SOCKET m_socket;

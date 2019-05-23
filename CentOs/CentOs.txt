@@ -1,43 +1,146 @@
 #=================================================
-# Mettre à jour CentOS
+# Commandes CentOS
 #=================================================
+su
+exit
+yum update
+
+shutdown -h now
+shutdown -r now
+
+ifup enp0s3
+ifdown enp0s3
+
+yum info iputils
+
+ip a
+ip a s
+ifconfig
+
+yum install nano
+
+nano /etc/sysconfig/network-scripts/ifcfg-enp0s3
+
+TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=static
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=yes
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_FAILURE_FATAL=no
+IPV6_ADDR_GEN_MODE=stable-privacy
+NAME=enp0s3
+UUID=b6a521bc-68b0-487c-a1a5-735138f1b0b2
+DEVICE=enp0s3
+ONBOOT=yes
+IPADDR=192.9.200.127
+NETMASK=255.255.255.0
+GATEWAY=192.9.200.1
+
+nano /etc/sysconfig/network
+
+# Created by anaconda
+NETWORKING=yes
+DNS1=8.8.8.8
+DNS2=8.8.4.4
+SERACH=sogetek.fr
+
+nmcli d
+nmtui
+
+ping www.google.com
+
+yum install git
+yum install net-tools
+yum install java-1.10.0-openjdk-devel
+yum install bash-completion
+yum install bash-completion-extras
+yum install wget
+
+cd /opt/
+wget http://eclipse.mirror.garr.it/eclipse/technology/epp/downloads/release/2019-06/M2/eclipse-cpp-2019-06-M2-linux-gtk-x86_64.tar.gz
+tar xfz eclipse-cpp-2019-06-M2-linux-gtk-x86_64.tar.gz
+rm -r eclipse-cpp-2019-06-M2-linux-gtk-x86_64.tar.gz
+
+ls /opt/eclipse/
+ln -s /opt/eclipse/eclipse /usr/local/bin/eclipse
+ls -al /usr/local/bin/eclipse 
+
+nano /usr/share/applications/eclipse.desktop
+[Desktop Entry]
+Name=Eclipse IDE
+Comment=Eclipse IDE
+Type=Application
+Encoding=UTF-8
+Exec=/usr/local/bin/eclipse
+Icon=/opt/eclipse/icon.xpm
+Categories=GNOME;Application;Development;
+Terminal=false
+StartupNotify=true
+
+nano /etc/ssh/ssh_config
+ForwardX11 yes
+
+yum install gtk2
+yum install libXtst
+yum install xorg-x11-fonts-Type1
+yum install  psmisc
+
+locate libswt
+
+yum install  mlocate
+updatedb
+
+192.9.200.127
+192.9.200.128
+
+cd /opt/
+wget https://download.oracle.com/otn/java/jdk/12+33/312335d836a34c7c8bba9d963e26dc23/jdk-12_osx-x64_bin.tar.gz?AuthParam=1558615785_c0965aad7553b39567b0f8a1f2df3c50
+
+755
+chmod -R 777 /opt/
+chmod -R 755 /opt/
+
+tar xfz jdk-12_linux-x64_bin.tar.gz
+rm -f jdk-12_linux-x64_bin.tar.gz
+
+cat <<EOF | sudo tee /etc/profile.d/jdk12.sh
+export JAVA_HOME=/opt/jdk-12
+export PATH=\$PATH:\$JAVA_HOME/bin
+EOF
+
+source /etc/profile.d/jdk12.sh
+
+echo $JAVA_HOME
+java --version
+which java
+
+yum remove jdk
+
+rpm -qa | grep java
+
+rpm -e  java-1.8.0-openjdk-headless-1.8.0.212.b04-0.el7_6.x86_64
+rpm -e  javapackages-tools-3.4.1-11.el7.noarch
+rpm -e  java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64
+
+yum remove java 
+
+update-alternatives --install "/usr/bin/javac" "javac" "/opt/jdk-12/bin/javac" 1
+
+update-alternatives --config javac
+
+echo 1 > cmd_compile.sh
+
+yum install gcc
+yum install gcc-c++
+
+yum groupinstall "Development Tools"
+yum groupinstall "X Window System"
+
+export DISPLAY=192.9.200.127:10.0
+xclock -display 192.9.200.127:10.0
+
 #=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-#=================================================
-sudo apt-get install synaptic
