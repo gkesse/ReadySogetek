@@ -9,6 +9,9 @@
 //===============================================
 #ifdef __WIN32
 #include <winsock2.h>
+#define G_PLATEFORM_OS "WINDOWS"
+#else
+#define G_PLATEFORM_OS "UNIX"
 #endif
 //===============================================
 typedef unsigned char uchar;

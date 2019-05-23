@@ -8,7 +8,7 @@ typedef struct _GSocketO GSocketO;
 //===============================================
 struct _GSocketO {
     void* m_child;
-    void (*Delete)();
+    void (*Delete)(GSocketO* obj);
     void (*Start)(const int major, const int minor);
     void (*Socket)(const int addressFamily, const int type, const int protocol);
     void (*Bind)(const int addressFamily, const ulong ipAddress, const int port);
@@ -25,7 +25,7 @@ struct _GSocketO {
 };
 //===============================================
 GSocketO* GSocket_New();
-void GSocket_Delete();
+void GSocket_Delete(GSocketO* obj);
 GSocketO* GSocket();
 //===============================================
 #endif

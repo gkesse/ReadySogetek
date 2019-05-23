@@ -9,7 +9,9 @@ void GProcessSocket_Run(int argc, char** argv);
 GProcessO* GProcessSocket_New() {
     GProcessO* lParent = GProcess_New();
     GProcessSocketO* lChild = (GProcessSocketO*)malloc(sizeof(GProcessSocketO));
+
     lChild->m_parent = lParent;
+
     lParent->m_child = lChild;
     lParent->Delete = GProcessSocket_Delete;
     lParent->Run = GProcessSocket_Run;
@@ -26,15 +28,15 @@ GProcessO* GProcessSocket() {
     }
     return m_GProcessSocketO;
 }
-
 //===============================================
 void GProcessSocket_Run(int argc, char** argv) {
-    GSocket()->Start(2, 0);
+	GSocket();
+    /*GSocket()->Start(2, 0);
     GSocket()->Socket(AF_INET, SOCK_STREAM, 0);
     GSocket()->Bind(AF_INET, INADDR_ANY, 23);
     GSocket()->Listen();
     GSocket()->Accept();
     GSocket()->Connect();
-    GSocket()->Clean();
+    GSocket()->Clean();*/
 }
 //===============================================
