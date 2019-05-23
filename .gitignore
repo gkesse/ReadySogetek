@@ -35,6 +35,8 @@
 /**/.settings/
 /**/.project
 /**/.cproject
+/**/cmd_eclipse_start*
+/**/cmd_eclipse_run*
 
 #================================================
 # Python
