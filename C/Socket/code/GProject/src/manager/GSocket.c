@@ -24,9 +24,8 @@ void GSocket_Delete(GSocketO* obj) {
 //===============================================
 GSocketO* GSocket() {
 	printf("%s\n", G_PLATEFORM_OS);
-    /*char* lKey = "UNIX";
-    if(GString()->Is_Equal(lKey, "WINDOWS")) return GSocketWindows();
-    if(GString()->Is_Equal(lKey, "UNIX")) return GSocketUnix();*/
-    return 0;
+    if(GString()->Is_Equal(G_PLATEFORM_OS, "WINDOWS")) return GSocketWindows();
+    if(GString()->Is_Equal(G_PLATEFORM_OS, "UNIX")) return GSocketUnix();
+    return GSocketWindows();
 }
 //===============================================
