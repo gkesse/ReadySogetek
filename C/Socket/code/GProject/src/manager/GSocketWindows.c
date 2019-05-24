@@ -73,7 +73,7 @@ void GSocketWindows_Bind(const int addressFamily, const ulong ipAddress, const i
 //===============================================
 void GSocketWindows_Bind2(const int addressFamily, const char* ipAddress, const int port) {
 #if defined(__WIN32)
-	printf("[ SOCKET ] Bind...\n");
+	printf("[ SOCKET ] Bind2...\n");
 	SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
 	SOCKADDR_IN lSocketAddr;
 	lSocketAddr.sin_addr.s_addr = inet_addr(ipAddress);

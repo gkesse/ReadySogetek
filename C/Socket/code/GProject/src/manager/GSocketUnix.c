@@ -50,7 +50,9 @@ void GSocketUnix_Start(const int major, const int minor) {
 }
 //===============================================
 void GSocketUnix_Socket(const int addressFamily, const int type, const int protocol) {
+#if defined(__unix)
 	printf("[ SOCKET ] Socket...\n");
+#endif
 }
 //===============================================
 void GSocketUnix_Bind(const int addressFamily, const ulong ipAddress, const int port) {
@@ -61,7 +63,7 @@ void GSocketUnix_Bind(const int addressFamily, const ulong ipAddress, const int 
 //===============================================
 void GSocketUnix_Bind2(const int addressFamily, const char* ipAddress, const int port) {
 #if defined(__unix)
-	printf("[ SOCKET ] Bind...\n");
+	printf("[ SOCKET ] Bind2...\n");
 #endif
 }
 //===============================================

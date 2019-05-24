@@ -436,3 +436,39 @@ gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\
 gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GConfig.o" "..\\src\\manager\\GConfig.c" 
 gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocket.o" "..\\src\\manager\\GSocket.c" 
 gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessSocket.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+10:31:34 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketWindows.o" "..\\src\\manager\\GSocketWindows.c" 
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSocket.o" "..\\src\\manager\\GProcessSocket.c" 
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocket.o" "..\\src\\manager\\GSocket.c" 
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketUnix.o" "..\\src\\manager\\GSocketUnix.c" 
+..\src\manager\GSocketUnix.c: In function 'GSocketUnix_Socket':
+..\src\manager\GSocketUnix.c:55:7: warning: extra tokens at end of #endif directive [-Wendif-labels]
+ #endif}
+       ^
+..\src\manager\GSocketUnix.c:92:1: error: expected declaration or statement at end of input
+ }
+ ^
+At top level:
+..\src\manager\GSocketUnix.c:88:6: warning: 'GSocketUnix_Clean' defined but not used [-Wunused-function]
+ void GSocketUnix_Clean() {
+      ^~~~~~~~~~~~~~~~~
+..\src\manager\GSocketUnix.c:82:6: warning: 'GSocketUnix_Connect' defined but not used [-Wunused-function]
+ void GSocketUnix_Connect() {
+      ^~~~~~~~~~~~~~~~~~~
+..\src\manager\GSocketUnix.c:75:5: warning: 'GSocketUnix_Accept' defined but not used [-Wunused-function]
+ int GSocketUnix_Accept() {
+     ^~~~~~~~~~~~~~~~~~
+..\src\manager\GSocketUnix.c:69:6: warning: 'GSocketUnix_Listen' defined but not used [-Wunused-function]
+ void GSocketUnix_Listen() {
+      ^~~~~~~~~~~~~~~~~~
+..\src\manager\GSocketUnix.c:63:6: warning: 'GSocketUnix_Bind2' defined but not used [-Wunused-function]
+ void GSocketUnix_Bind2(const int addressFamily, const char* ipAddress, const int port) {
+      ^~~~~~~~~~~~~~~~~
+..\src\manager\GSocketUnix.c:57:6: warning: 'GSocketUnix_Bind' defined but not used [-Wunused-function]
+ void GSocketUnix_Bind(const int addressFamily, const ulong ipAddress, const int port) {
+      ^~~~~~~~~~~~~~~~
+10:32:22 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketUnix.o" "..\\src\\manager\\GSocketUnix.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessSocket.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
