@@ -16,6 +16,7 @@ void GSocketUnix_Clean();
 GSocketO* GSocketUnix_New() {
 	GSocketO* lParent = GSocket_New();
 	GSocketUnixO* lChild = (GSocketUnixO*)malloc(sizeof(GSocketUnixO));
+
 	lChild->m_parent = lParent;
 
 	lParent->m_child = lChild;

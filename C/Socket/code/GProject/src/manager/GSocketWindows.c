@@ -16,6 +16,7 @@ void GSocketWindows_Clean();
 GSocketO* GSocketWindows_New() {
 	GSocketO* lParent = GSocket_New();
 	GSocketWindowsO* lChild = (GSocketWindowsO*)malloc(sizeof(GSocketWindowsO));
+
 	lChild->m_parent = lParent;
 
 	lParent->m_child = lChild;
@@ -54,7 +55,8 @@ void GSocketWindows_Start(const int major, const int minor) {
 void GSocketWindows_Socket(const int addressFamily, const int type, const int protocol) {
 #if defined(__WIN32)
 	printf("[ SOCKET ] Socket...\n");
-	SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
+	GSocketWindowsO* lSocketWindows = m_GSocketWindowsO->m_child;
+	SOCKET* lSocket = &lSocketWindows->m_socket;
 	*lSocket = socket(AF_INET, SOCK_STREAM, 0);
 #endif
 }
@@ -62,7 +64,8 @@ void GSocketWindows_Socket(const int addressFamily, const int type, const int pr
 void GSocketWindows_Bind(const int addressFamily, const ulong ipAddress, const int port) {
 #if defined(__WIN32)
 	printf("[ SOCKET ] Bind...\n");
-	SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
+	GSocketWindowsO* lSocketWindows = m_GSocketWindowsO->m_child;
+	SOCKET* lSocket = &lSocketWindows->m_socket;
 	SOCKADDR_IN lSocketAddr;
 	lSocketAddr.sin_addr.s_addr = ipAddress;
 	lSocketAddr.sin_family = addressFamily;
@@ -74,7 +77,8 @@ void GSocketWindows_Bind(const int addressFamily, const ulong ipAddress, const i
 void GSocketWindows_Bind2(const int addressFamily, const char* ipAddress, const int port) {
 #if defined(__WIN32)
 	printf("[ SOCKET ] Bind2...\n");
-	SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
+	GSocketWindowsO* lSocketWindows = m_GSocketWindowsO->m_child;
+	SOCKET* lSocket = &lSocketWindows->m_socket;
 	SOCKADDR_IN lSocketAddr;
 	lSocketAddr.sin_addr.s_addr = inet_addr(ipAddress);
 	lSocketAddr.sin_family = addressFamily;
@@ -86,7 +90,8 @@ void GSocketWindows_Bind2(const int addressFamily, const char* ipAddress, const 
 void GSocketWindows_Listen() {
 #if defined(__WIN32)
 	printf("[ SOCKET ] Listen...\n");
-	SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
+	GSocketWindowsO* lSocketWindows = m_GSocketWindowsO->m_child;
+	SOCKET* lSocket = &lSocketWindows->m_socket;
 	listen(*lSocket, 0);
 #endif
 }
@@ -94,7 +99,8 @@ void GSocketWindows_Listen() {
 int GSocketWindows_Accept() {
 #if defined(__WIN32)
 	printf("[ SOCKET ] Accept...\n");
-	SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
+	GSocketWindowsO* lSocketWindows = m_GSocketWindowsO->m_child;
+	SOCKET* lSocket = &lSocketWindows->m_socket;
 	SOCKADDR_IN lSocketAddr;
 	int lSize = sizeof(SOCKADDR);
 	int lOk = accept(*lSocket, (SOCKADDR*)&lSocketAddr, &lSize);

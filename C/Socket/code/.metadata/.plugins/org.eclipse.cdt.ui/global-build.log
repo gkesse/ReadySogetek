@@ -472,3 +472,132 @@ At top level:
 Info: Internal Builder is used for build
 gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketUnix.o" "..\\src\\manager\\GSocketUnix.c" 
 gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessSocket.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+10:47:51 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSocket.o" "..\\src\\manager\\GProcessSocket.c" 
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketUnix.o" "..\\src\\manager\\GSocketUnix.c" 
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketWindows.o" "..\\src\\manager\\GSocketWindows.c" 
+..\src\manager\GSocketWindows.c: In function 'GSocketWindows_Socket':
+..\src\manager\GSocketWindows.c:57:40: error: 'GSocketO' {aka 'struct _GSocketO'} has no member named 'm_socket'; did you mean 'Socket'?
+  SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
+                                        ^~~~~~~~
+                                        Socket
+..\src\manager\GSocketWindows.c: In function 'GSocketWindows_Bind':
+..\src\manager\GSocketWindows.c:65:40: error: 'GSocketO' {aka 'struct _GSocketO'} has no member named 'm_socket'; did you mean 'Socket'?
+  SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
+                                        ^~~~~~~~
+                                        Socket
+..\src\manager\GSocketWindows.c: In function 'GSocketWindows_Bind2':
+..\src\manager\GSocketWindows.c:77:40: error: 'GSocketO' {aka 'struct _GSocketO'} has no member named 'm_socket'; did you mean 'Socket'?
+  SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
+                                        ^~~~~~~~
+                                        Socket
+..\src\manager\GSocketWindows.c: In function 'GSocketWindows_Listen':
+..\src\manager\GSocketWindows.c:89:40: error: 'GSocketO' {aka 'struct _GSocketO'} has no member named 'm_socket'; did you mean 'Socket'?
+  SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
+                                        ^~~~~~~~
+                                        Socket
+..\src\manager\GSocketWindows.c: In function 'GSocketWindows_Accept':
+..\src\manager\GSocketWindows.c:97:40: error: 'GSocketO' {aka 'struct _GSocketO'} has no member named 'm_socket'; did you mean 'Socket'?
+  SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
+                                        ^~~~~~~~
+                                        Socket
+10:48:21 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocket.o" "..\\src\\manager\\GSocket.c" 
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSocket.o" "..\\src\\manager\\GProcessSocket.c" 
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketWindows.o" "..\\src\\manager\\GSocketWindows.c" 
+..\src\manager\GSocketWindows.c: In function 'GSocketWindows_Socket':
+..\src\manager\GSocketWindows.c:57:40: error: 'GSocketO' {aka 'struct _GSocketO'} has no member named 'm_socket'; did you mean 'Socket'?
+  SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
+                                        ^~~~~~~~
+                                        Socket
+..\src\manager\GSocketWindows.c: In function 'GSocketWindows_Bind':
+..\src\manager\GSocketWindows.c:65:40: error: 'GSocketO' {aka 'struct _GSocketO'} has no member named 'm_socket'; did you mean 'Socket'?
+  SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
+                                        ^~~~~~~~
+                                        Socket
+..\src\manager\GSocketWindows.c: In function 'GSocketWindows_Bind2':
+..\src\manager\GSocketWindows.c:77:40: error: 'GSocketO' {aka 'struct _GSocketO'} has no member named 'm_socket'; did you mean 'Socket'?
+  SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
+                                        ^~~~~~~~
+                                        Socket
+..\src\manager\GSocketWindows.c: In function 'GSocketWindows_Listen':
+..\src\manager\GSocketWindows.c:89:40: error: 'GSocketO' {aka 'struct _GSocketO'} has no member named 'm_socket'; did you mean 'Socket'?
+  SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
+                                        ^~~~~~~~
+                                        Socket
+..\src\manager\GSocketWindows.c: In function 'GSocketWindows_Accept':
+..\src\manager\GSocketWindows.c:97:40: error: 'GSocketO' {aka 'struct _GSocketO'} has no member named 'm_socket'; did you mean 'Socket'?
+  SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
+                                        ^~~~~~~~
+                                        Socket
+10:48:33 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocket.o" "..\\src\\manager\\GSocket.c" 
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketUnix.o" "..\\src\\manager\\GSocketUnix.c" 
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketWindows.o" "..\\src\\manager\\GSocketWindows.c" 
+..\src\manager\GSocketWindows.c: In function 'GSocketWindows_Socket':
+..\src\manager\GSocketWindows.c:57:40: error: 'GSocketO' {aka 'struct _GSocketO'} has no member named 'm_socket'; did you mean 'Socket'?
+  SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
+                                        ^~~~~~~~
+                                        Socket
+..\src\manager\GSocketWindows.c: In function 'GSocketWindows_Bind':
+..\src\manager\GSocketWindows.c:65:40: error: 'GSocketO' {aka 'struct _GSocketO'} has no member named 'm_socket'; did you mean 'Socket'?
+  SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
+                                        ^~~~~~~~
+                                        Socket
+..\src\manager\GSocketWindows.c: In function 'GSocketWindows_Bind2':
+..\src\manager\GSocketWindows.c:77:40: error: 'GSocketO' {aka 'struct _GSocketO'} has no member named 'm_socket'; did you mean 'Socket'?
+  SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
+                                        ^~~~~~~~
+                                        Socket
+..\src\manager\GSocketWindows.c: In function 'GSocketWindows_Listen':
+..\src\manager\GSocketWindows.c:89:40: error: 'GSocketO' {aka 'struct _GSocketO'} has no member named 'm_socket'; did you mean 'Socket'?
+  SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
+                                        ^~~~~~~~
+                                        Socket
+..\src\manager\GSocketWindows.c: In function 'GSocketWindows_Accept':
+..\src\manager\GSocketWindows.c:97:40: error: 'GSocketO' {aka 'struct _GSocketO'} has no member named 'm_socket'; did you mean 'Socket'?
+  SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
+                                        ^~~~~~~~
+                                        Socket
+10:50:49 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketWindows.o" "..\\src\\manager\\GSocketWindows.c" 
+..\src\manager\GSocketWindows.c: In function 'GSocketWindows_Bind':
+..\src\manager\GSocketWindows.c:66:40: error: 'GSocketO' {aka 'struct _GSocketO'} has no member named 'm_socket'; did you mean 'Socket'?
+  SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
+                                        ^~~~~~~~
+                                        Socket
+..\src\manager\GSocketWindows.c: In function 'GSocketWindows_Bind2':
+..\src\manager\GSocketWindows.c:78:40: error: 'GSocketO' {aka 'struct _GSocketO'} has no member named 'm_socket'; did you mean 'Socket'?
+  SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
+                                        ^~~~~~~~
+                                        Socket
+..\src\manager\GSocketWindows.c: In function 'GSocketWindows_Listen':
+..\src\manager\GSocketWindows.c:90:40: error: 'GSocketO' {aka 'struct _GSocketO'} has no member named 'm_socket'; did you mean 'Socket'?
+  SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
+                                        ^~~~~~~~
+                                        Socket
+..\src\manager\GSocketWindows.c: In function 'GSocketWindows_Accept':
+..\src\manager\GSocketWindows.c:98:40: error: 'GSocketO' {aka 'struct _GSocketO'} has no member named 'm_socket'; did you mean 'Socket'?
+  SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
+                                        ^~~~~~~~
+                                        Socket
+10:51:13 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketWindows.o" "..\\src\\manager\\GSocketWindows.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessSocket.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+10:52:34 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketWindows.o" "..\\src\\manager\\GSocketWindows.c" 
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSocket.o" "..\\src\\manager\\GProcessSocket.c" 
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocket.o" "..\\src\\manager\\GSocket.c" 
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketUnix.o" "..\\src\\manager\\GSocketUnix.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessSocket.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+10:53:08 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketWindows.o" "..\\src\\manager\\GSocketWindows.c" 
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketUnix.o" "..\\src\\manager\\GSocketUnix.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessSocket.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 

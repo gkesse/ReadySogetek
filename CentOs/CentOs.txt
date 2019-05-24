@@ -143,4 +143,26 @@ yum groupinstall "X Window System"
 export DISPLAY=192.9.200.127:10.0
 xclock -display 192.9.200.127:10.0
 
-#=================================================
+gdb bin/GProject.exe
+
+debuginfo-install glibc-2.17-260.el7_6.5.x86_64
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

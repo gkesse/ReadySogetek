@@ -16,15 +16,10 @@ struct _GSocketO {
     void (*Listen)();
     int (*Accept)();
     void (*Connect)();
-#if defined(__WIN32)
-    int (*Send)(SOCKET socket, const char* buffer, const int length, const int flags);
-#endif
+    int (*Send)(const char* buffer, const int length, const int flags);
     void (*Read)();
     void (*Close)();
     void (*Clean)();
-#if defined(__WIN32)
-    SOCKET m_socket;
-#endif
 };
 //===============================================
 GSocketO* GSocket_New();
