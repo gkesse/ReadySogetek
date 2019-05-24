@@ -44,7 +44,7 @@ GSocketO* GSocketWindows() {
 }
 //===============================================
 void GSocketWindows_Start(const int major, const int minor) {
-#ifdef __WIN32
+#if defined(__WIN32)
 	printf("[ SOCKET ] Start...\n");
 	WSADATA lWsadata;
 	WSAStartup(MAKEWORD(major, major), &lWsadata);
@@ -52,7 +52,7 @@ void GSocketWindows_Start(const int major, const int minor) {
 }
 //===============================================
 void GSocketWindows_Socket(const int addressFamily, const int type, const int protocol) {
-#ifdef __WIN32
+#if defined(__WIN32)
 	printf("[ SOCKET ] Socket...\n");
 	SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
 	*lSocket = socket(AF_INET, SOCK_STREAM, 0);
@@ -60,7 +60,7 @@ void GSocketWindows_Socket(const int addressFamily, const int type, const int pr
 }
 //===============================================
 void GSocketWindows_Bind(const int addressFamily, const ulong ipAddress, const int port) {
-#ifdef __WIN32
+#if defined(__WIN32)
 	printf("[ SOCKET ] Bind...\n");
 	SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
 	SOCKADDR_IN lSocketAddr;
@@ -72,7 +72,7 @@ void GSocketWindows_Bind(const int addressFamily, const ulong ipAddress, const i
 }
 //===============================================
 void GSocketWindows_Bind2(const int addressFamily, const char* ipAddress, const int port) {
-#ifdef __WIN32
+#if defined(__WIN32)
 	printf("[ SOCKET ] Bind...\n");
 	SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
 	SOCKADDR_IN lSocketAddr;
@@ -84,7 +84,7 @@ void GSocketWindows_Bind2(const int addressFamily, const char* ipAddress, const 
 }
 //===============================================
 void GSocketWindows_Listen() {
-#ifdef __WIN32
+#if defined(__WIN32)
 	printf("[ SOCKET ] Listen...\n");
 	SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
 	listen(*lSocket, 0);
@@ -92,7 +92,7 @@ void GSocketWindows_Listen() {
 }
 //===============================================
 int GSocketWindows_Accept() {
-#ifdef __WIN32
+#if defined(__WIN32)
 	printf("[ SOCKET ] Accept...\n");
 	SOCKET* lSocket = &m_GSocketWindowsO->m_socket;
 	SOCKADDR_IN lSocketAddr;
@@ -104,13 +104,13 @@ int GSocketWindows_Accept() {
 }
 //===============================================
 void GSocketWindows_Connect() {
-#ifdef __WIN32
+#if defined(__WIN32)
 	printf("[ SOCKET ] Connect...\n");
 #endif
 }
 //===============================================
 void GSocketWindows_Clean() {
-#ifdef __WIN32
+#if defined(__WIN32)
 	printf("[ SOCKET ] Clean...\n");
 	WSACleanup();
 #endif

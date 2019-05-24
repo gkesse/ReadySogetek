@@ -44,7 +44,7 @@ GSocketO* GSocketUnix() {
 }
 //===============================================
 void GSocketUnix_Start(const int major, const int minor) {
-#ifndef __WIN32
+#if defined(__unix)
 	printf("[ SOCKET ] Start...\n");
 #endif
 }
@@ -54,38 +54,38 @@ void GSocketUnix_Socket(const int addressFamily, const int type, const int proto
 }
 //===============================================
 void GSocketUnix_Bind(const int addressFamily, const ulong ipAddress, const int port) {
-#ifndef __WIN32
+#if defined(__unix)
 	printf("[ SOCKET ] Bind...\n");
 #endif
 }
 //===============================================
 void GSocketUnix_Bind2(const int addressFamily, const char* ipAddress, const int port) {
-#ifndef __WIN32
+#if defined(__unix)
 	printf("[ SOCKET ] Bind...\n");
 #endif
 }
 //===============================================
 void GSocketUnix_Listen() {
-#ifndef __WIN32
+#if defined(__unix)
 	printf("[ SOCKET ] Listen...\n");
 #endif
 }
 //===============================================
 int GSocketUnix_Accept() {
-#ifndef __WIN32
+#if defined(__unix)
 	printf("[ SOCKET ] Accept...\n");
 #endif
 	return 0;
 }
 //===============================================
 void GSocketUnix_Connect() {
-#ifndef __WIN32
+#if defined(__unix)
 	printf("[ SOCKET ] Connect...\n");
 #endif
 }
 //===============================================
 void GSocketUnix_Clean() {
-#ifndef __WIN32
+#if defined(__unix)
 	printf("[ SOCKET ] Clean...\n");
 #endif
 }
