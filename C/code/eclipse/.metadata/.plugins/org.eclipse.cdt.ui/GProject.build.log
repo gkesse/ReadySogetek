@@ -1,7 +1,0 @@
-17:07:01 **** Incremental Build of configuration Release for project GProject ****
-Info: Internal Builder is used for build
-gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\C\\code\\eclipse\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessExo49.o" "..\\src\\manager\\GProcessExo49.c" 
-gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessExo3.o" "src\\manager\\GProcessExo4.o" "src\\manager\\GProcessExo49.o" "src\\manager\\GProcessExo5.o" "src\\manager\\GProcessExo50.o" "src\\manager\\GProcessExo51.o" "src\\manager\\GProcessExo52.o" "src\\manager\\GProcessExo6.o" "src\\manager\\GSetting.o" "src\\manager\\GString.o" 
-
-17:07:02 Build Finished. 0 errors, 0 warnings. (took 758ms)
-

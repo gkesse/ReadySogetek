@@ -2,8 +2,6 @@
 #include "GSocketUnix.h"
 #include "GString.h"
 //===============================================
-#ifndef __WIN32
-//===============================================
 static GSocketO* m_GSocketUnixO = 0;
 //===============================================
 void GSocketUnix_Start(const int major, const int minor);
@@ -18,6 +16,7 @@ void GSocketUnix_Clean();
 GSocketO* GSocketUnix_New() {
 	GSocketO* lParent = GSocket_New();
 	GSocketUnixO* lChild = (GSocketUnixO*)malloc(sizeof(GSocketUnixO));
+
 	lChild->m_parent = lParent;
 
 	lParent->m_child = lChild;
@@ -46,36 +45,51 @@ GSocketO* GSocketUnix() {
 }
 //===============================================
 void GSocketUnix_Start(const int major, const int minor) {
+#if defined(__unix)
 	printf("[ SOCKET ] Start...\n");
+#endif
 }
 //===============================================
 void GSocketUnix_Socket(const int addressFamily, const int type, const int protocol) {
+#if defined(__unix)
 	printf("[ SOCKET ] Socket...\n");
+#endif
 }
 //===============================================
 void GSocketUnix_Bind(const int addressFamily, const ulong ipAddress, const int port) {
+#if defined(__unix)
 	printf("[ SOCKET ] Bind...\n");
+#endif
 }
 //===============================================
 void GSocketUnix_Bind2(const int addressFamily, const char* ipAddress, const int port) {
-	printf("[ SOCKET ] Bind...\n");
+#if defined(__unix)
+	printf("[ SOCKET ] Bind2...\n");
+#endif
 }
 //===============================================
 void GSocketUnix_Listen() {
+#if defined(__unix)
 	printf("[ SOCKET ] Listen...\n");
+#endif
 }
 //===============================================
 int GSocketUnix_Accept() {
+#if defined(__unix)
 	printf("[ SOCKET ] Accept...\n");
+#endif
+	return 0;
 }
 //===============================================
 void GSocketUnix_Connect() {
+#if defined(__unix)
 	printf("[ SOCKET ] Connect...\n");
+#endif
 }
 //===============================================
 void GSocketUnix_Clean() {
+#if defined(__unix)
 	printf("[ SOCKET ] Clean...\n");
-}
-//===============================================
 #endif
+}
 //===============================================

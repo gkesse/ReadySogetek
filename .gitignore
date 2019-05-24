@@ -26,7 +26,7 @@
 /**/~$*
 
 #================================================
-# Eclipse
+# Eclipse [ Comment For Fist Commit ]
 #================================================
 
 /**/Release/
@@ -35,15 +35,21 @@
 /**/.settings/
 /**/.project
 /**/.cproject
-/**/cmd_eclipse_start*
-/**/cmd_eclipse_run*
 
 #================================================
-# Compilation
+# Compilation [ Comment For Fist Commit ]
 #================================================
-/**/cmd_compile*
-/**/cmd_clean*
-/**/cmd_run*
+#/**/cmd_build*
+#/**/cmd_compile*
+#/**/cmd_clean*
+#/**/cmd_run*
+#/**/cmd_eclipse_start*
+#/**/cmd_eclipse_run*
+
+#================================================
+# Data Manager [ Comment For Fist Commit ]
+#================================================
+/**/data/*
 
 #================================================
 # Python

@@ -7,6 +7,9 @@ typedef struct _GSocketWindowsO GSocketWindowsO;
 //===============================================
 struct _GSocketWindowsO {
     GSocketO* m_parent;
+#if defined(__WIN32)
+    SOCKET m_socket;
+#endif
 };
 //===============================================
 GSocketO* GSocketWindows_New();

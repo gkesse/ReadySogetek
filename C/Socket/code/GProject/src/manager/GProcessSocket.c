@@ -1,6 +1,6 @@
 //===============================================
 #include "GProcessSocket.h"
-#include "GSocket.h"
+//#include "GSocket.h"
 //===============================================
 static GProcessO* m_GProcessSocketO = 0;
 //===============================================

@@ -7,10 +7,10 @@
 #include <string.h>
 #include <ctype.h>
 //===============================================
-#ifdef __WIN32
+#if defined(__WIN32)
 #include <winsock2.h>
 #define G_PLATEFORM_OS "WINDOWS"
-#else
+#elif defined(__unix)
 #define G_PLATEFORM_OS "UNIX"
 #define FALSE (0)
 #define TRUE (!FALSE)
