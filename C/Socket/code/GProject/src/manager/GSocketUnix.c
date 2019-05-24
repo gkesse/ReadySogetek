@@ -47,49 +47,26 @@ GSocketO* GSocketUnix() {
 //===============================================
 void GSocketUnix_Start(const int major, const int minor) {
 	printf("[ SOCKET ] Start...\n");
-	WSADATA lWsadata;
-	WSAStartup(MAKEWORD(major, major), &lWsadata);
 }
 //===============================================
 void GSocketUnix_Socket(const int addressFamily, const int type, const int protocol) {
 	printf("[ SOCKET ] Socket...\n");
-	SOCKET* lSocket = &m_GSocketUnixO->m_socket;
-	*lSocket = socket(AF_INET, SOCK_STREAM, 0);
 }
 //===============================================
 void GSocketUnix_Bind(const int addressFamily, const ulong ipAddress, const int port) {
 	printf("[ SOCKET ] Bind...\n");
-	SOCKET* lSocket = &m_GSocketUnixO->m_socket;
-	SOCKADDR_IN lSocketAddr;
-	lSocketAddr.sin_addr.s_addr = ipAddress;
-	lSocketAddr.sin_family = addressFamily;
-	lSocketAddr.sin_port = htons(port);
-	bind(*lSocket, (SOCKADDR*)&lSocketAddr, sizeof(lSocketAddr));
 }
 //===============================================
 void GSocketUnix_Bind2(const int addressFamily, const char* ipAddress, const int port) {
 	printf("[ SOCKET ] Bind...\n");
-	SOCKET* lSocket = &m_GSocketUnixO->m_socket;
-	SOCKADDR_IN lSocketAddr;
-	lSocketAddr.sin_addr.s_addr = inet_addr(ipAddress);
-	lSocketAddr.sin_family = addressFamily;
-	lSocketAddr.sin_port = htons(port);
-	bind(*lSocket, (SOCKADDR*)&lSocketAddr, sizeof(lSocketAddr));
 }
 //===============================================
 void GSocketUnix_Listen() {
 	printf("[ SOCKET ] Listen...\n");
-	SOCKET* lSocket = &m_GSocketUnixO->m_socket;
-	listen(*lSocket, 0);
 }
 //===============================================
 int GSocketUnix_Accept() {
 	printf("[ SOCKET ] Accept...\n");
-	SOCKET* lSocket = &m_GSocketUnixO->m_socket;
-	SOCKADDR_IN lSocketAddr;
-	int lSize = sizeof(SOCKADDR);
-	int lOk = accept(*lSocket, (SOCKADDR*)&lSocketAddr, &lSize);
-	return lOk;
 }
 //===============================================
 void GSocketUnix_Connect() {
@@ -98,7 +75,6 @@ void GSocketUnix_Connect() {
 //===============================================
 void GSocketUnix_Clean() {
 	printf("[ SOCKET ] Clean...\n");
-	WSACleanup();
 }
 //===============================================
 #endif
