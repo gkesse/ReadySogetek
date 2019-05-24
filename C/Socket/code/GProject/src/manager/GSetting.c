@@ -41,7 +41,7 @@ void GSetting_Load(const char* file) {
     char lBuffer[100];
 
     while(fgets(lBuffer, sizeof(lBuffer), lFile) != NULL) {
-        char* lTrim = GString()->Trim(lBuffer);
+       char* lTrim = GString()->Trim(lBuffer);
         if(lTrim == 0) {continue;}
         char lFirst = lTrim[0];
         if(lFirst == G_CHAR_COMMENT) {GString()->Free(lTrim); continue;}
