@@ -6,9 +6,10 @@ set GMOBULEPATH=C:\Users\gerard\Downloads\Gerard\openjfx-12.0.1_windows-x64_bin-
 set GADDMODULES=javafx.controls
 
 echo.
-java --module-path %GMOBULEPATH% ^
+java ^
+--module-path %GMOBULEPATH% ^
 --add-modules=%GADDMODULES% ^
 com.elephant.app.GWindow 
 echo.
 
-pause
+::pause
