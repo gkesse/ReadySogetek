@@ -2,17 +2,13 @@
 
 set PATH=D:\Java\jdk-12\bin
 set CLASSPATH=..\JavaFX\GProject\bin
-set CLASSPATH=C:\Users\gerard\Downloads\Gerard\openjfx-12.0.1_windows-x64_bin-sdk\javafx-sdk-12.0.1\lib\javafx.base.jar;%CLASSPATH%
-set CLASSPATH=C:\Users\gerard\Downloads\Gerard\openjfx-12.0.1_windows-x64_bin-sdk\javafx-sdk-12.0.1\lib\javafx.javafx.controls.jar;%CLASSPATH%
-set CLASSPATH=C:\Users\gerard\Downloads\Gerard\openjfx-12.0.1_windows-x64_bin-sdk\javafx-sdk-12.0.1\lib\javafx.fxml.jar;%CLASSPATH%
-set CLASSPATH=C:\Users\gerard\Downloads\Gerard\openjfx-12.0.1_windows-x64_bin-sdk\javafx-sdk-12.0.1\lib\javafx.graphics.jar;%CLASSPATH%
-set CLASSPATH=C:\Users\gerard\Downloads\Gerard\openjfx-12.0.1_windows-x64_bin-sdk\javafx-sdk-12.0.1\lib\javafx.media.jar;%CLASSPATH%
-set CLASSPATH=C:\Users\gerard\Downloads\Gerard\openjfx-12.0.1_windows-x64_bin-sdk\javafx-sdk-12.0.1\lib\javafx.swing.jar;%CLASSPATH%
-set CLASSPATH=C:\Users\gerard\Downloads\Gerard\openjfx-12.0.1_windows-x64_bin-sdk\javafx-sdk-12.0.1\lib\javafx.web.jar;%CLASSPATH%
-set CLASSPATH=C:\Users\gerard\Downloads\Gerard\openjfx-12.0.1_windows-x64_bin-sdk\javafx-sdk-12.0.1\lib\javafx-swt.jar;%CLASSPATH%
+set GMOBULEPATH=C:\Users\gerard\Downloads\Gerard\openjfx-12.0.1_windows-x64_bin-sdk\javafx-sdk-12.0.1\lib
+set GADDMODULES=javafx.controls
 
 echo.
-java --module-path C:\Users\gerard\Downloads\Gerard\openjfx-12.0.1_windows-x64_bin-sdk\javafx-sdk-12.0.1\lib --add-modules=javafx.controls com.elephant.app.GWindow 
+java --module-path %GMOBULEPATH% ^
+--add-modules=%GADDMODULES% ^
+com.elephant.app.GWindow 
 echo.
 
 pause
