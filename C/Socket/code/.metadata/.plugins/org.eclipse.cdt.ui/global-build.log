@@ -367,3 +367,55 @@ gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\
 gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketWindows.o" "..\\src\\manager\\GSocketWindows.c" 
 gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessSocket.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
 Info: Nothing to build for GProject
+10:02:15 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketUnix.o" "..\\src\\manager\\GSocketUnix.c" 
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketWindows.o" "..\\src\\manager\\GSocketWindows.c" 
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocket.o" "..\\src\\manager\\GSocket.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessSocket.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+src\manager\GSocket.o:GSocket.c:(.text+0xb5): undefined reference to `GSocketUnix'
+collect2.exe: error: ld returned 1 exit status
+10:05:46 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketUnix.o" "..\\src\\manager\\GSocketUnix.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessSocket.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x34): undefined reference to `GSocketUnix_Socket'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x43): undefined reference to `GSocketUnix_Start'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x4a): undefined reference to `GSocketUnix_Bind2'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x56): undefined reference to `GSocketUnix_Bind'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x6a): undefined reference to `GSocketUnix_Accept'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x76): undefined reference to `GSocketUnix_Listen'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x8f): undefined reference to `GSocketUnix_Connect'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x116): undefined reference to `GSocketUnix_Socket'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x125): undefined reference to `GSocketUnix_Start'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x12c): undefined reference to `GSocketUnix_Bind2'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x138): undefined reference to `GSocketUnix_Bind'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x14c): undefined reference to `GSocketUnix_Accept'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x158): undefined reference to `GSocketUnix_Listen'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x171): undefined reference to `GSocketUnix_Connect'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.rdata$.refptr.GSocketUnix_Clean[.refptr.GSocketUnix_Clean]+0x0): undefined reference to `GSocketUnix_Clean'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.rdata$.refptr.GSocketUnix_Accept[.refptr.GSocketUnix_Accept]+0x0): undefined reference to `GSocketUnix_Accept'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.rdata$.refptr.GSocketUnix_Connect[.refptr.GSocketUnix_Connect]+0x0): undefined reference to `GSocketUnix_Connect'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.rdata$.refptr.GSocketUnix_Bind2[.refptr.GSocketUnix_Bind2]+0x0): undefined reference to `GSocketUnix_Bind2'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.rdata$.refptr.GSocketUnix_Listen[.refptr.GSocketUnix_Listen]+0x0): undefined reference to `GSocketUnix_Listen'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.rdata$.refptr.GSocketUnix_Socket[.refptr.GSocketUnix_Socket]+0x0): undefined reference to `GSocketUnix_Socket'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.rdata$.refptr.GSocketUnix_Bind[.refptr.GSocketUnix_Bind]+0x0): undefined reference to `GSocketUnix_Bind'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.rdata$.refptr.GSocketUnix_Start[.refptr.GSocketUnix_Start]+0x0): undefined reference to `GSocketUnix_Start'
+collect2.exe: error: ld returned 1 exit status
+10:10:40 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketUnix.o" "..\\src\\manager\\GSocketUnix.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessSocket.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+10:13:01 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketWindows.o" "..\\src\\manager\\GSocketWindows.c" 
+..\src\manager\GSocketWindows.c:54: error: unterminated #ifdef
+ #ifdef __WIN32
+ 
+..\src\manager\GSocketWindows.c:47: error: unterminated #ifdef
+ #ifdef __WIN32
+ 
+10:13:16 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketWindows.o" "..\\src\\manager\\GSocketWindows.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessSocket.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
