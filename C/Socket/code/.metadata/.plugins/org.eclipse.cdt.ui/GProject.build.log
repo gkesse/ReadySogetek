@@ -1,7 +1,11 @@
-11:25:20 **** Incremental Build of configuration Release for project GProject ****
+07:45:25 **** Incremental Build of configuration Release for project GProject ****
 Info: Internal Builder is used for build
-gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSetting.o" "..\\src\\manager\\GSetting.c" 
-gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessSocket.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketUnix.o" "..\\src\\manager\\GSocketUnix.c" 
+..\src\manager\GSocketUnix.c: In function 'GSocketUnix_New':
+..\src\manager\GSocketUnix.c:28:11: error: 'GSocketO' {aka 'struct _GSocketO'} has no member named 'Bind2'; did you mean 'Bind'?
+  lParent->Bind2 = GSocketUnix_Bind2;
+           ^~~~~
+           Bind
 
-11:25:21 Build Finished. 0 errors, 0 warnings. (took 1s.83ms)
+07:45:26 Build Failed. 1 errors, 0 warnings. (took 1s.207ms)
 

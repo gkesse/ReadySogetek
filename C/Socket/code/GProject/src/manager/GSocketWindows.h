@@ -9,6 +9,7 @@ struct _GSocketWindowsO {
     GSocketO* m_parent;
 #if defined(__WIN32)
     SOCKET m_socket;
+    SOCKADDR_IN m_address;
 #endif
 };
 //===============================================

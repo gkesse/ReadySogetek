@@ -11,13 +11,14 @@ struct _GSocketO {
     void (*Delete)(GSocketO* obj);
     void (*Start)(const int major, const int minor);
     void (*Socket)(const int addressFamily, const int type, const int protocol);
-    void (*Bind)(const int addressFamily, const ulong ipAddress, const int port);
-    void (*Bind2)(const int addressFamily, const char* ipAddress, const int port);
+    void (*Address)(const int addressFamily, const char* ipAddress, const int port);
+    void (*Address2)(const int addressFamily, const ulong ipAddress, const int port);
+    void (*Bind)();
     void (*Listen)();
     int (*Accept)();
     void (*Connect)();
-    int (*Send)(const char* buffer, const int length, const int flags);
-    void (*Read)();
+    int (*Send)();
+    void (*Recv)();
     void (*Close)();
     void (*Clean)();
 };
