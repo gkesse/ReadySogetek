@@ -17,7 +17,7 @@ struct _GSocketO {
     void (*Listen)();
     int (*Accept)();
     void (*Connect)();
-    int (*Send)();
+    void (*Send)();
     void (*Recv)();
     void (*Close)();
     void (*Clean)();

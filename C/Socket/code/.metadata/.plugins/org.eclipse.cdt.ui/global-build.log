@@ -88,3 +88,261 @@ gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject
   lParent->Bind2 = GSocketUnix_Bind2;
            ^~~~~
            Bind
+08:20:36 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketWindows.o" "..\\src\\manager\\GSocketWindows.c" 
+..\src\manager\GSocketWindows.c: In function 'GSocketWindows_New':
+..\src\manager\GSocketWindows.c:36:16: warning: assignment to 'int (*)()' from incompatible pointer type 'void (*)()' [-Wincompatible-pointer-types]
+  lParent->Send = GSocketWindows_Send;
+                ^
+Command canceled
+08:21:24 **** Rebuild of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GString.o" "..\\src\\manager\\GString.c" 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocket.o" "..\\src\\manager\\GSocket.c" 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSetting.o" "..\\src\\manager\\GSetting.c" 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GConfig.o" "..\\src\\manager\\GConfig.c" 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSocket.o" "..\\src\\manager\\GProcessSocket.c" 
+..\src\manager\GProcessSocket.c: In function 'GProcessSocket_Run':
+..\src\manager\GProcessSocket.c:33:2: warning: implicit declaration of function 'GSocket'; did you mean 'socket'? [-Wimplicit-function-declaration]
+  GSocket();
+  ^~~~~~~
+  socket
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GConfigNormal.o" "..\\src\\manager\\GConfigNormal.c" 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketWindows.o" "..\\src\\manager\\GSocketWindows.c" 
+..\src\manager\GSocketWindows.c: In function 'GSocketWindows_New':
+..\src\manager\GSocketWindows.c:36:16: warning: assignment to 'int (*)()' from incompatible pointer type 'void (*)()' [-Wincompatible-pointer-types]
+  lParent->Send = GSocketWindows_Send;
+                ^
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketUnix.o" "..\\src\\manager\\GSocketUnix.c" 
+..\src\manager\GSocketUnix.c: In function 'GSocketUnix_New':
+..\src\manager\GSocketUnix.c:28:11: error: 'GSocketO' {aka 'struct _GSocketO'} has no member named 'Bind2'; did you mean 'Bind'?
+  lParent->Bind2 = GSocketUnix_Bind2;
+           ^~~~~
+           Bind
+08:22:48 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketUnix.o" "..\\src\\manager\\GSocketUnix.c" 
+..\src\manager\GSocketUnix.c: In function 'GSocketUnix_New':
+..\src\manager\GSocketUnix.c:28:11: error: 'GSocketO' {aka 'struct _GSocketO'} has no member named 'Bind2'; did you mean 'Bind'?
+  lParent->Bind2 = GSocketUnix_Bind2;
+           ^~~~~
+           Bind
+08:27:52 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketUnix.o" "..\\src\\manager\\GSocketUnix.c" 
+..\src\manager\GSocketUnix.c: In function 'GSocketUnix_New':
+..\src\manager\GSocketUnix.c:32:42: error: expected ';' before 'lParent'
+  lParent->Address2 = GSocketUnix_Address2
+                                          ^
+                                          ;
+  lParent->Bind = GSocketUnix_Bind;
+  ~~~~~~~                                  
+..\src\manager\GSocketUnix.c:37:16: warning: assignment to 'int (*)()' from incompatible pointer type 'void (*)()' [-Wincompatible-pointer-types]
+  lParent->Send = GSocketUnix_Send;
+                ^
+08:28:00 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketUnix.o" "..\\src\\manager\\GSocketUnix.c" 
+..\src\manager\GSocketUnix.c: In function 'GSocketUnix_New':
+..\src\manager\GSocketUnix.c:37:16: warning: assignment to 'int (*)()' from incompatible pointer type 'void (*)()' [-Wincompatible-pointer-types]
+  lParent->Send = GSocketUnix_Send;
+                ^
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessSocket.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0xba): undefined reference to `GSocketUnix_Address2'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0xc6): undefined reference to `GSocketUnix_Address'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x11a): undefined reference to `GSocketUnix_Recv'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x126): undefined reference to `GSocketUnix_Send'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x13f): undefined reference to `GSocketUnix_Close'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x1dc): undefined reference to `GSocketUnix_Address2'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x1e8): undefined reference to `GSocketUnix_Address'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x23c): undefined reference to `GSocketUnix_Recv'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x248): undefined reference to `GSocketUnix_Send'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x261): undefined reference to `GSocketUnix_Close'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.rdata$.refptr.GSocketUnix_Recv[.refptr.GSocketUnix_Recv]+0x0): undefined reference to `GSocketUnix_Recv'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.rdata$.refptr.GSocketUnix_Close[.refptr.GSocketUnix_Close]+0x0): undefined reference to `GSocketUnix_Close'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.rdata$.refptr.GSocketUnix_Send[.refptr.GSocketUnix_Send]+0x0): undefined reference to `GSocketUnix_Send'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.rdata$.refptr.GSocketUnix_Address2[.refptr.GSocketUnix_Address2]+0x0): undefined reference to `GSocketUnix_Address2'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.rdata$.refptr.GSocketUnix_Address[.refptr.GSocketUnix_Address]+0x0): undefined reference to `GSocketUnix_Address'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x2aa): undefined reference to `GSocketWindows_Recv'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x2b6): undefined reference to `GSocketWindows_Send'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x2cf): undefined reference to `GSocketWindows_Close'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x3cc): undefined reference to `GSocketWindows_Recv'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x3d8): undefined reference to `GSocketWindows_Send'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x3f1): undefined reference to `GSocketWindows_Close'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.rdata$.refptr.GSocketWindows_Recv[.refptr.GSocketWindows_Recv]+0x0): undefined reference to `GSocketWindows_Recv'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.rdata$.refptr.GSocketWindows_Close[.refptr.GSocketWindows_Close]+0x0): undefined reference to `GSocketWindows_Close'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.rdata$.refptr.GSocketWindows_Send[.refptr.GSocketWindows_Send]+0x0): undefined reference to `GSocketWindows_Send'
+collect2.exe: error: ld returned 1 exit status
+08:29:58 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketUnix.o" "..\\src\\manager\\GSocketUnix.c" 
+..\src\manager\GSocketUnix.c: In function 'GSocketUnix_New':
+..\src\manager\GSocketUnix.c:36:16: warning: assignment to 'int (*)()' from incompatible pointer type 'void (*)()' [-Wincompatible-pointer-types]
+  lParent->Send = GSocketUnix_Send;
+                ^
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessSocket.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0xba): undefined reference to `GSocketUnix_Address2'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0xc6): undefined reference to `GSocketUnix_Address'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x11a): undefined reference to `GSocketUnix_Recv'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x126): undefined reference to `GSocketUnix_Send'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x13f): undefined reference to `GSocketUnix_Close'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x1dc): undefined reference to `GSocketUnix_Address2'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x1e8): undefined reference to `GSocketUnix_Address'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x23c): undefined reference to `GSocketUnix_Recv'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x248): undefined reference to `GSocketUnix_Send'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x261): undefined reference to `GSocketUnix_Close'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.rdata$.refptr.GSocketUnix_Recv[.refptr.GSocketUnix_Recv]+0x0): undefined reference to `GSocketUnix_Recv'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.rdata$.refptr.GSocketUnix_Close[.refptr.GSocketUnix_Close]+0x0): undefined reference to `GSocketUnix_Close'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.rdata$.refptr.GSocketUnix_Send[.refptr.GSocketUnix_Send]+0x0): undefined reference to `GSocketUnix_Send'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.rdata$.refptr.GSocketUnix_Address2[.refptr.GSocketUnix_Address2]+0x0): undefined reference to `GSocketUnix_Address2'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.rdata$.refptr.GSocketUnix_Address[.refptr.GSocketUnix_Address]+0x0): undefined reference to `GSocketUnix_Address'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x2aa): undefined reference to `GSocketWindows_Recv'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x2b6): undefined reference to `GSocketWindows_Send'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x2cf): undefined reference to `GSocketWindows_Close'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x3cc): undefined reference to `GSocketWindows_Recv'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x3d8): undefined reference to `GSocketWindows_Send'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x3f1): undefined reference to `GSocketWindows_Close'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.rdata$.refptr.GSocketWindows_Recv[.refptr.GSocketWindows_Recv]+0x0): undefined reference to `GSocketWindows_Recv'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.rdata$.refptr.GSocketWindows_Close[.refptr.GSocketWindows_Close]+0x0): undefined reference to `GSocketWindows_Close'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.rdata$.refptr.GSocketWindows_Send[.refptr.GSocketWindows_Send]+0x0): undefined reference to `GSocketWindows_Send'
+collect2.exe: error: ld returned 1 exit status
+08:30:06 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessSocket.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0xba): undefined reference to `GSocketUnix_Address2'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0xc6): undefined reference to `GSocketUnix_Address'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x11a): undefined reference to `GSocketUnix_Recv'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x126): undefined reference to `GSocketUnix_Send'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x13f): undefined reference to `GSocketUnix_Close'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x1dc): undefined reference to `GSocketUnix_Address2'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x1e8): undefined reference to `GSocketUnix_Address'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x23c): undefined reference to `GSocketUnix_Recv'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x248): undefined reference to `GSocketUnix_Send'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x261): undefined reference to `GSocketUnix_Close'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.rdata$.refptr.GSocketUnix_Recv[.refptr.GSocketUnix_Recv]+0x0): undefined reference to `GSocketUnix_Recv'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.rdata$.refptr.GSocketUnix_Close[.refptr.GSocketUnix_Close]+0x0): undefined reference to `GSocketUnix_Close'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.rdata$.refptr.GSocketUnix_Send[.refptr.GSocketUnix_Send]+0x0): undefined reference to `GSocketUnix_Send'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.rdata$.refptr.GSocketUnix_Address2[.refptr.GSocketUnix_Address2]+0x0): undefined reference to `GSocketUnix_Address2'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.rdata$.refptr.GSocketUnix_Address[.refptr.GSocketUnix_Address]+0x0): undefined reference to `GSocketUnix_Address'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x2aa): undefined reference to `GSocketWindows_Recv'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x2b6): undefined reference to `GSocketWindows_Send'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x2cf): undefined reference to `GSocketWindows_Close'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x3cc): undefined reference to `GSocketWindows_Recv'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x3d8): undefined reference to `GSocketWindows_Send'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x3f1): undefined reference to `GSocketWindows_Close'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.rdata$.refptr.GSocketWindows_Recv[.refptr.GSocketWindows_Recv]+0x0): undefined reference to `GSocketWindows_Recv'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.rdata$.refptr.GSocketWindows_Close[.refptr.GSocketWindows_Close]+0x0): undefined reference to `GSocketWindows_Close'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.rdata$.refptr.GSocketWindows_Send[.refptr.GSocketWindows_Send]+0x0): undefined reference to `GSocketWindows_Send'
+collect2.exe: error: ld returned 1 exit status
+08:30:11 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessSocket.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0xba): undefined reference to `GSocketUnix_Address2'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0xc6): undefined reference to `GSocketUnix_Address'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x11a): undefined reference to `GSocketUnix_Recv'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x126): undefined reference to `GSocketUnix_Send'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x13f): undefined reference to `GSocketUnix_Close'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x1dc): undefined reference to `GSocketUnix_Address2'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x1e8): undefined reference to `GSocketUnix_Address'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x23c): undefined reference to `GSocketUnix_Recv'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x248): undefined reference to `GSocketUnix_Send'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.text+0x261): undefined reference to `GSocketUnix_Close'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.rdata$.refptr.GSocketUnix_Recv[.refptr.GSocketUnix_Recv]+0x0): undefined reference to `GSocketUnix_Recv'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.rdata$.refptr.GSocketUnix_Close[.refptr.GSocketUnix_Close]+0x0): undefined reference to `GSocketUnix_Close'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.rdata$.refptr.GSocketUnix_Send[.refptr.GSocketUnix_Send]+0x0): undefined reference to `GSocketUnix_Send'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.rdata$.refptr.GSocketUnix_Address2[.refptr.GSocketUnix_Address2]+0x0): undefined reference to `GSocketUnix_Address2'
+src\manager\GSocketUnix.o:GSocketUnix.c:(.rdata$.refptr.GSocketUnix_Address[.refptr.GSocketUnix_Address]+0x0): undefined reference to `GSocketUnix_Address'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x2aa): undefined reference to `GSocketWindows_Recv'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x2b6): undefined reference to `GSocketWindows_Send'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x2cf): undefined reference to `GSocketWindows_Close'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x3cc): undefined reference to `GSocketWindows_Recv'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x3d8): undefined reference to `GSocketWindows_Send'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x3f1): undefined reference to `GSocketWindows_Close'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.rdata$.refptr.GSocketWindows_Recv[.refptr.GSocketWindows_Recv]+0x0): undefined reference to `GSocketWindows_Recv'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.rdata$.refptr.GSocketWindows_Close[.refptr.GSocketWindows_Close]+0x0): undefined reference to `GSocketWindows_Close'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.rdata$.refptr.GSocketWindows_Send[.refptr.GSocketWindows_Send]+0x0): undefined reference to `GSocketWindows_Send'
+collect2.exe: error: ld returned 1 exit status
+08:32:33 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketUnix.o" "..\\src\\manager\\GSocketUnix.c" 
+..\src\manager\GSocketUnix.c: In function 'GSocketUnix_New':
+..\src\manager\GSocketUnix.c:36:16: warning: assignment to 'int (*)()' from incompatible pointer type 'void (*)()' [-Wincompatible-pointer-types]
+  lParent->Send = GSocketUnix_Send;
+                ^
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessSocket.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x2aa): undefined reference to `GSocketWindows_Recv'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x2b6): undefined reference to `GSocketWindows_Send'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x2cf): undefined reference to `GSocketWindows_Close'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x3cc): undefined reference to `GSocketWindows_Recv'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x3d8): undefined reference to `GSocketWindows_Send'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x3f1): undefined reference to `GSocketWindows_Close'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.rdata$.refptr.GSocketWindows_Recv[.refptr.GSocketWindows_Recv]+0x0): undefined reference to `GSocketWindows_Recv'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.rdata$.refptr.GSocketWindows_Close[.refptr.GSocketWindows_Close]+0x0): undefined reference to `GSocketWindows_Close'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.rdata$.refptr.GSocketWindows_Send[.refptr.GSocketWindows_Send]+0x0): undefined reference to `GSocketWindows_Send'
+collect2.exe: error: ld returned 1 exit status
+08:33:27 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketUnix.o" "..\\src\\manager\\GSocketUnix.c" 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocket.o" "..\\src\\manager\\GSocket.c" 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketWindows.o" "..\\src\\manager\\GSocketWindows.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessSocket.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x2aa): undefined reference to `GSocketWindows_Recv'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x2b6): undefined reference to `GSocketWindows_Send'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x2cf): undefined reference to `GSocketWindows_Close'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x3cc): undefined reference to `GSocketWindows_Recv'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x3d8): undefined reference to `GSocketWindows_Send'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x3f1): undefined reference to `GSocketWindows_Close'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.rdata$.refptr.GSocketWindows_Recv[.refptr.GSocketWindows_Recv]+0x0): undefined reference to `GSocketWindows_Recv'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.rdata$.refptr.GSocketWindows_Close[.refptr.GSocketWindows_Close]+0x0): undefined reference to `GSocketWindows_Close'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.rdata$.refptr.GSocketWindows_Send[.refptr.GSocketWindows_Send]+0x0): undefined reference to `GSocketWindows_Send'
+collect2.exe: error: ld returned 1 exit status
+08:34:20 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessSocket.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x2aa): undefined reference to `GSocketWindows_Recv'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x2b6): undefined reference to `GSocketWindows_Send'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x2cf): undefined reference to `GSocketWindows_Close'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x3cc): undefined reference to `GSocketWindows_Recv'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x3d8): undefined reference to `GSocketWindows_Send'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x3f1): undefined reference to `GSocketWindows_Close'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.rdata$.refptr.GSocketWindows_Recv[.refptr.GSocketWindows_Recv]+0x0): undefined reference to `GSocketWindows_Recv'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.rdata$.refptr.GSocketWindows_Close[.refptr.GSocketWindows_Close]+0x0): undefined reference to `GSocketWindows_Close'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.rdata$.refptr.GSocketWindows_Send[.refptr.GSocketWindows_Send]+0x0): undefined reference to `GSocketWindows_Send'
+collect2.exe: error: ld returned 1 exit status
+08:34:46 **** Clean-only build of configuration Release for project GProject ****
+rm -rf src/manager/GSocket.o src/main.d src/manager/GSocketUnix.o src/manager/GProcess.d GProject.exe src/manager/GProcess.o src/manager/GSocket.d src/manager/GConfig.d src/manager/GProcessSocket.o src/manager/GConfig.o src/manager/GString.o src/manager/GConfigNormal.o src/manager/GSetting.o src/manager/GSocketWindows.o src/manager/GProcessSocket.d src/manager/GSocketUnix.d src/manager/GConfigNormal.d src/main.o src/manager/GString.d src/manager/GSetting.d src/manager/GSocketWindows.d 
+Cannot run program "rm": Launching failed
+
+Error: Program "rm" not found in PATH
+PATH=[C:\Users\Admin\Downloads\x86_64-8.1.0-release-win32-sjlj-rt_v6-rev0\mingw64\bin;\bin;\usr\bin;C:/Program Files/Java/jdk-11.0.1/bin/server;C:/Program Files/Java/jdk-11.0.1/bin;C:\Users\Admin\Downloads\x86_64-8.1.0-release-win32-sjlj-rt_v6-rev0\mingw64\bin;C:\Users\Admin\Downloads\eclipse-cpp-2019-03-R-win32-x86_64\eclipse;C:\Program Files\Java\jdk-11.0.1\bin;C:\Users\Admin\Downloads\Programs\SOGETEK\C\Socket\win]
+
+08:34:47 **** Clean-only build of configuration Release for project GProject ****
+08:34:54 **** Rebuild of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GConfigNormal.o" "..\\src\\manager\\GConfigNormal.c" 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSetting.o" "..\\src\\manager\\GSetting.c" 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketWindows.o" "..\\src\\manager\\GSocketWindows.c" 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GString.o" "..\\src\\manager\\GString.c" 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GConfig.o" "..\\src\\manager\\GConfig.c" 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcess.o" "..\\src\\manager\\GProcess.c" 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSocket.o" "..\\src\\manager\\GProcessSocket.c" 
+..\src\manager\GProcessSocket.c: In function 'GProcessSocket_Run':
+..\src\manager\GProcessSocket.c:33:2: warning: implicit declaration of function 'GSocket'; did you mean 'socket'? [-Wimplicit-function-declaration]
+  GSocket();
+  ^~~~~~~
+  socket
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocket.o" "..\\src\\manager\\GSocket.c" 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketUnix.o" "..\\src\\manager\\GSocketUnix.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessSocket.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x2aa): undefined reference to `GSocketWindows_Recv'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x2b6): undefined reference to `GSocketWindows_Send'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x2cf): undefined reference to `GSocketWindows_Close'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x3cc): undefined reference to `GSocketWindows_Recv'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x3d8): undefined reference to `GSocketWindows_Send'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x3f1): undefined reference to `GSocketWindows_Close'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.rdata$.refptr.GSocketWindows_Recv[.refptr.GSocketWindows_Recv]+0x0): undefined reference to `GSocketWindows_Recv'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.rdata$.refptr.GSocketWindows_Close[.refptr.GSocketWindows_Close]+0x0): undefined reference to `GSocketWindows_Close'
+src\manager\GSocketWindows.o:GSocketWindows.c:(.rdata$.refptr.GSocketWindows_Send[.refptr.GSocketWindows_Send]+0x0): undefined reference to `GSocketWindows_Send'
+collect2.exe: error: ld returned 1 exit status

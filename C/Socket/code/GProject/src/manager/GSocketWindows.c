@@ -97,7 +97,7 @@ void GSocketWindows_Bind() {
 	SOCKET* lSocket = &lSocketWindows->m_socket;
 	SOCKADDR_IN* lAddress = &lSocketWindows->m_address;
 	int lSize = sizeof(*lAddress);
-	bind(*lSocket, (SOCKADDR*)&lAddress, lSize);
+	bind(*lSocket, (SOCKADDR*)&lAddress, lSize );
 #endif
 }
 //===============================================
