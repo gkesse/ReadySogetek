@@ -31,6 +31,7 @@ GProcessO* GProcessSocketServer() {
 //===============================================
 void GProcessSocketServer_Run(int argc, char** argv) {
     GSocket()->Start(2, 0);
+    GSocket()->Status();
     GSocket()->Socket(AF_INET, SOCK_STREAM, 0);
     GSocket()->Address2(AF_INET, INADDR_ANY, 5566);
     GSocket()->Bind();

@@ -5,6 +5,9 @@
 static GSocketO* m_GSocketWindowsO = 0;
 //===============================================
 void GSocketWindows_Start(const int major, const int minor);
+void GSocketWindows_Status();
+void GSocketWindows_Major();
+void GSocketWindows_Minor();
 void GSocketWindows_Socket(const int addressFamily, const int type, const int protocol);
 void GSocketWindows_Address(const int addressFamily, const char* ipAddress, const int port);
 void GSocketWindows_Address2(const int addressFamily, const ulong ipAddress, const int port);
@@ -27,6 +30,9 @@ GSocketO* GSocketWindows_New() {
 	lParent->m_child = lChild;
 	lParent->Delete = GSocketWindows_Delete;
 	lParent->Start = GSocketWindows_Start;
+	lParent->Status = GSocketWindows_Status;
+	lParent->Major = GSocketWindows_Major;
+	lParent->Minor = GSocketWindows_Minor;
 	lParent->Socket = GSocketWindows_Socket;
 	lParent->Address = GSocketWindows_Address;
 	lParent->Address2 = GSocketWindows_Address2;
@@ -56,8 +62,39 @@ GSocketO* GSocketWindows() {
 void GSocketWindows_Start(const int major, const int minor) {
 #if defined(__WIN32)
 	printf("[ SOCKET ] Start...\n");
-	WSADATA lWsadata;
-	WSAStartup(MAKEWORD(major, major), &lWsadata);
+	GSocketWindowsO* lSocketWindows = m_GSocketWindowsO->m_child;
+	WSADATA* lWsaData = &lSocketWindows->m_wsaData;
+	WSAStartup(MAKEWORD(major, major), lWsaData);
+#endif
+}
+//===============================================
+void GSocketWindows_Status() {
+#if defined(__WIN32)
+	printf("[ SOCKET ] Status...\n");
+	GSocketWindowsO* lSocketWindows = m_GSocketWindowsO->m_child;
+	WSADATA* lWsaData = &lSocketWindows->m_wsaData;
+	char* lStatus = lWsaData->szSystemStatus;
+	printf("[ STATUS ] %s...\n", lStatus);
+#endif
+}
+//===============================================
+void GSocketWindows_Major() {
+#if defined(__WIN32)
+	printf("[ SOCKET ] Major...\n");
+	GSocketWindowsO* lSocketWindows = m_GSocketWindowsO->m_child;
+	WSADATA* lWsaData = &lSocketWindows->m_wsaData;
+	int lMajor = HIBYTE(lWsaData->wVersion);
+	printf("[ MAJOR ] %d...\n", lMajor);
+#endif
+}
+//===============================================
+void GSocketWindows_Minor() {
+#if defined(__WIN32)
+	printf("[ SOCKET ] Minor...\n");
+	GSocketWindowsO* lSocketWindows = m_GSocketWindowsO->m_child;
+	WSADATA* lWsaData = &lSocketWindows->m_wsaData;
+	int lMinor = LOBYTE(lWsaData->wVersion);
+	printf("[ MINOR ] %d...\n", lMinor);
 #endif
 }
 //===============================================
@@ -66,7 +103,7 @@ void GSocketWindows_Socket(const int addressFamily, const int type, const int pr
 	printf("[ SOCKET ] Socket...\n");
 	GSocketWindowsO* lSocketWindows = m_GSocketWindowsO->m_child;
 	SOCKET* lSocket = &lSocketWindows->m_socket;
-	*lSocket = socket(AF_INET, SOCK_STREAM, 0);
+	*lSocket = socket(addressFamily, type, protocol);
 #endif
 }
 //===============================================

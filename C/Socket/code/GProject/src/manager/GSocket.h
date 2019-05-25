@@ -10,6 +10,9 @@ struct _GSocketO {
     void* m_child;
     void (*Delete)(GSocketO* obj);
     void (*Start)(const int major, const int minor);
+    void (*Status)();
+    void (*Major)();
+    void (*Minor)();
     void (*Socket)(const int addressFamily, const int type, const int protocol);
     void (*Address)(const int addressFamily, const char* ipAddress, const int port);
     void (*Address2)(const int addressFamily, const ulong ipAddress, const int port);

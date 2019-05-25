@@ -8,6 +8,7 @@ typedef struct _GSocketWindowsO GSocketWindowsO;
 struct _GSocketWindowsO {
     GSocketO* m_parent;
 #if defined(__WIN32)
+    WSADATA m_wsaData;
     SOCKET m_socket;
     SOCKADDR_IN m_address;
     SOCKET m_socket2;
