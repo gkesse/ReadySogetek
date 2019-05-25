@@ -97,7 +97,7 @@ void GSocketWindows_Bind() {
 	SOCKET* lSocket = &lSocketWindows->m_socket;
 	SOCKADDR_IN* lAddress = &lSocketWindows->m_address;
 	int lSize = sizeof(*lAddress);
-	bind(*lSocket, (SOCKADDR*)&lAddress, lSize );
+	bind(*lSocket, (SOCKADDR*)lAddress, lSize);
 #endif
 }
 //===============================================
@@ -115,10 +115,11 @@ int GSocketWindows_Accept() {
 	printf("[ SOCKET ] Accept...\n");
 	GSocketWindowsO* lSocketWindows = m_GSocketWindowsO->m_child;
 	SOCKET* lSocket = &lSocketWindows->m_socket;
-	SOCKADDR_IN lSocketAddr;
-	int lSize = sizeof(SOCKADDR);
-	int lOk = accept(*lSocket, (SOCKADDR*)&lSocketAddr, &lSize);
-	return lOk;
+	SOCKET* lSocket2 = &lSocketWindows->m_socket2;
+	SOCKADDR_IN* lAddress2 = &lSocketWindows->m_address2;
+	int lSize2 = sizeof(*lAddress2);
+	*lSocket2 = accept(*lSocket, (SOCKADDR*)lAddress2, &lSize2);
+	return *lSocket2;
 #endif
 	return 0;
 }
