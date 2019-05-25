@@ -126,6 +126,11 @@ int GSocketWindows_Accept() {
 void GSocketWindows_Connect() {
 #if defined(__WIN32)
 	printf("[ SOCKET ] Connect...\n");
+	GSocketWindowsO* lSocketWindows = m_GSocketWindowsO->m_child;
+	SOCKET* lSocket = &lSocketWindows->m_socket;
+	SOCKADDR_IN* lAddress = &lSocketWindows->m_address;
+	int lSize = sizeof(*lAddress);
+	connect(*lSocket, (SOCKADDR*)lAddress, lSize);
 #endif
 }
 //===============================================
@@ -138,12 +143,20 @@ void GSocketWindows_Send() {
 void GSocketWindows_Recv() {
 #if defined(__WIN32)
 	printf("[ SOCKET ] Recv...\n");
+	GSocketWindowsO* lSocketWindows = m_GSocketWindowsO->m_child;
+	SOCKET* lSocket = &lSocketWindows->m_socket;
+	char lBuffer[255];
+	int lSize = sizeof(lBuffer);
+	recv(*lSocket, lBuffer, lSize, 0);
 #endif
 }
 //===============================================
 void GSocketWindows_Close() {
 #if defined(__WIN32)
 	printf("[ SOCKET ] Close...\n");
+	GSocketWindowsO* lSocketWindows = m_GSocketWindowsO->m_child;
+	SOCKET* lSocket = &lSocketWindows->m_socket;
+	closesocket(*lSocket);
 #endif
 }
 //===============================================
