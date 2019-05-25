@@ -1,28 +1,27 @@
 //===============================================
-#ifndef _GConfigNormal_
-#define _GConfigNormal_
+#ifndef _GMap_
+#define _GMap_
 //===============================================
-#include "GConfig.h"
+#include "GInclude.h"
 //===============================================
-typedef struct _GConfigNormalO GConfigNormalO;
-typedef struct _GConfigNodeO GConfigNodeO;
+typedef struct _GMapNodeO GMapNodeO;
+typedef struct _GMapO GMapO;
 //===============================================
-struct _GConfigNodeO {
-    int m_index;
-    char* m_key;
+struct _GMapNodeO {
+	char* m_key;
     char* m_value;
-    GConfigNodeO* m_next;
+    GMapNodeO* m_next;
 };
 //===============================================
-struct _GConfigNormalO {
-    GConfigO* m_parent;
-    GConfigNodeO* m_start;
-    int m_size;
+struct _GMapO {
+    void (*Delete)(GMapO* obj);
+    void (*SetData)(GMapO* obj, const char* key, const char* value);
+    void (*Show)(GMapO* obj);
+    GMapNodeO* m_head;
 };
 //===============================================
-GConfigO* GConfigNormal_New();
-void GConfigNormal_Delete();
-GConfigO* GConfigNormal();
+GMapO* GMap_New();
+void GMap_Delete(GMapO* obj);
 //===============================================
 #endif
 //===============================================

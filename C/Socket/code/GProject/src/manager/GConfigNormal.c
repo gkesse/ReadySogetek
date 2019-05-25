@@ -5,7 +5,7 @@ static GConfigO* m_GConfigNormalO = 0;
 //===============================================
 void GConfigNormal_Clear();
 void GConfigNormal_Remove(const char* key);
-void GConfigNormal_Remove_Node(GNodeO* node);
+void GConfigNormal_Remove_Node(GConfigNodeO* node);
 void GConfigNormal_Set_Data(const char* key, const char* value);
 char* GConfigNormal_Get_Data(const char* key);
 void GConfigNormal_Show();
@@ -42,9 +42,9 @@ GConfigO* GConfigNormal() {
 //===============================================
 void GConfigNormal_Clear() {
     GConfigNormalO* lConfigNormal = m_GConfigNormalO->m_child;
-    GNodeO* lNode = lConfigNormal->m_start;
+    GConfigNodeO* lNode = lConfigNormal->m_start;
     while(lNode != 0) {
-        GNodeO* lNext = lNode->m_next;
+        GConfigNodeO* lNext = lNode->m_next;
         GConfigNormal_Remove_Node(lNode);
         lNode = lNext;
     }
@@ -52,9 +52,9 @@ void GConfigNormal_Clear() {
 //===============================================
 void GConfigNormal_Remove(const char* key) {
     GConfigNormalO* lConfigNormal = m_GConfigNormalO->m_child;
-    GNodeO* lNode = lConfigNormal->m_start;
-    GNodeO* lPrevious = 0;
-    GNodeO* lNext = 0;
+    GConfigNodeO* lNode = lConfigNormal->m_start;
+    GConfigNodeO* lPrevious = 0;
+    GConfigNodeO* lNext = 0;
     while(lNode != 0) {
         lNext = lNode->m_next;
         int lStrcmp = strcmp(lNode->m_key, key);
@@ -73,7 +73,7 @@ void GConfigNormal_Remove(const char* key) {
     }
 }
 //===============================================
-void GConfigNormal_Remove_Node(GNodeO* node) {
+void GConfigNormal_Remove_Node(GConfigNodeO* node) {
     GConfigNormalO* lConfigNormal = m_GConfigNormalO->m_child;
     if(node != 0) {
         if(node->m_key != 0) {
@@ -93,7 +93,7 @@ void GConfigNormal_Remove_Node(GNodeO* node) {
 void GConfigNormal_Set_Data(const char* key, const char* value) {
     GConfigNormalO* lConfigNormal = m_GConfigNormalO->m_child;
     int lExist = FALSE;
-    GNodeO* lNode = lConfigNormal->m_start;
+    GConfigNodeO* lNode = lConfigNormal->m_start;
     while(lNode != 0) {
         int lStrcmp = strcmp(lNode->m_key, key);
         if(lStrcmp == 0) {
@@ -105,7 +105,7 @@ void GConfigNormal_Set_Data(const char* key, const char* value) {
     }
 
     if(lExist == FALSE) {
-        lNode = (GNodeO*)malloc(sizeof(GNodeO));
+        lNode = (GConfigNodeO*)malloc(sizeof(GConfigNodeO));
         int lKey = strlen(key) + 1;
         int lValue = strlen(value) + 1;
         lNode->m_key = (char*)malloc(sizeof(char)*lKey);
@@ -120,7 +120,7 @@ void GConfigNormal_Set_Data(const char* key, const char* value) {
             return;
         }
 
-        GNodeO* lNode2 = lConfigNormal->m_start;
+        GConfigNodeO* lNode2 = lConfigNormal->m_start;
         while(lNode2->m_next != 0) {
             lNode2 = lNode2->m_next;
         }
@@ -131,7 +131,7 @@ void GConfigNormal_Set_Data(const char* key, const char* value) {
 //===============================================
 char* GConfigNormal_Get_Data(const char* key) {
     GConfigNormalO* lConfigNormal = m_GConfigNormalO->m_child;
-    GNodeO* lNode = lConfigNormal->m_start;
+    GConfigNodeO* lNode = lConfigNormal->m_start;
     while(lNode != 0) {
         int lStrcmp = strcmp(lNode->m_key, key);
         if(lStrcmp == 0) {
@@ -144,7 +144,7 @@ char* GConfigNormal_Get_Data(const char* key) {
 //===============================================
 void GConfigNormal_Show() {
     GConfigNormalO* lConfigNormal = m_GConfigNormalO->m_child;
-    GNodeO* lNode = lConfigNormal->m_start;
+    GConfigNodeO* lNode = lConfigNormal->m_start;
     while(lNode != 0) {
         char* lKey = lNode->m_key;
         char* lValue = lNode->m_value;

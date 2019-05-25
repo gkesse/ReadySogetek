@@ -11,10 +11,13 @@ void GSocketWindows_Minor();
 void GSocketWindows_MajorMax();
 void GSocketWindows_MinorMax();
 void GSocketWindows_Socket(const int addressFamily, const int type, const int protocol);
+void GSocketWindows_SocketName();
+void GSocketWindows_IpAddress();
+void GSocketWindows_Port();
 void GSocketWindows_Address(const int addressFamily, const char* ipAddress, const int port);
 void GSocketWindows_Address2(const int addressFamily, const ulong ipAddress, const int port);
 void GSocketWindows_Bind();
-void GSocketWindows_Listen();
+void GSocketWindows_Listen(const int backlog);
 int GSocketWindows_Accept();
 void GSocketWindows_Connect();
 void GSocketWindows_Send();
@@ -38,6 +41,9 @@ GSocketO* GSocketWindows_New() {
 	lParent->MajorMax = GSocketWindows_MajorMax;
 	lParent->MinorMax = GSocketWindows_MinorMax;
 	lParent->Socket = GSocketWindows_Socket;
+	lParent->SocketName = GSocketWindows_SocketName;
+	lParent->IpAddress = GSocketWindows_IpAddress;
+	lParent->Port = GSocketWindows_Port;
 	lParent->Address = GSocketWindows_Address;
 	lParent->Address2 = GSocketWindows_Address2;
 	lParent->Bind = GSocketWindows_Bind;
@@ -131,6 +137,37 @@ void GSocketWindows_Socket(const int addressFamily, const int type, const int pr
 #endif
 }
 //===============================================
+void GSocketWindows_SocketName() {
+#if defined(__WIN32)
+	printf("[ SOCKET ] SocketName...\n");
+	GSocketWindowsO* lSocketWindows = m_GSocketWindowsO->m_child;
+	SOCKET* lSocket = &lSocketWindows->m_socket;
+	SOCKADDR_IN* lAddress = &lSocketWindows->m_address;
+	int lSize = sizeof(*lAddress);
+	getsockname(*lSocket, (SOCKADDR*)lAddress, &lSize);
+#endif
+}
+//===============================================
+void GSocketWindows_IpAddress() {
+#if defined(__WIN32)
+	printf("[ SOCKET ] IpAddress...\n");
+	GSocketWindowsO* lSocketWindows = m_GSocketWindowsO->m_child;
+	SOCKADDR_IN* lAddress = &lSocketWindows->m_address;
+	char* lIpAddress = inet_ntoa(lAddress->sin_addr);
+	printf("[ IP_ADDRESS ] %s...\n", lIpAddress);
+#endif
+}
+//===============================================
+void GSocketWindows_Port() {
+#if defined(__WIN32)
+	printf("[ SOCKET ] Port...\n");
+	GSocketWindowsO* lSocketWindows = m_GSocketWindowsO->m_child;
+	SOCKADDR_IN* lAddress = &lSocketWindows->m_address;
+	int lPort = htons(lAddress->sin_port);
+	printf("[ PORT ] %d...\n", lPort);
+#endif
+}
+//===============================================
 void GSocketWindows_Address(const int addressFamily, const char* ipAddress, const int port) {
 #if defined(__WIN32)
 	printf("[ SOCKET ] Address...\n");
@@ -147,7 +184,7 @@ void GSocketWindows_Address2(const int addressFamily, const ulong ipAddress, con
 	printf("[ SOCKET ] Address2...\n");
 	GSocketWindowsO* lSocketWindows = m_GSocketWindowsO->m_child;
 	SOCKADDR_IN* lAddress = &lSocketWindows->m_address;
-	lAddress->sin_addr.s_addr = ipAddress;
+	lAddress->sin_addr.s_addr = htonl(ipAddress);
 	lAddress->sin_family = addressFamily;
 	lAddress->sin_port = htons(port);
 #endif
@@ -164,12 +201,12 @@ void GSocketWindows_Bind() {
 #endif
 }
 //===============================================
-void GSocketWindows_Listen() {
+void GSocketWindows_Listen(const int backlog) {
 #if defined(__WIN32)
 	printf("[ SOCKET ] Listen...\n");
 	GSocketWindowsO* lSocketWindows = m_GSocketWindowsO->m_child;
 	SOCKET* lSocket = &lSocketWindows->m_socket;
-	listen(*lSocket, 0);
+	listen(*lSocket, backlog);
 #endif
 }
 //===============================================

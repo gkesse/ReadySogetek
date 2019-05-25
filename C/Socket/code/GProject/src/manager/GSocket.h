@@ -16,10 +16,13 @@ struct _GSocketO {
 	void (*MajorMax)();
 	void (*MinorMax)();
 	void (*Socket)(const int addressFamily, const int type, const int protocol);
+	void (*SocketName)();
+	void (*IpAddress)();
+	void (*Port)();
 	void (*Address)(const int addressFamily, const char* ipAddress, const int port);
 	void (*Address2)(const int addressFamily, const ulong ipAddress, const int port);
 	void (*Bind)();
-	void (*Listen)();
+	void (*Listen)(const int backlog);
 	int (*Accept)();
 	void (*Connect)();
 	void (*Send)();
