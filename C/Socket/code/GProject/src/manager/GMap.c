@@ -4,6 +4,7 @@
 //===============================================
 static void GMap_SetData(GMapO* obj, const char* key, const char* value);
 static void GMap_Clear(GMapO* obj);
+static void GMap_Remove(GMapO* obj, const char* key);
 static void GMap_Size(GMapO* obj);
 static void GMap_Show(GMapO* obj);
 //===============================================
@@ -15,6 +16,7 @@ GMapO* GMap_New() {
 	lObj->Delete = GMap_Delete;
 	lObj->SetData = GMap_SetData;
 	lObj->Clear = GMap_Clear;
+	lObj->Remove = GMap_Remove;
 	lObj->Show = GMap_Show;
 	lObj->Size = GMap_Size;
 	lObj->m_head = 0;
@@ -32,10 +34,8 @@ void GMap_Delete(GMapO* obj) {
 static void GMap_SetData(GMapO* obj, const char* key, const char* value) {
 	GMapNodeO* lLast = obj->m_head;
 	GMapNodeO* lNext = lLast;
-
 	while(lNext != 0) {
 		lLast = lNext;
-
 		int lStrcmp = strcmp(lLast->m_key, key);
 		if(lStrcmp == 0) {
 			free(lLast->m_value);
@@ -44,7 +44,6 @@ static void GMap_SetData(GMapO* obj, const char* key, const char* value) {
 			sprintf(lLast->m_value, "%s", value);
 			return;
 		}
-
 		lNext = lNext->m_next;
 	}
 
@@ -62,13 +61,30 @@ static void GMap_SetData(GMapO* obj, const char* key, const char* value) {
 }
 //===============================================
 static void GMap_Clear(GMapO* obj) {
-	GMapNodeO* lNode = obj->m_head;
-	while(lNode != 0) {
-		GMapNodeO* lLast = lNode;
-		lNode = lNode->m_next;
+	GMapNodeO* lNext = obj->m_head;
+	while(lNext != 0) {
+		GMapNodeO* lLast = lNext;
+		lNext = lNext->m_next;
 		GMap_RemoveNode(lLast);
 	}
 	obj->m_head = 0;
+}
+//===============================================
+static void GMap_Remove(GMapO* obj, const char* key) {
+	GMapNodeO* lNode = obj->m_head;
+	GMapNodeO* lPrevious = 0;
+	while(lNode != 0) {
+
+		int lStrcmp = strcmp(lNode->m_key, key);
+		if(lStrcmp == 0) {
+			if(lPrevious != 0) lPrevious->m_next = lNode->m_next;
+			else obj->m_head = lNode->m_next;
+			GMap_RemoveNode(lNode);
+			return;
+		}
+		lPrevious = lNode;
+		lNode = lNode->m_next;
+	}
 }
 //===============================================
 static void GMap_Size(GMapO* obj) {

@@ -1234,3 +1234,24 @@ gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConf
 Info: Internal Builder is used for build
 gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GMap.o" "..\\src\\manager\\GMap.c" 
 gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GMap.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+01:18:58 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GMap.o" "..\\src\\manager\\GMap.c" 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessMap.o" "..\\src\\manager\\GProcessMap.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GMap.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+01:52:52 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GMap.o" "..\\src\\manager\\GMap.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GMap.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+01:54:58 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessMap.o" "..\\src\\manager\\GProcessMap.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GMap.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+01:55:51 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessMap.o" "..\\src\\manager\\GProcessMap.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GMap.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+01:56:38 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessMap.o" "..\\src\\manager\\GProcessMap.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GMap.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 

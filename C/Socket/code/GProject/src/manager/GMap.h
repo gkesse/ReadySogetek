@@ -17,6 +17,7 @@ struct _GMapO {
     void (*Delete)(GMapO* obj);
     void (*SetData)(GMapO* obj, const char* key, const char* value);
     void (*Clear)(GMapO* obj);
+    void (*Remove)(GMapO* obj, const char* key);
     void (*Size)(GMapO* obj);
     void (*Show)(GMapO* obj);
     GMapNodeO* m_head;
