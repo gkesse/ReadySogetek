@@ -87,7 +87,7 @@ void GSocketWindows_Major() {
 	printf("[ SOCKET ] Major...\n");
 	GSocketWindowsO* lSocketWindows = m_GSocketWindowsO->m_child;
 	WSADATA* lWsaData = &lSocketWindows->m_wsaData;
-	int lMajor = HIBYTE(lWsaData->wVersion);
+	int lMajor = LOBYTE(lWsaData->wVersion);
 	printf("[ MAJOR ] %d...\n", lMajor);
 #endif
 }
@@ -97,7 +97,7 @@ void GSocketWindows_Minor() {
 	printf("[ SOCKET ] Minor...\n");
 	GSocketWindowsO* lSocketWindows = m_GSocketWindowsO->m_child;
 	WSADATA* lWsaData = &lSocketWindows->m_wsaData;
-	int lMinor = LOBYTE(lWsaData->wVersion);
+	int lMinor = HIBYTE(lWsaData->wVersion);
 	printf("[ MINOR ] %d...\n", lMinor);
 #endif
 }
@@ -107,7 +107,7 @@ void GSocketWindows_MajorMax() {
 	printf("[ SOCKET ] MajorMax...\n");
 	GSocketWindowsO* lSocketWindows = m_GSocketWindowsO->m_child;
 	WSADATA* lWsaData = &lSocketWindows->m_wsaData;
-	int lMajor = HIBYTE(lWsaData->wHighVersion);
+	int lMajor = LOBYTE(lWsaData->wHighVersion);
 	printf("[ MAJOR MAX ] %d...\n", lMajor);
 #endif
 }
@@ -117,7 +117,7 @@ void GSocketWindows_MinorMax() {
 	printf("[ SOCKET ] MinorMax...\n");
 	GSocketWindowsO* lSocketWindows = m_GSocketWindowsO->m_child;
 	WSADATA* lWsaData = &lSocketWindows->m_wsaData;
-	int lMinor = LOBYTE(lWsaData->wHighVersion);
+	int lMinor = HIBYTE(lWsaData->wHighVersion);
 	printf("[ MINOR MAX ] %d...\n", lMinor);
 #endif
 }
