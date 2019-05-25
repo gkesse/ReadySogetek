@@ -65,10 +65,10 @@ GSocketO* GSocketWindows() {
 //===============================================
 void GSocketWindows_Start(const int major, const int minor) {
 #if defined(__WIN32)
-	printf("[ SOCKET ] Start...\n");
+	printf("[ SOCKET ] Start %d.%d...\n", major, minor);
 	GSocketWindowsO* lSocketWindows = m_GSocketWindowsO->m_child;
 	WSADATA* lWsaData = &lSocketWindows->m_wsaData;
-	WSAStartup(MAKEWORD(major, major), lWsaData);
+	WSAStartup(MAKEWORD(major, minor), lWsaData);
 #endif
 }
 //===============================================
