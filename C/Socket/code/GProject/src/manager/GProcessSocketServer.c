@@ -35,7 +35,7 @@ void GProcessSocketServer_Run(int argc, char** argv) {
     GSocket()->Address2(AF_INET, INADDR_ANY, 5566);
     GSocket()->Bind();
     GSocket()->Listen();
-    if(GSocket()->Accept() == TRUE) {
+    while(GSocket()->Accept() == TRUE) {
     	GSocket()->Send();
     	GSocket()->Close2();
     }
