@@ -129,6 +129,24 @@ void GSocketWindows_Connect() {
 #endif
 }
 //===============================================
+void GSocketWindows_Send() {
+#if defined(__WIN32)
+	printf("[ SOCKET ] Send...\n");
+#endif
+}
+//===============================================
+void GSocketWindows_Recv() {
+#if defined(__WIN32)
+	printf("[ SOCKET ] Recv...\n");
+#endif
+}
+//===============================================
+void GSocketWindows_Close() {
+#if defined(__WIN32)
+	printf("[ SOCKET ] Close...\n");
+#endif
+}
+//===============================================
 void GSocketWindows_Clean() {
 #if defined(__WIN32)
 	printf("[ SOCKET ] Clean...\n");

@@ -1,26 +1,7 @@
-11:09:00 **** Rebuild of configuration Release for project GProject ****
+11:13:46 **** Incremental Build of configuration Release for project GProject ****
 Info: Internal Builder is used for build
-gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSocketClient.o" "..\\src\\manager\\GProcessSocketClient.c" 
-gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GConfigNormal.o" "..\\src\\manager\\GConfigNormal.c" 
-gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GConfig.o" "..\\src\\manager\\GConfig.c" 
-gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketUnix.o" "..\\src\\manager\\GSocketUnix.c" 
-gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcess.o" "..\\src\\manager\\GProcess.c" 
-gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocket.o" "..\\src\\manager\\GSocket.c" 
-gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSetting.o" "..\\src\\manager\\GSetting.c" 
 gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketWindows.o" "..\\src\\manager\\GSocketWindows.c" 
-gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GString.o" "..\\src\\manager\\GString.c" 
 gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
-src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x2aa): undefined reference to `GSocketWindows_Recv'
-src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x2b6): undefined reference to `GSocketWindows_Send'
-src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x2cf): undefined reference to `GSocketWindows_Close'
-src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x3cc): undefined reference to `GSocketWindows_Recv'
-src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x3d8): undefined reference to `GSocketWindows_Send'
-src\manager\GSocketWindows.o:GSocketWindows.c:(.text+0x3f1): undefined reference to `GSocketWindows_Close'
-src\manager\GSocketWindows.o:GSocketWindows.c:(.rdata$.refptr.GSocketWindows_Recv[.refptr.GSocketWindows_Recv]+0x0): undefined reference to `GSocketWindows_Recv'
-src\manager\GSocketWindows.o:GSocketWindows.c:(.rdata$.refptr.GSocketWindows_Close[.refptr.GSocketWindows_Close]+0x0): undefined reference to `GSocketWindows_Close'
-src\manager\GSocketWindows.o:GSocketWindows.c:(.rdata$.refptr.GSocketWindows_Send[.refptr.GSocketWindows_Send]+0x0): undefined reference to `GSocketWindows_Send'
-collect2.exe: error: ld returned 1 exit status
 
-11:09:17 Build Failed. 6 errors, 0 warnings. (took 16s.418ms)
+11:13:48 Build Finished. 0 errors, 0 warnings. (took 2s.218ms)
 
