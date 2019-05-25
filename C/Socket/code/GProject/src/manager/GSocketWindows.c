@@ -145,6 +145,7 @@ void GSocketWindows_Send() {
 	SOCKET* lSocket2 = &lSocketWindows->m_socket2;
 	char* lBuffer = "Bonjour tout le monde";
 	int lSize = strlen(lBuffer) + 1;
+	printf("[ SEND ] %s...\n", lBuffer);
 	send(*lSocket2, lBuffer, lSize, 0);
 #endif
 }
@@ -157,6 +158,7 @@ void GSocketWindows_Recv() {
 	char lBuffer[255];
 	int lSize = sizeof(lBuffer);
 	recv(*lSocket, lBuffer, lSize, 0);
+	printf("[ RECV ] %s...\n", lBuffer);
 #endif
 }
 //===============================================
