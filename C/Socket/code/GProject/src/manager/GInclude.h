@@ -12,6 +12,9 @@
 #define G_PLATEFORM_OS "WINDOWS"
 #elif defined(__unix)
 #define G_PLATEFORM_OS "UNIX"
+#endif
+//===============================================
+#if !defined(TRUE)
 #define FALSE (0)
 #define TRUE (!FALSE)
 #endif

@@ -121,7 +121,8 @@ int GSocketWindows_Accept() {
 	SOCKADDR_IN* lAddress2 = &lSocketWindows->m_address2;
 	int lSize2 = sizeof(*lAddress2);
 	*lSocket2 = accept(*lSocket, (SOCKADDR*)lAddress2, &lSize2);
-	return *lSocket2;
+	int lOk = (*lSocket2 == INVALID_SOCKET) ? TRUE : FALSE;
+	return lOk;
 #endif
 	return 0;
 }
