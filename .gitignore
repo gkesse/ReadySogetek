@@ -39,12 +39,12 @@
 #================================================
 # Compilation [ Comment For Fist Commit ]
 #================================================
-#/**/cmd_build*
-#/**/cmd_compile*
-#/**/cmd_clean*
-#/**/cmd_run*
-#/**/cmd_eclipse_start*
-#/**/cmd_eclipse_run*
+/**/cmd_build*
+/**/cmd_compile*
+/**/cmd_clean*
+/**/cmd_run*
+/**/cmd_eclipse_start*
+/**/cmd_eclipse_run*
 
 #================================================
 # Data Manager [ Comment For Fist Commit ]

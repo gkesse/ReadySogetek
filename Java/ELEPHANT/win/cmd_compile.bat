@@ -1,6 +1,6 @@
 @echo off
 
-set PATH=D:\Java\jdk-12\bin
+set PATH=C:\Program Files\Java\jdk-11.0.1\bin
 
 set GSRC=..\code\GProject\src\com\elephant\app
 set GBUILD=build

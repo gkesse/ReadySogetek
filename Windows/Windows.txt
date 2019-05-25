@@ -4,7 +4,7 @@
 http://efxclipse.bestsolution.at/install.html
 https://docs.oracle.com/javase/8/javafx/user-interface-tutorial/label.htm#CIHHFIBJ
 https://docs.oracle.com/javase/8/javafx/api/allclasses-noframe.html
-
+https://gluonhq.com/products/javafx/
 
 
 
