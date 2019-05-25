@@ -15,6 +15,7 @@ void GSocketUnix_Connect();
 void GSocketUnix_Send();
 void GSocketUnix_Recv();
 void GSocketUnix_Close();
+void GSocketUnix_Close2();
 void GSocketUnix_Clean();
 //===============================================
 GSocketO* GSocketUnix_New() {
@@ -36,6 +37,7 @@ GSocketO* GSocketUnix_New() {
 	lParent->Send = GSocketUnix_Send;
 	lParent->Recv = GSocketUnix_Recv;
 	lParent->Close = GSocketUnix_Close;
+	lParent->Close2 = GSocketUnix_Close2;
 	lParent->Clean = GSocketUnix_Clean;
 	return lParent;
 }
@@ -115,6 +117,12 @@ void GSocketUnix_Recv() {
 void GSocketUnix_Close() {
 #if defined(__unix)
 	printf("[ SOCKET ] Close...\n");
+#endif
+}
+//===============================================
+void GSocketUnix_Close2() {
+#if defined(__unix)
+	printf("[ SOCKET ] Close2...\n");
 #endif
 }
 //===============================================

@@ -20,6 +20,7 @@ struct _GSocketO {
     void (*Send)();
     void (*Recv)();
     void (*Close)();
+    void (*Close2)();
     void (*Clean)();
 };
 //===============================================

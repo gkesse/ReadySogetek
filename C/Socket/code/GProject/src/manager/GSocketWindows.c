@@ -15,6 +15,7 @@ void GSocketWindows_Connect();
 void GSocketWindows_Send();
 void GSocketWindows_Recv();
 void GSocketWindows_Close();
+void GSocketWindows_Close2();
 void GSocketWindows_Clean();
 //===============================================
 GSocketO* GSocketWindows_New() {
@@ -36,6 +37,7 @@ GSocketO* GSocketWindows_New() {
 	lParent->Send = GSocketWindows_Send;
 	lParent->Recv = GSocketWindows_Recv;
 	lParent->Close = GSocketWindows_Close;
+	lParent->Close2 = GSocketWindows_Close2;
 	lParent->Clean = GSocketWindows_Clean;
 	return lParent;
 }
@@ -138,6 +140,11 @@ void GSocketWindows_Connect() {
 void GSocketWindows_Send() {
 #if defined(__WIN32)
 	printf("[ SOCKET ] Send...\n");
+	GSocketWindowsO* lSocketWindows = m_GSocketWindowsO->m_child;
+	SOCKET* lSocket2 = &lSocketWindows->m_socket2;
+	char* lBuffer = "Bonjour tout le monde";
+	int lSize = strlen(lBuffer) + 1;
+	send(*lSocket2, lBuffer, lSize, 0);
 #endif
 }
 //===============================================
@@ -158,6 +165,15 @@ void GSocketWindows_Close() {
 	GSocketWindowsO* lSocketWindows = m_GSocketWindowsO->m_child;
 	SOCKET* lSocket = &lSocketWindows->m_socket;
 	closesocket(*lSocket);
+#endif
+}
+//===============================================
+void GSocketWindows_Close2() {
+#if defined(__WIN32)
+	printf("[ SOCKET ] Close2...\n");
+	GSocketWindowsO* lSocketWindows = m_GSocketWindowsO->m_child;
+	SOCKET* lSocket2 = &lSocketWindows->m_socket2;
+	closesocket(*lSocket2);
 #endif
 }
 //===============================================
