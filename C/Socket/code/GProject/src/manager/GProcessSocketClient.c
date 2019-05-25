@@ -1,35 +1,35 @@
 //===============================================
-#include "GProcessSocket.h"
-//#include "GSocket.h"
+#include <GProcessSocketClient.h>
+#include "GSocket.h"
 //===============================================
-static GProcessO* m_GProcessSocketO = 0;
+static GProcessO* m_GProcessSocketClientO = 0;
 //===============================================
-void GProcessSocket_Run(int argc, char** argv);
+void GProcessSocketClient_Run(int argc, char** argv);
 //===============================================
-GProcessO* GProcessSocket_New() {
+GProcessO* GProcessSocketClient_New() {
     GProcessO* lParent = GProcess_New();
-    GProcessSocketO* lChild = (GProcessSocketO*)malloc(sizeof(GProcessSocketO));
+    GProcessSocketClientO* lChild = (GProcessSocketClientO*)malloc(sizeof(GProcessSocketClientO));
 
     lChild->m_parent = lParent;
 
     lParent->m_child = lChild;
-    lParent->Delete = GProcessSocket_Delete;
-    lParent->Run = GProcessSocket_Run;
+    lParent->Delete = GProcessSocketClient_Delete;
+    lParent->Run = GProcessSocketClient_Run;
     return lParent;
 }
 //===============================================
-void GProcessSocket_Delete(GProcessO* obj) {
+void GProcessSocketClient_Delete(GProcessO* obj) {
     GProcess_Delete(obj);
 }
 //===============================================
-GProcessO* GProcessSocket() {
-    if(m_GProcessSocketO == 0) {
-        m_GProcessSocketO = GProcessSocket_New();
+GProcessO* GProcessSocketClient() {
+    if(m_GProcessSocketClientO == 0) {
+        m_GProcessSocketClientO = GProcessSocketClient_New();
     }
-    return m_GProcessSocketO;
+    return m_GProcessSocketClientO;
 }
 //===============================================
-void GProcessSocket_Run(int argc, char** argv) {
+void GProcessSocketClient_Run(int argc, char** argv) {
 	GSocket();
     /*GSocket()->Start(2, 0);
     GSocket()->Socket(AF_INET, SOCK_STREAM, 0);

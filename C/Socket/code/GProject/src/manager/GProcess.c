@@ -1,6 +1,6 @@
 //===============================================
 #include "GProcess.h"
-#include "GProcessSocket.h"
+#include <GProcessSocketClient.h>
 #include "GString.h"
 #include "GConfig.h"
 //===============================================
@@ -23,7 +23,7 @@ void GProcess_Delete(GProcessO* obj) {
 //===============================================
 GProcessO* GProcess() {
     char* lKey = GConfig()->Get_Data("PROCESS");
-    if(GString()->Is_Equal(lKey, "SOCKET")) return GProcessSocket();
-    return GProcessSocket();
+    if(GString()->Is_Equal(lKey, "SOCKET")) return GProcessSocketClient();
+    return GProcessSocketClient();
 }
 //===============================================
