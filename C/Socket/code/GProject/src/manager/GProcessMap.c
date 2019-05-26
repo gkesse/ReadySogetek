@@ -31,14 +31,13 @@ GProcessO* GProcessMap() {
 //===============================================
 void GProcessMap_Run(int argc, char** argv) {
 	GMapO* lMap = GMap_New();
-	lMap->SetData(lMap, "Nom", "Gerard KESSE");
-	lMap->SetData(lMap, "Nom", "Deborah YOBOUE");
+	lMap->SetData(lMap, "Nom", "Gerard");
+	lMap->SetData(lMap, "Prenom", "KESSE");
 	lMap->SetData(lMap, "Email", "gerard.kesse@readydev.com");
+	lMap->SetData(lMap, "Diplome", "Ingenieur");
+	lMap->SetData(lMap, "Formation", "Informatique Industrielle");
 	lMap->SetData(lMap, "Ecole", "Polytech'Montpellier");
-	lMap->Remove(lMap, "Ecole");
 	lMap->Show(lMap);
-	lMap->Size(lMap);
-	lMap->Clear(lMap);
 	lMap->Size(lMap);
 	lMap->Delete(lMap);
 }
