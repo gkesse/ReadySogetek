@@ -32,18 +32,18 @@ void GMap_Delete(GMapO* obj) {
 }
 //===============================================
 static void GMap_SetData(GMapO* obj, const char* key, const char* value) {
-	GMapNodeO* lLast = obj->m_head;
-	GMapNodeO* lNext = lLast;
+	GMapNodeO* lNext = obj->m_head;
+	GMapNodeO* lLast = 0;
 	while(lNext != 0) {
-		lLast = lNext;
-		int lStrcmp = strcmp(lLast->m_key, key);
+		int lStrcmp = strcmp(lNext->m_key, key);
 		if(lStrcmp == 0) {
-			free(lLast->m_value);
+			free(lNext->m_value);
 			int lValue = strlen(value) + 1;
-			lLast->m_value = (char*)malloc(sizeof(char)*lValue);
-			sprintf(lLast->m_value, "%s", value);
+			lNext->m_value = (char*)malloc(sizeof(char)*lValue);
+			sprintf(lNext->m_value, "%s", value);
 			return;
 		}
+		lLast = lNext;
 		lNext = lNext->m_next;
 	}
 
@@ -74,7 +74,6 @@ static void GMap_Remove(GMapO* obj, const char* key) {
 	GMapNodeO* lNode = obj->m_head;
 	GMapNodeO* lPrevious = 0;
 	while(lNode != 0) {
-
 		int lStrcmp = strcmp(lNode->m_key, key);
 		if(lStrcmp == 0) {
 			if(lPrevious != 0) lPrevious->m_next = lNode->m_next;
