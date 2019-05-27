@@ -15,13 +15,11 @@
 /**/Servers/
 
 #================================================
-# File
+# ReadyDev
 #================================================
 
 /**/views.json
 /**/messages.json
-/**/.classpath
-/**/.project
 /data/sitemaps/*xml
 /**/~$*
 
@@ -31,10 +29,10 @@
 
 /**/Release/
 /**/Debug/
-/**/.metadata/
-/**/.settings/
-/**/.project
-/**/.cproject
+/**/*.metadata/
+/**/*.settings/
+/**/*.project
+/**/*.cproject
 
 #================================================
 # Compilation [ Comment For Fist Commit ]
