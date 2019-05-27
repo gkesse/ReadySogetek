@@ -1,7 +1,21 @@
-13:34:22 **** Incremental Build of configuration Release for project GProject ****
+14:17:50 **** Incremental Build of configuration Release for project GProject ****
 Info: Internal Builder is used for build
 gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GConfigTemplate.o" "..\\src\\manager\\GConfigTemplate.c" 
-gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+..\src\manager\GConfigTemplate.c: In function 'GConfigTemplate_Show':
+..\src\manager\GConfigTemplate.c:79:9: warning: unused variable 'lValue' [-Wunused-variable]
+   char* lValue = lNext->m_value;
+         ^~~~~~
+..\src\manager\GConfigTemplate.c:78:9: warning: unused variable 'lKey' [-Wunused-variable]
+   char* lKey = lNext->m_key;
+         ^~~~
+..\src\manager\GConfigTemplate.c: In function 'GConfigTemplate_GetData':
+..\src\manager\GConfigTemplate.c:71:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GConfig.o" "..\\src\\manager\\GConfig.c" 
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcess.o" "..\\src\\manager\\GProcess.c" 
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessMap.o" "..\\src\\manager\\GProcessMap.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
 
-13:34:23 Build Finished. 0 errors, 0 warnings. (took 1s.70ms)
+14:17:54 Build Finished. 0 errors, 3 warnings. (took 3s.803ms)
 
