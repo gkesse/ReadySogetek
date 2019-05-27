@@ -9,11 +9,12 @@ typedef struct _GConfigO GConfigO;
 struct _GConfigO {
     void* m_child;
     void (*Delete)();
-    void (*SetData)(char* key, char* value);
-    char* (*GetData)(char* key);
-    void (*Show)();
     void (*Clear)();
     void (*Remove)(char* key);
+    void (*SetData)(char* key, char* value);
+    char* (*GetData)(char* key);
+    void (*Size)();
+    void (*Show)();
 };
 //===============================================
 GConfigO* GConfig_New();

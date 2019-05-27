@@ -37,11 +37,6 @@ void GProcessConfig_Run(int argc, char** argv) {
 	GConfig()->SetData("Formation", "Informatique Industrielle");
 	GConfig()->SetData("Ecole", "Polytech'Montpellier");
 	GConfig()->Show();
-	GConfig()->Remove("Nom");
-	GConfig()->Show();
-	GConfig()->Remove("Email");
-	GConfig()->Show();
-	GConfig()->Remove("Ecole");
-	GConfig()->Show();
+	GConfig()->Delete();
 }
 //===============================================
