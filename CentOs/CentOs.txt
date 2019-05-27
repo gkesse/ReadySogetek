@@ -1,6 +1,72 @@
 #=================================================
 # Commandes CentOS
 #=================================================
+ip a s
+ifup enp0s3
+yum update
+
+yum install nano
+
+nano /etc/sysconfig/network-scripts/ifcfg-enp0s3
+
+TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=static
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=yes
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_FAILURE_FATAL=no
+IPV6_ADDR_GEN_MODE=stable-privacy
+NAME=enp0s3
+UUID=22cb71b0-8fe1-49ac-b3b5-8f9bb60605a3
+DEVICE=enp0s3
+ONBOOT=yes
+NM_CONTROLLED=no
+IPADDR=192.9.200.127
+NETMASK=255.255.255.0
+GATEWAY=192.9.200.1
+
+/etc/sysconfig/network
+
+NETWORKING=yes
+DNS1=8.8.8.8
+DNS2=8.8.4.4
+SERACH=www.sogetek.fr
+
+ipconfig
+
+192.9.200.229
+192.9.200.127
+
+shutdown -r now
+
+yum install net-tools.x86_64
+
+ifconfig
+
+yum provides */xclock
+yum install xorg-x11-apps
+yum install xorg-x11-xauth 
+yum install xorg-x11-fonts-* 
+yum install xorg-x11-font-utils 
+yum install xorg-x11-fonts-Type1
+yum groupinstall "GNOME Desktop" "X Window System" "Fonts"
+
+xclock
+
+
+
+
+
+
+
+
+
+
+
 su
 exit
 yum update
