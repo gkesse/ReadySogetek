@@ -49,10 +49,8 @@ void GSetting_Load(const char* file) {
         char** lSplit = GString()->Split(lTrim, "=", &lCount);
         char* lKey = GString()->Trim(lSplit[0]);
         char* lValue = GString()->Trim(lSplit[1]);
-        GConfig()->Set_Data(lKey, lValue);
+        GConfig()->SetData(lKey, lValue);
         GString()->Free(lTrim);
-        GString()->Free(lKey);
-        GString()->Free(lValue);
         GString()->Free2(lSplit, lCount);
     }
     GConfig()->Show();

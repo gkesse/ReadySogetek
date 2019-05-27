@@ -1,6 +1,7 @@
 //===============================================
 #include "GConfig.h"
 #include "GConfigNormal.h"
+#include "GConfigTemplate.h"
 #include "GString.h"
 //===============================================
 GConfigO* GConfig_New() {
@@ -22,8 +23,9 @@ void GConfig_Delete() {
 }
 //===============================================
 GConfigO* GConfig() {
-    char* lKey = "NORMAL";
+    char* lKey = "TEMPLATE";
     if(GString()->Is_Equal(lKey, "NORMAL")) return GConfigNormal();
+    if(GString()->Is_Equal(lKey, "TEMPLATE")) return GConfigTemplate();
     return GConfigNormal();
 }
 //===============================================

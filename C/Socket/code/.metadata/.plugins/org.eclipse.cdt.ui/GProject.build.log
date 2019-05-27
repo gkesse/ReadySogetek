@@ -1,7 +1,8 @@
-09:37:02 **** Incremental Build of configuration Release for project GProject ****
+16:09:16 **** Incremental Build of configuration Release for project GProject ****
 Info: Internal Builder is used for build
-gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessMap.o" "..\\src\\manager\\GProcessMap.c" 
-gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessMap.o" "..\\src\\manager\\GProcessMap.c" 
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessConfig.o" "..\\src\\manager\\GProcessConfig.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
 
-09:37:05 Build Finished. 0 errors, 0 warnings. (took 2s.980ms)
+16:09:18 Build Finished. 0 errors, 0 warnings. (took 2s.191ms)
 

@@ -1,18 +1,18 @@
 //===============================================
-#ifndef _GProcessMap_
-#define _GProcessMap_
+#ifndef _GProcessConfig_
+#define _GProcessConfig_
 //===============================================
 #include "GProcess.h"
 //===============================================
-typedef struct _GProcessMapO GProcessMapO;
+typedef struct _GProcessConfigO GProcessConfigO;
 //===============================================
-struct _GProcessMapO {
+struct _GProcessConfigO {
     GProcessO* m_parent;
 };
 //===============================================
-GProcessO* GProcessMap_New();
-void GProcessMap_Delete(GProcessO* obj);
-GProcessO* GProcessMap();
+GProcessO* GProcessConfig_New();
+void GProcessConfig_Delete(GProcessO* obj);
+GProcessO* GProcessConfig();
 //===============================================
 #endif
 //===============================================
