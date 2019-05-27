@@ -26,6 +26,8 @@
 		\
 		GMapO_##GTYPE* GMap_New_##GTYPE(); \
 		void GMap_Delete_##GTYPE(GMapO_##GTYPE* obj); \
+		void GMap_Clear_##GTYPE(GMapO_##GTYPE* obj); \
+		void GMap_RemoveNode_##GTYPE(GMapNodeO_##GTYPE* node); \
 		void GMap_SetData_##GTYPE(GMapO_##GTYPE* obj, GKEY key, GVALUE value); \
 		void GMap_Size_##GTYPE(GMapO_##GTYPE* obj);
 //===============================================
@@ -35,6 +37,7 @@
 			GMapO_##GTYPE* lObj = (GMapO_##GTYPE*)malloc(sizeof(GMapO_##GTYPE)); \
 			\
 			lObj->Delete = GMap_Delete_##GTYPE; \
+			lObj->Clear = GMap_Clear_##GTYPE; \
 			lObj->SetData = GMap_SetData_##GTYPE; \
 			lObj->Size = GMap_Size_##GTYPE; \
 			lObj->m_head = 0; \
@@ -46,6 +49,23 @@
 				obj->Clear(obj); \
 				free(obj); \
 				obj = 0; \
+			} \
+		} \
+		\
+		void GMap_Clear_##GTYPE(GMapO_##GTYPE* obj) { \
+			GMapNodeO_##GTYPE* lNext = obj->m_head; \
+			while(lNext != 0) { \
+				GMapNodeO_##GTYPE* lLast = lNext; \
+				lNext = lNext->m_next; \
+				GMap_RemoveNode_##GTYPE(lLast); \
+			} \
+			obj->m_head = 0; \
+		} \
+		\
+		void GMap_RemoveNode_##GTYPE(GMapNodeO_##GTYPE* node) { \
+			if(node != 0) { \
+				free(node); \
+				node = 0; \
 			} \
 		} \
 		\
@@ -75,7 +95,7 @@
 				lSize++; \
 				lNext = lNext->m_next; \
 			} \
-			printf("[ SIZE ] : %d...\n", lSize); \
+			printf("[ SIZE ] %d...\n", lSize); \
 		}
 //===============================================
 #define GMapO(GTYPE) \

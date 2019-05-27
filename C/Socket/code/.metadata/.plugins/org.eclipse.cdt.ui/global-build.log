@@ -5994,3 +5994,225 @@ src\manager\GProcess.o:GProcess.c:(.text+0xb0): first defined here
 src\manager\GProcessMap.o:GProcessMap.c:(.text+0x1b0): multiple definition of `GMap_New_GINT_GCHAR'
 src\manager\GProcess.o:GProcess.c:(.text+0xe0): first defined here
 collect2.exe: error: ld returned 1 exit status
+08:05:03 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+src\manager\GProcessMap.o:GProcessMap.c:(.text+0x10): multiple definition of `GMap_SetData_GINT_GCHAR'
+src\manager\GProcess.o:GProcess.c:(.text+0x0): first defined here
+src\manager\GProcessMap.o:GProcessMap.c:(.text+0x90): multiple definition of `GMap_Delete_GINT_GCHAR'
+src\manager\GProcess.o:GProcess.c:(.text+0x80): first defined here
+src\manager\GProcessMap.o:GProcessMap.c:(.text+0xc0): multiple definition of `GMap_Size_GINT_GCHAR'
+src\manager\GProcess.o:GProcess.c:(.text+0xb0): first defined here
+src\manager\GProcessMap.o:GProcessMap.c:(.text+0x1b0): multiple definition of `GMap_New_GINT_GCHAR'
+src\manager\GProcess.o:GProcess.c:(.text+0xe0): first defined here
+collect2.exe: error: ld returned 1 exit status
+08:06:58 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcess.o" "..\\src\\manager\\GProcess.c" 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessMap.o" "..\\src\\manager\\GProcessMap.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+08:22:48 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessMap.o" "..\\src\\manager\\GProcessMap.c" 
+In file included from ..\src\manager\GProcessMap.c:3:
+..\src\manager\GProcessMap.c: In function 'GMap_RemoveNode':
+..\src\manager\GMap.h:68:15: warning: passing argument 1 of 'free' makes pointer from integer without a cast [-Wint-conversion]
+      free(node->m_key); \
+           ~~~~^~~~~~~
+..\src\manager\GMap.h:68:15: note: in definition of macro 'GDEFINE_MAP'
+      free(node->m_key); \
+               ^~
+In file included from ..\src\manager\GInclude.h:6,
+                 from ..\src\manager\GProcess.h:5,
+                 from ..\src\manager\GProcessMap.h:5,
+                 from ..\src\manager\GProcessMap.c:2:
+C:/Users/Admin/Downloads/x86_64-8.1.0-release-win32-sjlj-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/stdlib.h:502:27: note: expected 'void *' but argument is of type 'GINT' {aka 'int'}
+   void __cdecl free(void *_Memory);
+                     ~~~~~~^~~~~~~
+In file included from ..\src\manager\GProcessMap.c:3:
+..\src\manager\GMap.h:72:15: warning: passing argument 1 of 'free' makes pointer from integer without a cast [-Wint-conversion]
+      free(node->m_value); \
+           ~~~~^~~~~~~~~
+..\src\manager\GMap.h:72:15: note: in definition of macro 'GDEFINE_MAP'
+      free(node->m_value); \
+               ^~
+In file included from ..\src\manager\GInclude.h:6,
+                 from ..\src\manager\GProcess.h:5,
+                 from ..\src\manager\GProcessMap.h:5,
+                 from ..\src\manager\GProcessMap.c:2:
+C:/Users/Admin/Downloads/x86_64-8.1.0-release-win32-sjlj-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/stdlib.h:502:27: note: expected 'void *' but argument is of type 'GCHAR' {aka 'char'}
+   void __cdecl free(void *_Memory);
+                     ~~~~~~^~~~~~~
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+08:24:41 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessMap.o" "..\\src\\manager\\GProcessMap.c" 
+In file included from ..\src\manager\GProcessMap.c:3:
+..\src\manager\GProcessMap.c: In function 'GMap_RemoveNode':
+..\src\manager\GMap.h:68:15: warning: passing argument 1 of 'free' makes pointer from integer without a cast [-Wint-conversion]
+      free(node->m_key); \
+           ~~~~^~~~~~~
+..\src\manager\GMap.h:68:15: note: in definition of macro 'GDEFINE_MAP'
+      free(node->m_key); \
+               ^~
+In file included from ..\src\manager\GInclude.h:6,
+                 from ..\src\manager\GProcess.h:5,
+                 from ..\src\manager\GProcessMap.h:5,
+                 from ..\src\manager\GProcessMap.c:2:
+C:/Users/Admin/Downloads/x86_64-8.1.0-release-win32-sjlj-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/stdlib.h:502:27: note: expected 'void *' but argument is of type 'GINT' {aka 'int'}
+   void __cdecl free(void *_Memory);
+                     ~~~~~~^~~~~~~
+In file included from ..\src\manager\GProcessMap.c:3:
+..\src\manager\GMap.h:72:15: warning: passing argument 1 of 'free' makes pointer from integer without a cast [-Wint-conversion]
+      free(node->m_value); \
+           ~~~~^~~~~~~~~
+..\src\manager\GMap.h:72:15: note: in definition of macro 'GDEFINE_MAP'
+      free(node->m_value); \
+               ^~
+In file included from ..\src\manager\GInclude.h:6,
+                 from ..\src\manager\GProcess.h:5,
+                 from ..\src\manager\GProcessMap.h:5,
+                 from ..\src\manager\GProcessMap.c:2:
+C:/Users/Admin/Downloads/x86_64-8.1.0-release-win32-sjlj-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/stdlib.h:502:27: note: expected 'void *' but argument is of type 'GCHAR' {aka 'char'}
+   void __cdecl free(void *_Memory);
+                     ~~~~~~^~~~~~~
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+08:28:28 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessMap.o" "..\\src\\manager\\GProcessMap.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+Info: Nothing to build for GProject
+08:37:01 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessMap.o" "..\\src\\manager\\GProcessMap.c" 
+In file included from ..\src\manager\GProcessMap.c:3:
+..\src\manager\GMap.h:30:8: error: conflicting types for 'GMap_RemoveNode'
+   void GMap_RemoveNode(GMapNodeO_##GTYPE* node); \
+        ^~~~~~~~~~~~~~~
+..\src\manager\GMap.h:30:8: note: in definition of macro 'GDECLARE_MAP'
+   void GMap_RemoveNode(GMapNodeO_##GTYPE* node); \
+        ^~~~~~~~~~~~~~~
+..\src\manager\GMap.h:65:8: note: previous definition of 'GMap_RemoveNode' was here
+   void GMap_RemoveNode(GMapNodeO_##GTYPE* node) { \
+        ^~~~~~~~~~~~~~~
+..\src\manager\GMap.h:65:8: note: in definition of macro 'GDEFINE_MAP'
+   void GMap_RemoveNode(GMapNodeO_##GTYPE* node) { \
+        ^~~~~~~~~~~~~~~
+..\src\manager\GMap.h:65:8: error: conflicting types for 'GMap_RemoveNode'
+   void GMap_RemoveNode(GMapNodeO_##GTYPE* node) { \
+        ^~~~~~~~~~~~~~~
+..\src\manager\GMap.h:65:8: note: in definition of macro 'GDEFINE_MAP'
+   void GMap_RemoveNode(GMapNodeO_##GTYPE* node) { \
+        ^~~~~~~~~~~~~~~
+..\src\manager\GMap.h:65:8: note: previous definition of 'GMap_RemoveNode' was here
+   void GMap_RemoveNode(GMapNodeO_##GTYPE* node) { \
+        ^~~~~~~~~~~~~~~
+..\src\manager\GMap.h:65:8: note: in definition of macro 'GDEFINE_MAP'
+   void GMap_RemoveNode(GMapNodeO_##GTYPE* node) { \
+        ^~~~~~~~~~~~~~~
+08:38:11 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessMap.o" "..\\src\\manager\\GProcessMap.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+08:40:14 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessMap.o" "..\\src\\manager\\GProcessMap.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+08:40:48 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessMap.o" "..\\src\\manager\\GProcessMap.c" 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcess.o" "..\\src\\manager\\GProcess.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+src\manager\GProcessMap.o:GProcessMap.c:(.text+0x20): multiple definition of `GMap_SetData_GINT_GCHAR'
+src\manager\GProcess.o:GProcess.c:(.text+0x0): first defined here
+src\manager\GProcessMap.o:GProcessMap.c:(.text+0xa0): multiple definition of `GMap_SetData_GCHAR_PTR_GCHAR_PTR'
+src\manager\GProcess.o:GProcess.c:(.text+0x80): first defined here
+src\manager\GProcessMap.o:GProcessMap.c:(.text+0x140): multiple definition of `GMap_Delete_GINT_GCHAR'
+src\manager\GProcess.o:GProcess.c:(.text+0x120): first defined here
+src\manager\GProcessMap.o:GProcessMap.c:(.text+0x170): multiple definition of `GMap_Delete_GCHAR_PTR_GCHAR_PTR'
+src\manager\GProcess.o:GProcess.c:(.text+0x150): first defined here
+src\manager\GProcessMap.o:GProcessMap.c:(.text+0x1a0): multiple definition of `GMap_Clear_GINT_GCHAR'
+src\manager\GProcess.o:GProcess.c:(.text+0x180): first defined here
+src\manager\GProcessMap.o:GProcessMap.c:(.text+0x1e0): multiple definition of `GMap_Clear_GCHAR_PTR_GCHAR_PTR'
+src\manager\GProcess.o:GProcess.c:(.text+0x1c0): first defined here
+src\manager\GProcessMap.o:GProcessMap.c:(.text+0x220): multiple definition of `GMap_Size_GINT_GCHAR'
+src\manager\GProcess.o:GProcess.c:(.text+0x200): first defined here
+src\manager\GProcessMap.o:GProcessMap.c:(.text+0x250): multiple definition of `GMap_Size_GCHAR_PTR_GCHAR_PTR'
+src\manager\GProcess.o:GProcess.c:(.text+0x230): first defined here
+src\manager\GProcessMap.o:GProcessMap.c:(.text+0x290): multiple definition of `GMap_New_GINT_GCHAR'
+src\manager\GProcess.o:GProcess.c:(.text+0x260): first defined here
+src\manager\GProcessMap.o:GProcessMap.c:(.text+0x2e0): multiple definition of `GMap_RemoveNode_GINT_GCHAR'
+src\manager\GProcess.o:GProcess.c:(.text+0x2b0): first defined here
+src\manager\GProcessMap.o:GProcessMap.c:(.text+0x300): multiple definition of `GMap_New_GCHAR_PTR_GCHAR_PTR'
+src\manager\GProcess.o:GProcess.c:(.text+0x2d0): first defined here
+src\manager\GProcessMap.o:GProcessMap.c:(.text+0x350): multiple definition of `GMap_RemoveNode_GCHAR_PTR_GCHAR_PTR'
+src\manager\GProcess.o:GProcess.c:(.text+0x320): first defined here
+collect2.exe: error: ld returned 1 exit status
+08:42:57 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcess.o" "..\\src\\manager\\GProcess.c" 
+In file included from ..\src\manager\GProcessMap.h:6,
+                 from ..\src\manager\GProcess.c:3:
+..\src\manager\GMap.h:102:3: error: unknown type name 'GMapO_GINT_GCHAR'; did you mean 'WM_IME_CHAR'?
+   GMapO_##GTYPE
+   ^~~~~~
+..\src\manager\GMap.h:102:3: note: in definition of macro 'GMapO'
+   GMapO_##GTYPE
+   ^~~~~~
+In file included from ..\src\manager\GProcess.c:3:
+..\src\manager\GProcessMap.h:13:1: warning: no semicolon at end of struct or union
+ };
+ ^
+08:44:07 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessMap.o" "..\\src\\manager\\GProcessMap.c" 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcess.o" "..\\src\\manager\\GProcess.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+08:44:57 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GConfigNormal.o" "..\\src\\manager\\GConfigNormal.c" 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GConfig.o" "..\\src\\manager\\GConfig.c" 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcess.o" "..\\src\\manager\\GProcess.c" 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSetting.o" "..\\src\\manager\\GSetting.c" 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocket.o" "..\\src\\manager\\GSocket.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+08:45:55 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSetting.o" "..\\src\\manager\\GSetting.c" 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GConfigNormal.o" "..\\src\\manager\\GConfigNormal.c" 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocket.o" "..\\src\\manager\\GSocket.c" 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GConfig.o" "..\\src\\manager\\GConfig.c" 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcess.o" "..\\src\\manager\\GProcess.c" 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessMap.o" "..\\src\\manager\\GProcessMap.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+08:51:11 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessMap.o" "..\\src\\manager\\GProcessMap.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+08:55:09 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessMap.o" "..\\src\\manager\\GProcessMap.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+09:31:20 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessMap.o" "..\\src\\manager\\GProcessMap.c" 
+..\src\manager\GProcessMap.c: In function 'GProcessMap_ShowMap2':
+..\src\manager\GProcessMap.c:79:33: warning: initialization of 'GMapNodeO_GINT_GCHAR *' {aka 'struct _GMapNodeO_GINT_GCHAR *'} from incompatible pointer type 'GMapNodeO_GCHAR_PTR_GCHAR_PTR *' {aka 'struct _GMapNodeO_GCHAR_PTR_GCHAR_PTR *'} [-Wincompatible-pointer-types]
+  GMapNodeO(GINT_GCHAR)* lNext = obj->m_head;
+                                 ^~~
+..\src\manager\GProcessMap.c:81:16: warning: initialization of 'char *' from 'GINT' {aka 'int'} makes pointer from integer without a cast [-Wint-conversion]
+   char* lKey = lNext->m_key;
+                ^~~~~
+..\src\manager\GProcessMap.c:82:18: warning: initialization of 'char *' from 'GCHAR' {aka 'char'} makes pointer from integer without a cast [-Wint-conversion]
+   char* lValue = lNext->m_value;
+                  ^~~~~
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcess.o" "..\\src\\manager\\GProcess.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+09:31:50 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessMap.o" "..\\src\\manager\\GProcessMap.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+09:37:02 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessMap.o" "..\\src\\manager\\GProcessMap.c" 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
