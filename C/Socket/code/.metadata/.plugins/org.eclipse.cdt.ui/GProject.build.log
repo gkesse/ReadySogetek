@@ -1,7 +1,17 @@
-02:12:37 **** Incremental Build of configuration Release for project GProject ****
+00:23:46 **** Incremental Build of configuration Release for project GProject ****
 Info: Internal Builder is used for build
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSocketClient.o" "..\\src\\manager\\GProcessSocketClient.c" 
 gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessMap.o" "..\\src\\manager\\GProcessMap.c" 
-gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GMap.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+src\manager\GProcessMap.o:GProcessMap.c:(.text+0x10): multiple definition of `GMap_SetData_GINT_GCHAR'
+src\manager\GProcess.o:GProcess.c:(.text+0x0): first defined here
+src\manager\GProcessMap.o:GProcessMap.c:(.text+0x90): multiple definition of `GMap_Delete_GINT_GCHAR'
+src\manager\GProcess.o:GProcess.c:(.text+0x80): first defined here
+src\manager\GProcessMap.o:GProcessMap.c:(.text+0xc0): multiple definition of `GMap_Size_GINT_GCHAR'
+src\manager\GProcess.o:GProcess.c:(.text+0xb0): first defined here
+src\manager\GProcessMap.o:GProcessMap.c:(.text+0x1b0): multiple definition of `GMap_New_GINT_GCHAR'
+src\manager\GProcess.o:GProcess.c:(.text+0xe0): first defined here
+collect2.exe: error: ld returned 1 exit status
 
-02:12:38 Build Finished. 0 errors, 0 warnings. (took 1s.630ms)
+00:23:49 Build Failed. 8 errors, 0 warnings. (took 2s.848ms)
 

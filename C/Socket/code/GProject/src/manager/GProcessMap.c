@@ -1,16 +1,17 @@
 //===============================================
-#include <GProcessMap.h>
-#include <GMap.h>
+#include "GProcessMap.h"
 //===============================================
 static GProcessO* m_GProcessMapO = 0;
 //===============================================
 void GProcessMap_Run(int argc, char** argv);
+void GProcessMap_ShowMap(GMapO(GINT_GCHAR)* obj);
 //===============================================
 GProcessO* GProcessMap_New() {
     GProcessO* lParent = GProcess_New();
     GProcessMapO* lChild = (GProcessMapO*)malloc(sizeof(GProcessMapO));
 
     lChild->m_parent = lParent;
+    lChild->ShowMap = GProcessMap_ShowMap;
 
     lParent->m_child = lChild;
     lParent->Delete = GProcessMap_Delete;
@@ -30,15 +31,16 @@ GProcessO* GProcessMap() {
 }
 //===============================================
 void GProcessMap_Run(int argc, char** argv) {
-	GMapO* lMap = GMap_New();
-	lMap->SetData(lMap, "Nom", "Gerard");
-	lMap->SetData(lMap, "Prenom", "KESSE");
-	lMap->SetData(lMap, "Email", "gerard.kesse@readydev.com");
-	lMap->SetData(lMap, "Diplome", "Ingenieur");
-	lMap->SetData(lMap, "Formation", "Informatique Industrielle");
-	lMap->SetData(lMap, "Ecole", "Polytech'Montpellier");
-	lMap->Show(lMap);
+	GMapO(GINT_GCHAR)* lMap = GMap_New_GINT_GCHAR();
+	lMap->SetData(lMap, 0, 'A');
+	lMap->SetData(lMap, 1, 'B');
+	lMap->SetData(lMap, 2, 'C');
+	lMap->SetData(lMap, 3, 'D');
 	lMap->Size(lMap);
 	lMap->Delete(lMap);
+}
+//===============================================
+void GProcessMap_ShowMap(GMapO(GINT_GCHAR)* obj) {
+
 }
 //===============================================

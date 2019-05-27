@@ -1,8 +1,8 @@
 //===============================================
 #include "GProcess.h"
-#include <GProcessMap.h>
-#include <GProcessSocketServer.h>
-#include <GProcessSocketClient.h>
+#include "GProcessMap.h"
+#include "GProcessSocketServer.h"
+#include "GProcessSocketClient.h"
 #include "GString.h"
 #include "GConfig.h"
 //===============================================

@@ -1,14 +1,13 @@
 //===============================================
 #include "GMap.h"
-#include "GString.h"
 //===============================================
-static void GMap_SetData(GMapO* obj, const char* key, const char* value);
-static void GMap_Clear(GMapO* obj);
-static void GMap_Remove(GMapO* obj, const char* key);
-static void GMap_Size(GMapO* obj);
-static void GMap_Show(GMapO* obj);
+void GMap_SetData(GMapO* obj, const char* key, const char* value);
+void GMap_Clear(GMapO* obj);
+void GMap_Remove(GMapO* obj, const char* key);
+void GMap_Size(GMapO* obj);
+void GMap_Show(GMapO* obj);
 //===============================================
-static void GMap_RemoveNode(GMapNodeO* node);
+void GMap_RemoveNode(GMapNodeO* node);
 //===============================================
 GMapO* GMap_New() {
 	GMapO* lObj = (GMapO*)malloc(sizeof(GMapO));
@@ -31,7 +30,7 @@ void GMap_Delete(GMapO* obj) {
 	}
 }
 //===============================================
-static void GMap_SetData(GMapO* obj, const char* key, const char* value) {
+void GMap_SetData(GMapO* obj, const char* key, const char* value) {
 	GMapNodeO* lNext = obj->m_head;
 	GMapNodeO* lLast = 0;
 	while(lNext != 0) {
@@ -60,7 +59,7 @@ static void GMap_SetData(GMapO* obj, const char* key, const char* value) {
 	else lLast->m_next = lNode;
 }
 //===============================================
-static void GMap_Clear(GMapO* obj) {
+void GMap_Clear(GMapO* obj) {
 	GMapNodeO* lNext = obj->m_head;
 	while(lNext != 0) {
 		GMapNodeO* lLast = lNext;
@@ -70,7 +69,7 @@ static void GMap_Clear(GMapO* obj) {
 	obj->m_head = 0;
 }
 //===============================================
-static void GMap_Remove(GMapO* obj, const char* key) {
+void GMap_Remove(GMapO* obj, const char* key) {
 	GMapNodeO* lNode = obj->m_head;
 	GMapNodeO* lPrevious = 0;
 	while(lNode != 0) {
@@ -86,7 +85,7 @@ static void GMap_Remove(GMapO* obj, const char* key) {
 	}
 }
 //===============================================
-static void GMap_Size(GMapO* obj) {
+void GMap_Size(GMapO* obj) {
 	GMapNodeO* lNext = obj->m_head;
 	int lSize = 0;
 
@@ -97,7 +96,7 @@ static void GMap_Size(GMapO* obj) {
 	printf("[ SIZE ] : %d...\n", lSize);
 }
 //===============================================
-static void GMap_Show(GMapO* obj) {
+void GMap_Show(GMapO* obj) {
 	GMapNodeO* lNode = obj->m_head;
 
 	while(lNode != 0) {
@@ -109,7 +108,7 @@ static void GMap_Show(GMapO* obj) {
 	printf("\n");
 }
 //===============================================
-static void GMap_RemoveNode(GMapNodeO* node) {
+void GMap_RemoveNode(GMapNodeO* node) {
 	if(node != 0) {
 		if(node->m_key != 0) {
 			free(node->m_key);
