@@ -31,23 +31,26 @@ public class GWindowLabel extends Application {
 
 		Tab lTab = new Tab("RedHat");
 		lTab.setContent(lLabel);
-
+		lTab.setClosable(false);
+		
 		Tab lTab2 = new Tab("CentOs");
 		lTab2.setContent(lLabel2);
+		lTab2.setClosable(false);
 
 		Tab lTab3 = new Tab("Debian");
 		lTab3.setContent(lLabel3);
+		lTab3.setClosable(false);
 
 		TabPane lTabPane = new TabPane();
 		lTabPane.getTabs().add(lTab);
 		lTabPane.getTabs().add(lTab2);
 		lTabPane.getTabs().add(lTab3);
 		lTabPane.setMinSize(Region.USE_PREF_SIZE, Region.USE_PREF_SIZE);
-		lTabPane.prefWidthProperty().bind(stage.widthProperty().subtract(15));
-		lTabPane.prefHeightProperty().bind(stage.heightProperty().subtract(5));
+		lTabPane.prefWidthProperty().bind(stage.widthProperty().subtract(20));
+		lTabPane.prefHeightProperty().bind(stage.heightProperty().subtract(40));
         
 		lGroup.getChildren().add(lTabPane);
-
+		
 		stage.setScene(lScene);
 		stage.setTitle("ELEPHANT | SOGETEK");
 		stage.show();
