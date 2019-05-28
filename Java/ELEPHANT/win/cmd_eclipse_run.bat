@@ -9,7 +9,7 @@ echo.
 java ^
 --module-path %GMOBULEPATH% ^
 --add-modules=%GADDMODULES% ^
-com.elephant.app.GWindow 
+com.elephant.app.GMain 
 echo.
 
 ::pause

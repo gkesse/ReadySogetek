@@ -1,0 +1,246 @@
+# Application
+# classe application
+launch
+
+# Stage
+# conteneur de niveau supérieur
+setTitle
+setScene
+show
+initStyle
+setAlwaysOnTop
+
+# Group
+# groupe de noeuds
+getChildren
+add;
+
+# Scene
+# graphe de scène
+Scene scene = new Scene(root, 300, 250);
+getStylesheets
+add
+getClass
+getResource
+toExternalForm
+widthProperty
+heightProperty
+subtract
+
+# Button
+# bouton poussoir
+setLayoutX
+setLayoutY
+setText
+setOnAction
+
+# Line
+# ligne
+setStartX
+setStartY
+setEndX
+setEndY
+setStroke
+setStrokeWidth
+setStrokeLineCap
+getStrokeDashArray
+setStrokeDashOffset
+strokeDashOffsetProperty
+setTranslateY
+
+# Slider
+# slider
+setLayoutX
+setLayoutY
+valueProperty
+
+# Text
+# texte
+setX
+setY
+setStroke
+setFill
+setRotate
+setFont
+setEffect
+
+# Rectangle
+# rectangle
+setX
+setY
+setWidth
+setHeight
+setArcWidth
+setArcHeight
+setTranslateY
+setId
+widthProperty
+heightProperty
+bind
+subtract
+
+
+
+# CubicCurve
+# courbe bézier
+setStrokeType
+setStroke
+setStrokeWidth
+setFill
+
+# Path
+# chemin de forme simple
+setStrokeWidth
+getElements
+add
+addAll
+setTranslateY
+getBoundsInParent
+getMaxY
+subtract
+
+# MoveTo
+# créer un chemin
+setX
+setY
+
+# QuadCurveTo
+# courbe bézier quadratique
+setX
+setY
+setControlX
+setControlY
+
+# LineTo
+# ligne
+setX
+setY
+
+# QuadCurve
+# courbe quadratique
+setTranslateY
+setStrokeWidth
+setStroke
+setFill
+
+# Ellipse
+# ellipse
+setStrokeWidth
+setStroke
+setFill
+getBoundsInParent
+getHeight
+
+# Shape
+# forme générale
+setStrokeWidth
+setStroke
+setFill
+setEffect
+setTranslateY
+
+# DropShadow
+# créer une ombre
+setOffsetX
+setOffsetY
+setColor
+
+# RadialGradient
+# gradient de couleur radial
+
+# LinearGradient
+# gradient de couleur linéaire
+
+# Stop
+# Rampe de couleur
+
+# Random
+# nombre aléatoire
+nextInt
+
+# Font
+# Police
+getFamilies
+stream
+forEach
+getFontNames
+font
+
+# Reflection
+# effet réflexion
+setFraction
+setTopOffset
+setEffect
+
+# Line
+# label
+setId
+textProperty
+bind
+
+# HBox
+# layout horizontal
+getChildren
+add
+maxWidthProperty
+prefWidthProperty
+bind
+widthProperty
+subtract
+setHgrow
+addAll
+setBorder
+setPadding
+
+# Region
+# Widget de base
+setId
+setVisible
+visibleProperty
+bind
+GRANTED_ACCESS
+
+# PasswordField
+# champ mot de passe
+setId
+setPromptText
+prefWidthProperty
+bind
+widthProperty
+subtract
+setOnAction
+textProperty
+
+# StackPane
+# empilement de widget
+getChildren
+addAll
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

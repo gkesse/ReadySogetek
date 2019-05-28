@@ -57,74 +57,9 @@ yum groupinstall "GNOME Desktop" "X Window System" "Fonts"
 
 xclock
 
-
-
-
-
-
-
-
-
-
-
-su
-exit
-yum update
-
-shutdown -h now
-shutdown -r now
-
-ifup enp0s3
-ifdown enp0s3
-
-yum info iputils
-
-ip a
-ip a s
-ifconfig
-
-yum install nano
-
-nano /etc/sysconfig/network-scripts/ifcfg-enp0s3
-
-TYPE=Ethernet
-PROXY_METHOD=none
-BROWSER_ONLY=no
-BOOTPROTO=static
-DEFROUTE=yes
-IPV4_FAILURE_FATAL=no
-IPV6INIT=yes
-IPV6_AUTOCONF=yes
-IPV6_DEFROUTE=yes
-IPV6_FAILURE_FATAL=no
-IPV6_ADDR_GEN_MODE=stable-privacy
-NAME=enp0s3
-UUID=b6a521bc-68b0-487c-a1a5-735138f1b0b2
-DEVICE=enp0s3
-ONBOOT=yes
-IPADDR=192.9.200.127
-NETMASK=255.255.255.0
-GATEWAY=192.9.200.1
-
-nano /etc/sysconfig/network
-
-# Created by anaconda
-NETWORKING=yes
-DNS1=8.8.8.8
-DNS2=8.8.4.4
-SERACH=sogetek.fr
-
-nmcli d
-nmtui
-
-ping www.google.com
-
 yum install git
-yum install net-tools
-yum install java-1.10.0-openjdk-devel
-yum install bash-completion
-yum install bash-completion-extras
-yum install wget
+
+git clone https://github.com/gkesse/ReadySogetek.git SOGETEK
 
 cd /opt/
 wget http://eclipse.mirror.garr.it/eclipse/technology/epp/downloads/release/2019-06/M2/eclipse-cpp-2019-06-M2-linux-gtk-x86_64.tar.gz
@@ -163,8 +98,11 @@ updatedb
 192.9.200.127
 192.9.200.128
 
+wget --no-cookies --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie"   "https://download.oracle.com/otn-pub/java/jdk/12.0.1+12/69cfe15208a647278a19ef0990eea691/jdk-12.0.1_linux-x64_bin.rpm
+
 cd /opt/
-wget https://download.oracle.com/otn/java/jdk/12+33/312335d836a34c7c8bba9d963e26dc23/jdk-12_osx-x64_bin.tar.gz?AuthParam=1558615785_c0965aad7553b39567b0f8a1f2df3c50
+wget https://download.oracle.com/otn/java/jdk/12+33/312335d836a34c7c8bba9d963e26dc23/jdk-12_linux-x64_bin.tar.gz?AuthParam=1558973893_c9ae6ac54521cec7a9302bf9fe152a5f
+https://download.oracle.com/otn/java/jdk/12+33/312335d836a34c7c8bba9d963e26dc23/jdk-12_osx-x64_bin.tar.gz?AuthParam=1558615785_c0965aad7553b39567b0f8a1f2df3c50
 
 755
 chmod -R 777 /opt/
