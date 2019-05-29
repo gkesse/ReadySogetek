@@ -13,11 +13,11 @@ GDEFINE_MAP(GCHAR_PTR, GSQLITE_STMT_PTR, GSQLite_GCHAR_PTR_GSQLITE_STMT_PTR)
 //===============================================
 static GSQLiteO* m_GSQLiteO = 0;
 //===============================================
-void GSQLite_Version();
-void GSQLite_Open(char* dbName, const char* path);
-void GSQLite_Close(char* dbName);
+static void GSQLite_Version();
+static void GSQLite_Open(char* dbName, const char* path);
+static void GSQLite_Close(char* dbName);
 //===============================================
-int GSQLite_MapEqual(char* key1, char* key2);
+static int GSQLite_MapEqual(char* key1, char* key2);
 //===============================================
 GSQLiteO* GSQLite_New() {
     GSQLiteO* lObj = (GSQLiteO*)malloc(sizeof(GSQLiteO));
@@ -46,12 +46,12 @@ GSQLiteO* GSQLite() {
     return m_GSQLiteO;
 }
 //===============================================
-void GSQLite_Version() {
+static void GSQLite_Version() {
 	const char* lVersion = sqlite3_libversion();
 	GConsole()->Print("[ SQLITE ] Version: %s\n", lVersion);
 }
 //===============================================
-void GSQLite_Open(char* dbName, const char* path) {
+static void GSQLite_Open(char* dbName, const char* path) {
 	GMapO(GSQLite_GCHAR_PTR_GSQLITE_PTR)* lDbMap = m_GSQLiteO->m_dbMap;
 	sqlite3* lDb;
 	int lOk = sqlite3_open(path, &lDb);
@@ -59,7 +59,7 @@ void GSQLite_Open(char* dbName, const char* path) {
 	lDbMap->SetData(lDbMap, dbName, lDb, GSQLite_MapEqual);
 }
 //===============================================
-void GSQLite_Exec(char* dbName, const char* sql) {
+static void GSQLite_Exec(char* dbName, const char* sql) {
 	GMapO(GSQLite_GCHAR_PTR_GSQLITE_PTR)* lDbMap = m_GSQLiteO->m_dbMap;
 	sqlite3* lDb = lDbMap->GetData(lDbMap, dbName, GSQLite_MapEqual, 0);
 	char** lError = &m_GSQLiteO->m_error;
@@ -67,7 +67,14 @@ void GSQLite_Exec(char* dbName, const char* sql) {
 	if(lOk != SQLITE_OK) {GConsole()->Print("[ SQLITE ] [ ERROR ] Exec: %s\n", *lError); exit(1);}
 }
 //===============================================
-void GSQLite_PrepareV2(char* dbName, const char* sql) {
+int GSQLite_LastId(char* dbName) {
+	GMapO(GSQLite_GCHAR_PTR_GSQLITE_PTR)* lDbMap = m_GSQLiteO->m_dbMap;
+	sqlite3* lDb = lDbMap->GetData(lDbMap, dbName, GSQLite_MapEqual, 0);
+	int lLastId = sqlite3_last_insert_rowid(lDb);
+	return lLastId;
+}
+//===============================================
+static void GSQLite_PrepareV2(char* dbName, const char* sql) {
 	GMapO(GSQLite_GCHAR_PTR_GSQLITE_PTR)* lDbMap = m_GSQLiteO->m_dbMap;
 	GMapO(GSQLite_GCHAR_PTR_GSQLITE_STMT_PTR)* lStmtMap = m_GSQLiteO->m_stmtMap;
 	sqlite3* lDb = lDbMap->GetData(lDbMap, dbName, GSQLite_MapEqual, 0);
@@ -92,32 +99,32 @@ const uchar* GSQLite_ColumnText(char* dbName, const int index) {
 	return lText;
 }
 //===============================================
-void GSQLite_Error(char* dbName) {
+static void GSQLite_Error(char* dbName) {
 	GMapO(GSQLite_GCHAR_PTR_GSQLITE_PTR)* lDbMap = m_GSQLiteO->m_dbMap;
 	sqlite3* lDb = lDbMap->GetData(lDbMap, dbName, GSQLite_MapEqual, 0);
 	const char* lError = sqlite3_errmsg(lDb);
 	GConsole()->Print("[ SQLITE ] Error: %s\n", lError);
 }
 //===============================================
-void GSQLite_Free() {
+static void GSQLite_Free() {
 	char* lError = m_GSQLiteO->m_error;
 	sqlite3_free(lError);
 }
 //===============================================
-void GSQLite_Finalize(char* dbName) {
+static void GSQLite_Finalize(char* dbName) {
 	GMapO(GSQLite_GCHAR_PTR_GSQLITE_STMT_PTR)* lStmtMap = m_GSQLiteO->m_stmtMap;
 	sqlite3_stmt* lStmt = lStmtMap->GetData(lStmtMap, dbName, GSQLite_MapEqual, 0);;
 	sqlite3_finalize(lStmt);
 }
 //===============================================
-void GSQLite_Close(char* dbName) {
+static void GSQLite_Close(char* dbName) {
 	GMapO(GSQLite_GCHAR_PTR_GSQLITE_PTR)* lDbMap = m_GSQLiteO->m_dbMap;
 	sqlite3* lDb = lDbMap->GetData(lDbMap, dbName, GSQLite_MapEqual, 0);
 	int lOk = sqlite3_close(lDb);
 	if(lOk == SQLITE_OK) GConsole()->Print("[ SQLITE ] Close is OK...\n");
 }
 //===============================================
-int GSQLite_MapEqual(char* key1, char* key2) {
+static int GSQLite_MapEqual(char* key1, char* key2) {
 	int lStrcmp = strcmp(key1, key2);
 	if(lStrcmp == 0) return TRUE;
 	return FALSE;

@@ -5,7 +5,7 @@
 //===============================================
 static GSettingO* m_GSettingO = 0;
 //===============================================
-void GSetting_Load(const char* file);
+static void GSetting_Load(const char* file);
 //===============================================
 GSettingO* GSetting_New() {
     GSettingO* lObj = (GSettingO*)malloc(sizeof(GSettingO));
@@ -34,7 +34,7 @@ GSettingO* GSetting() {
     return m_GSettingO;
 }
 //===============================================
-void GSetting_Load(const char* file) {
+static void GSetting_Load(const char* file) {
     FILE* lFile = fopen(file, "r");
     char lBuffer[100];
 

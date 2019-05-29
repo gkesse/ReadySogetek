@@ -3,13 +3,13 @@
 //===============================================
 static GStringO* m_GStringO = 0;
 //===============================================
-int GString_Size(const char* str);
-int GString_Is_Equal(const char* str1, const char* str2);
-char* GString_Copy(const char* str);
-char* GString_Trim(const char* str);
-char** GString_Split(const char* str, const char* sep, int* count);
-void GString_Free(char* ptr);
-void GString_Free2(char** ptr, const int size);
+static int GString_Size(const char* str);
+static int GString_Is_Equal(const char* str1, const char* str2);
+static char* GString_Copy(const char* str);
+static char* GString_Trim(const char* str);
+static char** GString_Split(const char* str, const char* sep, int* count);
+static void GString_Free(char* ptr);
+static void GString_Free2(char** ptr, const int size);
 //===============================================
 GStringO* GString_New() {
     GStringO* lObj = (GStringO*)malloc(sizeof(GStringO));
@@ -46,13 +46,13 @@ GStringO* GString() {
     return m_GStringO;
 }
 //===============================================
-int GString_Size(const char* str) {
+static int GString_Size(const char* str) {
     int i = 0;
     while(str[i] != 0) {i += 1;}
     return i;
 }
 //===============================================
-int GString_Is_Equal(const char* str1, const char* str2) {
+static int GString_Is_Equal(const char* str1, const char* str2) {
     int lSize1 = GString_Size(str1);
     int lSize2 = GString_Size(str2);
     if(lSize1 != lSize2) {return FALSE;}
@@ -64,7 +64,7 @@ int GString_Is_Equal(const char* str1, const char* str2) {
     return TRUE;
 }
 //===============================================
-char* GString_Copy(const char* str) {
+static char* GString_Copy(const char* str) {
     int lLength = GString_Size(str) + 1;
     char* lCopy = (char*)malloc(sizeof(char)*lLength);
     int i = 0;
@@ -76,7 +76,7 @@ char* GString_Copy(const char* str) {
     return lCopy;
 }
 //===============================================
-char* GString_Trim(const char* str) {
+static char* GString_Trim(const char* str) {
     if(str[0] == 0) return 0;
     int lStart = 0;
     int lEnd = GString()->Size(str) - 1;
@@ -97,7 +97,7 @@ char* GString_Trim(const char* str) {
     return lTrim;
 }
 //===============================================
-char** GString_Split(const char* str, const char* sep, int* count) {
+static char** GString_Split(const char* str, const char* sep, int* count) {
     int lPos = 0;
     int lCount = 0;
     while(str[lPos] != 0) {
@@ -121,14 +121,14 @@ char** GString_Split(const char* str, const char* sep, int* count) {
     return lSplit;
 }
 //===============================================
-void GString_Free(char* ptr) {
+static void GString_Free(char* ptr) {
     if(ptr != 0) {
         free(ptr);
         ptr = 0;
     }
 }
 //===============================================
-void GString_Free2(char** ptr, const int size) {
+static void GString_Free2(char** ptr, const int size) {
     if(ptr != 0) {
         for(int i = 0; i < size; i++) {
             if(ptr[i] != 0) {

@@ -8,6 +8,7 @@
 typedef struct _GSQLiteO GSQLiteO;
 typedef struct _GMapO_GSQLite_GCHAR_PTR_GSQLITE_PTR GMapO_GSQLite_GCHAR_PTR_GSQLITE_PTR;
 typedef struct _GMapO_GSQLite_GCHAR_PTR_GSQLITE_STMT_PTR GMapO_GSQLite_GCHAR_PTR_GSQLITE_STMT_PTR;
+typedef int (*GSQLITE_CALLBACK)(void *unused, int count, char **data, char **columns);
 //===============================================
 struct _GSQLiteO {
     void (*Delete)();

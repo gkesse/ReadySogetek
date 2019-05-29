@@ -4,7 +4,7 @@
 //===============================================
 static GProcessO* m_GProcessSQLiteO = 0;
 //===============================================
-void GProcessSQLite_Run(int argc, char** argv);
+static void GProcessSQLite_Run(int argc, char** argv);
 //===============================================
 GProcessO* GProcessSQLite_New() {
     GProcessO* lParent = GProcess_New();
@@ -29,7 +29,7 @@ GProcessO* GProcessSQLite() {
     return m_GProcessSQLiteO;
 }
 //===============================================
-void GProcessSQLite_Run(int argc, char** argv) {
+static void GProcessSQLite_Run(int argc, char** argv) {
 	GSQLite()->Version();
 	GSQLite()->Open("ELEPHANT", "data/data/elephant.db");
 	GSQLite()->Close("ELEPHANT");
