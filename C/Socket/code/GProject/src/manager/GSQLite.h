@@ -7,6 +7,7 @@
 //===============================================
 typedef struct _GSQLiteO GSQLiteO;
 typedef struct _GMapO_GSQLite_GCHAR_PTR_GSQLITE_PTR GMapO_GSQLite_GCHAR_PTR_GSQLITE_PTR;
+typedef struct _GMapO_GSQLite_GCHAR_PTR_GSQLITE_STMT_PTR GMapO_GSQLite_GCHAR_PTR_GSQLITE_STMT_PTR;
 //===============================================
 struct _GSQLiteO {
     void (*Delete)();
@@ -14,6 +15,7 @@ struct _GSQLiteO {
     void (*Open)(char* dbName, const char* path);
     void (*Close)(char* dbName);
     GMapO(GSQLite_GCHAR_PTR_GSQLITE_PTR)* m_dbMap;
+    GMapO(GSQLite_GCHAR_PTR_GSQLITE_STMT_PTR)* m_stmtMap;
 };
 //===============================================
 GSQLiteO* GSQLite_New();
