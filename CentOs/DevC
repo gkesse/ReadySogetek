@@ -1,0 +1,123 @@
+# éditeur de texte
+Vi
+Vim
+Emacs
+Gnome
+Kde
+Nedit
+
+# compilateur
+gcc
+g++
+
+# debogueur
+gdb
+
+# analyseur de code
+lclint
+
+# mise en forme
+indent
+
+# rechercher une chaine de caratère
+grep
+
+# rechercher un fichier
+find
+
+# relier deux commandes
+xargs
+
+# comparer deux fichiers
+diff
+
+# construction d'une application
+make
+
+# fichier de construction
+Makefile
+
+# créer un fichier de construction
+imake
+xmkmf
+
+# fichier de création d'un fichier de construction
+Imakefile
+
+# créer automatiquement un fichier de construction
+automake
+autoconf
+
+# afficher une documentation
+info
+
+# documentation sur la distribution de logiciel
+Linux Software-Release-Practice-HOWTO
+
+# archive de distribution de logiciel
+# Compresser Decompresser une archive
+tar
+rpm
+gzip
+bzip2
+
+# changer de repertoire
+cd
+
+# copier un fichier 
+cp
+
+# lister le contenu d'un répertoire
+ls
+
+# package au format Red Hat
+rpm
+
+# environnement de développement intégré
+KDevelop
+Eclipse
+Code Warrior
+
+# contrôle de version
+RCS
+SCCS
+
+# améliorer un programme en mode texte 
+Readline
+
+# afficher un programme en mode texte
+ncurses
+curses
+SUSv3
+
+# développer sous X-Window
+Xlib
+Xt
+Athena Widget
+Motif Xm
+Lessif
+
+# environnements de développement
+KDE
+Gnome
+GTK
+Qt
+
+# lister les processus
+ps
+
+# numéro d'identification d'un processus
+PID
+
+# premier processus d'un système
+init
+
+# dupliquer un processus
+fork()
+
+# Utiliser les processus
+fork() // créer un processus
+getpid() // id du fis
+getppid() // id du parent
+getuid() // id réel
+geteuid() -> id effectif

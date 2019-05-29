@@ -15,7 +15,7 @@ char* GConfigTemplate_GetData(char* key);
 void GConfigTemplate_Size();
 void GConfigTemplate_Show();
 //===============================================
-int GConfigTemplate_MapEqual(char* str1, char* str2);
+int GConfigTemplate_MapEqual(char* key1, char* key2);
 void GConfigTemplate_MapShow(char* key, char* value);
 //===============================================
 GConfigO* GConfigTemplate_New() {
@@ -84,8 +84,8 @@ void GConfigTemplate_Show() {
 	lDataMap->Show(lDataMap, GConfigTemplate_MapShow);
 }
 //===============================================
-int GConfigTemplate_MapEqual(char* str1, char* str2) {
-	int lStrcmp = strcmp(str1, str2);
+int GConfigTemplate_MapEqual(char* key1, char* key2) {
+	int lStrcmp = strcmp(key1, key2);
 	if(lStrcmp == 0) return TRUE;
 	return FALSE;
 }

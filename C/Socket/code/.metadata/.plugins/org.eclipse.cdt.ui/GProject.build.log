@@ -1,8 +1,12 @@
-16:09:16 **** Incremental Build of configuration Release for project GProject ****
+05:59:21 **** Incremental Build of configuration Release for project GProject ****
 Info: Internal Builder is used for build
-gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessMap.o" "..\\src\\manager\\GProcessMap.c" 
-gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessConfig.o" "..\\src\\manager\\GProcessConfig.c" 
-gcc -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\Admin\\Downloads\\sqlite3-master\\sqlite3-master" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+..\src\manager\GSQLite.c: In function 'GSQLite_PrepareV2':
+..\src\manager\GSQLite.c:59:11: warning: unused variable 'lDb' [-Wunused-variable]
+  sqlite3* lDb = lDbMap->GetData(lDbMap, dbName, GSQLite_MapEqual, 0);
+           ^~~
+gcc "-IC:\\Users\\Admin\\Downloads\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\Admin\\Downloads\\sqlite3-master\\sqlite3-master" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSQLite.o" "..\\src\\manager\\GProcessSQLite.c" 
+gcc "-LC:\\Users\\Admin\\Downloads\\sqlite-amalgamation-3_7_0_1" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lws2_32 -lsqlite3 
 
-16:09:18 Build Finished. 0 errors, 0 warnings. (took 2s.191ms)
+05:59:24 Build Finished. 0 errors, 1 warnings. (took 2s.865ms)
 

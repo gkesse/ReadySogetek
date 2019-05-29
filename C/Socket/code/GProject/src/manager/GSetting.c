@@ -5,8 +5,6 @@
 //===============================================
 static GSettingO* m_GSettingO = 0;
 //===============================================
-const char G_CHAR_COMMENT = '#';
-//===============================================
 void GSetting_Load(const char* file);
 //===============================================
 GSettingO* GSetting_New() {
@@ -44,7 +42,7 @@ void GSetting_Load(const char* file) {
        char* lTrim = GString()->Trim(lBuffer);
         if(lTrim == 0) {continue;}
         char lFirst = lTrim[0];
-        if(lFirst == G_CHAR_COMMENT) {GString()->Free(lTrim); continue;}
+        if(lFirst == '#') {GString()->Free(lTrim); continue;}
         int lCount;
         char** lSplit = GString()->Split(lTrim, "=", &lCount);
         char* lKey = GString()->Trim(lSplit[0]);
