@@ -28,6 +28,7 @@ INSERT INTO Persons (PersonID, LastName, Address, City) VALUES
 SELECT PersonID, LastName, Address, City
 FROM Persons; 
 
+-- modifier une ligne de données dans une table
 
 
 
