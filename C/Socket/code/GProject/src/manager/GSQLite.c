@@ -26,6 +26,8 @@ GSQLiteO* GSQLite_New() {
     lObj->Open = GSQLite_Open;
     lObj->Close = GSQLite_Close;
 	lObj->m_dbMap = GMap_New_GSQLite_GCHAR_PTR_GSQLITE_PTR();
+	lObj->m_error = 0;
+	lObj->m_lastId = -1;
     return lObj;
 }
 //===============================================
@@ -53,18 +55,16 @@ void GSQLite_Open(char* dbName, const char* path) {
 	GMapO(GSQLite_GCHAR_PTR_GSQLITE_PTR)* lDbMap = m_GSQLiteO->m_dbMap;
 	sqlite3* lDb;
 	int lOk = sqlite3_open(path, &lDb);
-	if(lOk == SQLITE_OK) GConsole()->Print("[ SQLITE ] Open is OK...\n");
+	if(lOk != SQLITE_OK) {GConsole()->Print("[ SQLITE ] [ ERROR ] Open\n"); exit(1);}
 	lDbMap->SetData(lDbMap, dbName, lDb, GSQLite_MapEqual);
 }
 //===============================================
 void GSQLite_Exec(char* dbName, const char* sql) {
 	GMapO(GSQLite_GCHAR_PTR_GSQLITE_PTR)* lDbMap = m_GSQLiteO->m_dbMap;
 	sqlite3* lDb = lDbMap->GetData(lDbMap, dbName, GSQLite_MapEqual, 0);
-	char* lError;
-	sqlite3_exec(lDb, sql, 0, 0, &lError);
-	if(lError != 0) {
-		GConsole()->Print("[ SQLITE ] Exec Error: %s\n", lError);
-	}
+	char** lError = &m_GSQLiteO->m_error;
+	int lOk = sqlite3_exec(lDb, sql, 0, 0, lError);
+	if(lOk != SQLITE_OK) {GConsole()->Print("[ SQLITE ] [ ERROR ] Exec: %s\n", *lError); exit(1);}
 }
 //===============================================
 void GSQLite_PrepareV2(char* dbName, const char* sql) {
@@ -72,7 +72,8 @@ void GSQLite_PrepareV2(char* dbName, const char* sql) {
 	GMapO(GSQLite_GCHAR_PTR_GSQLITE_STMT_PTR)* lStmtMap = m_GSQLiteO->m_stmtMap;
 	sqlite3* lDb = lDbMap->GetData(lDbMap, dbName, GSQLite_MapEqual, 0);
 	sqlite3_stmt* lStmt;
-	sqlite3_prepare_v2(lDb, sql, -1, &lStmt, 0);
+	int lOk = sqlite3_prepare_v2(lDb, sql, -1, &lStmt, 0);
+	if(lOk != SQLITE_OK) {GConsole()->Print("[ SQLITE ] [ ERROR ] PrepareV2: %s\n", sqlite3_errmsg(lDb)); exit(1); }
 	lStmtMap->SetData(lStmtMap, dbName, lStmt, GSQLite_MapEqual);
 }
 //===============================================
@@ -96,6 +97,11 @@ void GSQLite_Error(char* dbName) {
 	sqlite3* lDb = lDbMap->GetData(lDbMap, dbName, GSQLite_MapEqual, 0);
 	const char* lError = sqlite3_errmsg(lDb);
 	GConsole()->Print("[ SQLITE ] Error: %s\n", lError);
+}
+//===============================================
+void GSQLite_Free() {
+	char* lError = m_GSQLiteO->m_error;
+	sqlite3_free(lError);
 }
 //===============================================
 void GSQLite_Finalize(char* dbName) {
