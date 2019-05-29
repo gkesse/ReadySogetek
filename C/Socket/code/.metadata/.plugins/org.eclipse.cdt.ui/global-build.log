@@ -11995,3 +11995,464 @@ gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\
 gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketUnix.o" "..\\src\\manager\\GSocketUnix.c" 
 gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSocketClient.o" "..\\src\\manager\\GProcessSocketClient.c" 
 gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+11:02:47 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+..\src\manager\GSQLite.c:114:13: warning: 'GSQLite_Finalize' defined but not used [-Wunused-function]
+ static void GSQLite_Finalize(char* dbName) {
+             ^~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:109:13: warning: 'GSQLite_Free' defined but not used [-Wunused-function]
+ static void GSQLite_Free() {
+             ^~~~~~~~~~~~
+..\src\manager\GSQLite.c:102:13: warning: 'GSQLite_Error' defined but not used [-Wunused-function]
+ static void GSQLite_Error(char* dbName) {
+             ^~~~~~~~~~~~~
+..\src\manager\GSQLite.c:77:13: warning: 'GSQLite_PrepareV2' defined but not used [-Wunused-function]
+ static void GSQLite_PrepareV2(char* dbName, const char* sql) {
+             ^~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:62:13: warning: 'GSQLite_Exec' defined but not used [-Wunused-function]
+ static void GSQLite_Exec(char* dbName, const char* sql) {
+             ^~~~~~~~~~~~
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+11:04:17 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+..\src\manager\GSQLite.c:114:13: warning: 'GSQLite_Finalize' defined but not used [-Wunused-function]
+ static void GSQLite_Finalize(char* dbName) {
+             ^~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:109:13: warning: 'GSQLite_Free' defined but not used [-Wunused-function]
+ static void GSQLite_Free() {
+             ^~~~~~~~~~~~
+..\src\manager\GSQLite.c:102:13: warning: 'GSQLite_Error' defined but not used [-Wunused-function]
+ static void GSQLite_Error(char* dbName) {
+             ^~~~~~~~~~~~~
+..\src\manager\GSQLite.c:77:13: warning: 'GSQLite_PrepareV2' defined but not used [-Wunused-function]
+ static void GSQLite_PrepareV2(char* dbName, const char* sql) {
+             ^~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:62:13: warning: 'GSQLite_Exec' defined but not used [-Wunused-function]
+ static void GSQLite_Exec(char* dbName, const char* sql, GSQLITE_CALLBACK callback) {
+             ^~~~~~~~~~~~
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+11:13:01 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+..\src\manager\GSQLite.c:123:13: warning: 'GSQLite_Finalize' defined but not used [-Wunused-function]
+ static void GSQLite_Finalize(char* dbName) {
+             ^~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:118:13: warning: 'GSQLite_Free' defined but not used [-Wunused-function]
+ static void GSQLite_Free() {
+             ^~~~~~~~~~~~
+..\src\manager\GSQLite.c:111:13: warning: 'GSQLite_Error' defined but not used [-Wunused-function]
+ static void GSQLite_Error(char* dbName) {
+             ^~~~~~~~~~~~~
+..\src\manager\GSQLite.c:87:13: warning: 'GSQLite_BindInt' defined but not used [-Wunused-function]
+ static void GSQLite_BindInt(char* dbName, const char* sql, const int index, const int value) {
+             ^~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:77:13: warning: 'GSQLite_PrepareV2' defined but not used [-Wunused-function]
+ static void GSQLite_PrepareV2(char* dbName, const char* sql) {
+             ^~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:62:13: warning: 'GSQLite_Exec' defined but not used [-Wunused-function]
+ static void GSQLite_Exec(char* dbName, const char* sql, GSQLITE_CALLBACK callback) {
+             ^~~~~~~~~~~~
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+11:26:29 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+..\src\manager\GSQLite.c: In function 'GSQLite_BindBold':
+..\src\manager\GSQLite.c:111:30: error: 'data' undeclared (first use in this function)
+  sqlite3_bind_blob(lStmt, 1, data, size, SQLITE_STATIC);
+                              ^~~~
+..\src\manager\GSQLite.c:111:30: note: each undeclared identifier is reported only once for each function it appears in
+..\src\manager\GSQLite.c:111:36: error: 'size' undeclared (first use in this function); did you mean 'Pie'?
+  sqlite3_bind_blob(lStmt, 1, data, size, SQLITE_STATIC);
+                                    ^~~~
+                                    Pie
+At top level:
+..\src\manager\GSQLite.c:144:13: warning: 'GSQLite_Finalize' defined but not used [-Wunused-function]
+ static void GSQLite_Finalize(char* dbName) {
+             ^~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:139:13: warning: 'GSQLite_Free' defined but not used [-Wunused-function]
+ static void GSQLite_Free() {
+             ^~~~~~~~~~~~
+..\src\manager\GSQLite.c:132:13: warning: 'GSQLite_Error' defined but not used [-Wunused-function]
+ static void GSQLite_Error(char* dbName) {
+             ^~~~~~~~~~~~~
+..\src\manager\GSQLite.c:106:13: warning: 'GSQLite_BindBold' defined but not used [-Wunused-function]
+ static void GSQLite_BindBold(char* dbName, const char* sql, const char* parameterIndex, const int value) {
+             ^~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:96:13: warning: 'GSQLite_BindParameterIndexInt' defined but not used [-Wunused-function]
+ static void GSQLite_BindParameterIndexInt(char* dbName, const char* parameterIndex, const int value) {
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:87:13: warning: 'GSQLite_BindInt' defined but not used [-Wunused-function]
+ static void GSQLite_BindInt(char* dbName, const char* sql, const int index, const int value) {
+             ^~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:77:13: warning: 'GSQLite_PrepareV2' defined but not used [-Wunused-function]
+ static void GSQLite_PrepareV2(char* dbName, const char* sql) {
+             ^~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:62:13: warning: 'GSQLite_Exec' defined but not used [-Wunused-function]
+ static void GSQLite_Exec(char* dbName, const char* sql, GSQLITE_CALLBACK callback) {
+             ^~~~~~~~~~~~
+11:28:34 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+..\src\manager\GSQLite.c:142:13: warning: 'GSQLite_Finalize' defined but not used [-Wunused-function]
+ static void GSQLite_Finalize(char* dbName) {
+             ^~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:137:13: warning: 'GSQLite_Free' defined but not used [-Wunused-function]
+ static void GSQLite_Free() {
+             ^~~~~~~~~~~~
+..\src\manager\GSQLite.c:130:13: warning: 'GSQLite_Error' defined but not used [-Wunused-function]
+ static void GSQLite_Error(char* dbName) {
+             ^~~~~~~~~~~~~
+..\src\manager\GSQLite.c:106:13: warning: 'GSQLite_BindBold' defined but not used [-Wunused-function]
+ static void GSQLite_BindBold(char* dbName, const int index, const void* data, const int size) {
+             ^~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:96:13: warning: 'GSQLite_BindParameterIndexInt' defined but not used [-Wunused-function]
+ static void GSQLite_BindParameterIndexInt(char* dbName, const char* parameterIndex, const int value) {
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:87:13: warning: 'GSQLite_BindInt' defined but not used [-Wunused-function]
+ static void GSQLite_BindInt(char* dbName, const char* sql, const int index, const int value) {
+             ^~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:77:13: warning: 'GSQLite_PrepareV2' defined but not used [-Wunused-function]
+ static void GSQLite_PrepareV2(char* dbName, const char* sql) {
+             ^~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:62:13: warning: 'GSQLite_Exec' defined but not used [-Wunused-function]
+ static void GSQLite_Exec(char* dbName, const char* sql, GSQLITE_CALLBACK callback) {
+             ^~~~~~~~~~~~
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+11:42:11 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+..\src\manager\GSQLite.c:150:13: warning: 'GSQLite_Finalize' defined but not used [-Wunused-function]
+ static void GSQLite_Finalize(char* dbName) {
+             ^~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:145:13: warning: 'GSQLite_Free' defined but not used [-Wunused-function]
+ static void GSQLite_Free() {
+             ^~~~~~~~~~~~
+..\src\manager\GSQLite.c:138:13: warning: 'GSQLite_Error' defined but not used [-Wunused-function]
+ static void GSQLite_Error(char* dbName) {
+             ^~~~~~~~~~~~~
+..\src\manager\GSQLite.c:106:13: warning: 'GSQLite_BindBold' defined but not used [-Wunused-function]
+ static void GSQLite_BindBold(char* dbName, const int index, const void* data, const int size) {
+             ^~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:96:13: warning: 'GSQLite_BindParameterIndexInt' defined but not used [-Wunused-function]
+ static void GSQLite_BindParameterIndexInt(char* dbName, const char* parameterIndex, const int value) {
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:87:13: warning: 'GSQLite_BindInt' defined but not used [-Wunused-function]
+ static void GSQLite_BindInt(char* dbName, const char* sql, const int index, const int value) {
+             ^~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:77:13: warning: 'GSQLite_PrepareV2' defined but not used [-Wunused-function]
+ static void GSQLite_PrepareV2(char* dbName, const char* sql) {
+             ^~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:62:13: warning: 'GSQLite_Exec' defined but not used [-Wunused-function]
+ static void GSQLite_Exec(char* dbName, const char* sql, GSQLITE_CALLBACK callback) {
+             ^~~~~~~~~~~~
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+11:51:37 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+..\src\manager\GSQLite.c: In function 'GSQLite_ColumnBytes':
+..\src\manager\GSQLite.c:134:7: error: redefinition of 'lBytes'
+  int* lBytes = sqlite3_column_bytes(lStmt, index);
+       ^~~~~~
+..\src\manager\GSQLite.c:133:7: note: previous definition of 'lBytes' was here
+  int* lBytes = &m_GSQLiteO->m_bytes;
+       ^~~~~~
+..\src\manager\GSQLite.c:134:16: warning: initialization of 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  int* lBytes = sqlite3_column_bytes(lStmt, index);
+                ^~~~~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c: In function 'GSQLite_ColumnBold':
+..\src\manager\GSQLite.c:141:16: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  void* lData = sqlite3_column_blob(lStmt, index);
+                ^~~~~~~~~~~~~~~~~~~
+At top level:
+..\src\manager\GSQLite.c:157:13: warning: 'GSQLite_Finalize' defined but not used [-Wunused-function]
+ static void GSQLite_Finalize(char* dbName) {
+             ^~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:152:13: warning: 'GSQLite_Free' defined but not used [-Wunused-function]
+ static void GSQLite_Free() {
+             ^~~~~~~~~~~~
+..\src\manager\GSQLite.c:145:13: warning: 'GSQLite_Error' defined but not used [-Wunused-function]
+ static void GSQLite_Error(char* dbName) {
+             ^~~~~~~~~~~~~
+..\src\manager\GSQLite.c:107:13: warning: 'GSQLite_BindBold' defined but not used [-Wunused-function]
+ static void GSQLite_BindBold(char* dbName, const int index, const void* data, const int size) {
+             ^~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:97:13: warning: 'GSQLite_BindParameterIndexInt' defined but not used [-Wunused-function]
+ static void GSQLite_BindParameterIndexInt(char* dbName, const char* parameterIndex, const int value) {
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:88:13: warning: 'GSQLite_BindInt' defined but not used [-Wunused-function]
+ static void GSQLite_BindInt(char* dbName, const char* sql, const int index, const int value) {
+             ^~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:78:13: warning: 'GSQLite_PrepareV2' defined but not used [-Wunused-function]
+ static void GSQLite_PrepareV2(char* dbName, const char* sql) {
+             ^~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:63:13: warning: 'GSQLite_Exec' defined but not used [-Wunused-function]
+ static void GSQLite_Exec(char* dbName, const char* sql, GSQLITE_CALLBACK callback) {
+             ^~~~~~~~~~~~
+11:51:45 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+..\src\manager\GSQLite.c: In function 'GSQLite_ColumnBytes':
+..\src\manager\GSQLite.c:134:7: error: redefinition of 'lBytes'
+  int* lBytes = sqlite3_column_bytes(lStmt, index);
+       ^~~~~~
+..\src\manager\GSQLite.c:133:7: note: previous definition of 'lBytes' was here
+  int* lBytes = &m_GSQLiteO->m_bytes;
+       ^~~~~~
+..\src\manager\GSQLite.c:134:16: warning: initialization of 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  int* lBytes = sqlite3_column_bytes(lStmt, index);
+                ^~~~~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c: In function 'GSQLite_ColumnBold':
+..\src\manager\GSQLite.c:141:16: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  void* lData = sqlite3_column_blob(lStmt, index);
+                ^~~~~~~~~~~~~~~~~~~
+At top level:
+..\src\manager\GSQLite.c:157:13: warning: 'GSQLite_Finalize' defined but not used [-Wunused-function]
+ static void GSQLite_Finalize(char* dbName) {
+             ^~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:152:13: warning: 'GSQLite_Free' defined but not used [-Wunused-function]
+ static void GSQLite_Free() {
+             ^~~~~~~~~~~~
+..\src\manager\GSQLite.c:145:13: warning: 'GSQLite_Error' defined but not used [-Wunused-function]
+ static void GSQLite_Error(char* dbName) {
+             ^~~~~~~~~~~~~
+..\src\manager\GSQLite.c:107:13: warning: 'GSQLite_BindBold' defined but not used [-Wunused-function]
+ static void GSQLite_BindBold(char* dbName, const int index, const void* data, const int size) {
+             ^~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:97:13: warning: 'GSQLite_BindParameterIndexInt' defined but not used [-Wunused-function]
+ static void GSQLite_BindParameterIndexInt(char* dbName, const char* parameterIndex, const int value) {
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:88:13: warning: 'GSQLite_BindInt' defined but not used [-Wunused-function]
+ static void GSQLite_BindInt(char* dbName, const char* sql, const int index, const int value) {
+             ^~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:78:13: warning: 'GSQLite_PrepareV2' defined but not used [-Wunused-function]
+ static void GSQLite_PrepareV2(char* dbName, const char* sql) {
+             ^~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:63:13: warning: 'GSQLite_Exec' defined but not used [-Wunused-function]
+ static void GSQLite_Exec(char* dbName, const char* sql, GSQLITE_CALLBACK callback) {
+             ^~~~~~~~~~~~
+11:52:05 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+..\src\manager\GSQLite.c: In function 'GSQLite_ColumnBytes':
+..\src\manager\GSQLite.c:134:7: error: redefinition of 'lBytes'
+  int* lBytes = sqlite3_column_bytes(lStmt, index);
+       ^~~~~~
+..\src\manager\GSQLite.c:133:7: note: previous definition of 'lBytes' was here
+  int* lBytes = &m_GSQLiteO->m_bytes;
+       ^~~~~~
+..\src\manager\GSQLite.c:134:16: warning: initialization of 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  int* lBytes = sqlite3_column_bytes(lStmt, index);
+                ^~~~~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c: In function 'GSQLite_ColumnBold':
+..\src\manager\GSQLite.c:141:16: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  void* lData = sqlite3_column_blob(lStmt, index);
+                ^~~~~~~~~~~~~~~~~~~
+At top level:
+..\src\manager\GSQLite.c:157:13: warning: 'GSQLite_Finalize' defined but not used [-Wunused-function]
+ static void GSQLite_Finalize(char* dbName) {
+             ^~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:152:13: warning: 'GSQLite_Free' defined but not used [-Wunused-function]
+ static void GSQLite_Free() {
+             ^~~~~~~~~~~~
+..\src\manager\GSQLite.c:145:13: warning: 'GSQLite_Error' defined but not used [-Wunused-function]
+ static void GSQLite_Error(char* dbName) {
+             ^~~~~~~~~~~~~
+..\src\manager\GSQLite.c:107:13: warning: 'GSQLite_BindBold' defined but not used [-Wunused-function]
+ static void GSQLite_BindBold(char* dbName, const int index, const void* data, const int size) {
+             ^~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:97:13: warning: 'GSQLite_BindParameterIndexInt' defined but not used [-Wunused-function]
+ static void GSQLite_BindParameterIndexInt(char* dbName, const char* parameterIndex, const int value) {
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:88:13: warning: 'GSQLite_BindInt' defined but not used [-Wunused-function]
+ static void GSQLite_BindInt(char* dbName, const char* sql, const int index, const int value) {
+             ^~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:78:13: warning: 'GSQLite_PrepareV2' defined but not used [-Wunused-function]
+ static void GSQLite_PrepareV2(char* dbName, const char* sql) {
+             ^~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:63:13: warning: 'GSQLite_Exec' defined but not used [-Wunused-function]
+ static void GSQLite_Exec(char* dbName, const char* sql, GSQLITE_CALLBACK callback) {
+             ^~~~~~~~~~~~
+11:52:38 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSQLite.o" "..\\src\\manager\\GProcessSQLite.c" 
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+..\src\manager\GSQLite.c: In function 'GSQLite_ColumnBold':
+..\src\manager\GSQLite.c:141:16: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  void* lData = sqlite3_column_blob(lStmt, index);
+                ^~~~~~~~~~~~~~~~~~~
+At top level:
+..\src\manager\GSQLite.c:157:13: warning: 'GSQLite_Finalize' defined but not used [-Wunused-function]
+ static void GSQLite_Finalize(char* dbName) {
+             ^~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:152:13: warning: 'GSQLite_Free' defined but not used [-Wunused-function]
+ static void GSQLite_Free() {
+             ^~~~~~~~~~~~
+..\src\manager\GSQLite.c:145:13: warning: 'GSQLite_Error' defined but not used [-Wunused-function]
+ static void GSQLite_Error(char* dbName) {
+             ^~~~~~~~~~~~~
+..\src\manager\GSQLite.c:107:13: warning: 'GSQLite_BindBold' defined but not used [-Wunused-function]
+ static void GSQLite_BindBold(char* dbName, const int index, const void* data, const int size) {
+             ^~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:97:13: warning: 'GSQLite_BindParameterIndexInt' defined but not used [-Wunused-function]
+ static void GSQLite_BindParameterIndexInt(char* dbName, const char* parameterIndex, const int value) {
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:88:13: warning: 'GSQLite_BindInt' defined but not used [-Wunused-function]
+ static void GSQLite_BindInt(char* dbName, const char* sql, const int index, const int value) {
+             ^~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:78:13: warning: 'GSQLite_PrepareV2' defined but not used [-Wunused-function]
+ static void GSQLite_PrepareV2(char* dbName, const char* sql) {
+             ^~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:63:13: warning: 'GSQLite_Exec' defined but not used [-Wunused-function]
+ static void GSQLite_Exec(char* dbName, const char* sql, GSQLITE_CALLBACK callback) {
+             ^~~~~~~~~~~~
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+11:53:25 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+..\src\manager\GSQLite.c:157:13: warning: 'GSQLite_Finalize' defined but not used [-Wunused-function]
+ static void GSQLite_Finalize(char* dbName) {
+             ^~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:152:13: warning: 'GSQLite_Free' defined but not used [-Wunused-function]
+ static void GSQLite_Free() {
+             ^~~~~~~~~~~~
+..\src\manager\GSQLite.c:145:13: warning: 'GSQLite_Error' defined but not used [-Wunused-function]
+ static void GSQLite_Error(char* dbName) {
+             ^~~~~~~~~~~~~
+..\src\manager\GSQLite.c:107:13: warning: 'GSQLite_BindBold' defined but not used [-Wunused-function]
+ static void GSQLite_BindBold(char* dbName, const int index, const void* data, const int size) {
+             ^~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:97:13: warning: 'GSQLite_BindParameterIndexInt' defined but not used [-Wunused-function]
+ static void GSQLite_BindParameterIndexInt(char* dbName, const char* parameterIndex, const int value) {
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:88:13: warning: 'GSQLite_BindInt' defined but not used [-Wunused-function]
+ static void GSQLite_BindInt(char* dbName, const char* sql, const int index, const int value) {
+             ^~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:78:13: warning: 'GSQLite_PrepareV2' defined but not used [-Wunused-function]
+ static void GSQLite_PrepareV2(char* dbName, const char* sql) {
+             ^~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:63:13: warning: 'GSQLite_Exec' defined but not used [-Wunused-function]
+ static void GSQLite_Exec(char* dbName, const char* sql, GSQLITE_CALLBACK callback) {
+             ^~~~~~~~~~~~
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+12:29:18 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+..\src\manager\GSQLite.c:167:13: warning: 'GSQLite_Finalize' defined but not used [-Wunused-function]
+ static void GSQLite_Finalize(char* dbName) {
+             ^~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:162:13: warning: 'GSQLite_Free' defined but not used [-Wunused-function]
+ static void GSQLite_Free() {
+             ^~~~~~~~~~~~
+..\src\manager\GSQLite.c:155:13: warning: 'GSQLite_Error' defined but not used [-Wunused-function]
+ static void GSQLite_Error(char* dbName) {
+             ^~~~~~~~~~~~~
+..\src\manager\GSQLite.c:148:13: warning: 'GSQLite_GetAutocommit' defined but not used [-Wunused-function]
+ static void GSQLite_GetAutocommit(char* dbName) {
+             ^~~~~~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:110:13: warning: 'GSQLite_BindBold' defined but not used [-Wunused-function]
+ static void GSQLite_BindBold(char* dbName, const int index, const void* data, const int size) {
+             ^~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:100:13: warning: 'GSQLite_BindParameterIndexInt' defined but not used [-Wunused-function]
+ static void GSQLite_BindParameterIndexInt(char* dbName, const char* parameterIndex, const int value) {
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:91:13: warning: 'GSQLite_BindInt' defined but not used [-Wunused-function]
+ static void GSQLite_BindInt(char* dbName, const char* sql, const int index, const int value) {
+             ^~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:81:13: warning: 'GSQLite_PrepareV2' defined but not used [-Wunused-function]
+ static void GSQLite_PrepareV2(char* dbName, const char* sql) {
+             ^~~~~~~~~~~~~~~~~
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSQLite.o" "..\\src\\manager\\GProcessSQLite.c" 
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+13:44:18 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+..\src\manager\GSQLite.c:179:13: warning: 'GSQLite_Finalize' defined but not used [-Wunused-function]
+ static void GSQLite_Finalize(char* dbName) {
+             ^~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:174:13: warning: 'GSQLite_Free' defined but not used [-Wunused-function]
+ static void GSQLite_Free() {
+             ^~~~~~~~~~~~
+..\src\manager\GSQLite.c:167:13: warning: 'GSQLite_Error' defined but not used [-Wunused-function]
+ static void GSQLite_Error(char* dbName) {
+             ^~~~~~~~~~~~~
+..\src\manager\GSQLite.c:160:13: warning: 'GSQLite_GetAutocommit' defined but not used [-Wunused-function]
+ static void GSQLite_GetAutocommit(char* dbName) {
+             ^~~~~~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:153:20: warning: 'GSQLite_ColumnBold' defined but not used [-Wunused-function]
+ static const void* GSQLite_ColumnBold(char* dbName, const int index) {
+                    ^~~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:145:12: warning: 'GSQLite_ColumnBytes' defined but not used [-Wunused-function]
+ static int GSQLite_ColumnBytes(char* dbName, const int index) {
+            ^~~~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:138:14: warning: 'GSQLite_ColumnText' defined but not used [-Wunused-function]
+ const uchar* GSQLite_ColumnText(char* dbName, const int index) {
+              ^~~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:131:12: warning: 'GSQLite_Step' defined but not used [-Wunused-function]
+ static int GSQLite_Step(char* dbName) {
+            ^~~~~~~~~~~~
+..\src\manager\GSQLite.c:122:13: warning: 'GSQLite_BindBold' defined but not used [-Wunused-function]
+ static void GSQLite_BindBold(char* dbName, const int index, const void* data, const int size) {
+             ^~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:112:13: warning: 'GSQLite_BindParameterIndexInt' defined but not used [-Wunused-function]
+ static void GSQLite_BindParameterIndexInt(char* dbName, const char* parameterIndex, const int value) {
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:103:13: warning: 'GSQLite_BindInt' defined but not used [-Wunused-function]
+ static void GSQLite_BindInt(char* dbName, const char* sql, const int index, const int value) {
+             ^~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:93:13: warning: 'GSQLite_PrepareV2' defined but not used [-Wunused-function]
+ static void GSQLite_PrepareV2(char* dbName, const char* sql) {
+             ^~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:86:12: warning: 'GSQLite_LastId' defined but not used [-Wunused-function]
+ static int GSQLite_LastId(char* dbName) {
+            ^~~~~~~~~~~~~~
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSQLite.o" "..\\src\\manager\\GProcessSQLite.c" 
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+14:12:15 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSQLite.o" "..\\src\\manager\\GProcessSQLite.c" 
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+..\src\manager\GSQLite.c: In function 'GSQLite_New':
+..\src\manager\GSQLite.c:47:22: warning: assignment to 'uchar * (*)(char *, const int)' {aka 'unsigned char * (*)(char *, const int)'} from incompatible pointer type 'const uchar * (*)(char *, const int)' {aka 'const unsigned char * (*)(char *, const int)'} [-Wincompatible-pointer-types]
+     lObj->ColumnText = GSQLite_ColumnText;
+                      ^
+..\src\manager\GSQLite.c:49:22: warning: assignment to 'void * (*)(char *, const int)' from incompatible pointer type 'const void * (*)(char *, const int)' [-Wincompatible-pointer-types]
+     lObj->ColumnBold = GSQLite_ColumnBold;
+                      ^
+..\src\manager\GSQLite.c:53:22: error: 'GSQLite_Finalize' undeclared (first use in this function); did you mean 'GSQLite_Close'?
+     lObj->Finalize = GSQLite_Finalize;
+                      ^~~~~~~~~~~~~~~~
+                      GSQLite_Close
+..\src\manager\GSQLite.c:53:22: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+..\src\manager\GSQLite.c:192:13: warning: 'GSQLite_Finalize' defined but not used [-Wunused-function]
+ static void GSQLite_Finalize(char* dbName) {
+             ^~~~~~~~~~~~~~~~
+14:13:28 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+..\src\manager\GSQLite.c: In function 'GSQLite_New':
+..\src\manager\GSQLite.c:48:22: warning: assignment to 'uchar * (*)(char *, const int)' {aka 'unsigned char * (*)(char *, const int)'} from incompatible pointer type 'const uchar * (*)(char *, const int)' {aka 'const unsigned char * (*)(char *, const int)'} [-Wincompatible-pointer-types]
+     lObj->ColumnText = GSQLite_ColumnText;
+                      ^
+..\src\manager\GSQLite.c:50:22: warning: assignment to 'void * (*)(char *, const int)' from incompatible pointer type 'const void * (*)(char *, const int)' [-Wincompatible-pointer-types]
+     lObj->ColumnBold = GSQLite_ColumnBold;
+                      ^
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+14:14:04 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+..\src\manager\GSQLite.c: In function 'GSQLite_New':
+..\src\manager\GSQLite.c:48:22: warning: assignment to 'uchar * (*)(char *, const int)' {aka 'unsigned char * (*)(char *, const int)'} from incompatible pointer type 'const uchar * (*)(char *, const int)' {aka 'const unsigned char * (*)(char *, const int)'} [-Wincompatible-pointer-types]
+     lObj->ColumnText = GSQLite_ColumnText;
+                      ^
+..\src\manager\GSQLite.c:50:22: warning: assignment to 'void * (*)(char *, const int)' from incompatible pointer type 'const void * (*)(char *, const int)' [-Wincompatible-pointer-types]
+     lObj->ColumnBold = GSQLite_ColumnBold;
+                      ^
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+14:15:03 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSQLite.o" "..\\src\\manager\\GProcessSQLite.c" 
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 

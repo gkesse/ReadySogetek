@@ -1,29 +1,8 @@
-10:59:52 **** Incremental Build of configuration Release for project GProject ****
+14:15:03 **** Incremental Build of configuration Release for project GProject ****
 Info: Internal Builder is used for build
 gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
-..\src\manager\GSQLite.c:114:13: warning: 'GSQLite_Finalize' defined but not used [-Wunused-function]
- static void GSQLite_Finalize(char* dbName) {
-             ^~~~~~~~~~~~~~~~
-..\src\manager\GSQLite.c:109:13: warning: 'GSQLite_Free' defined but not used [-Wunused-function]
- static void GSQLite_Free() {
-             ^~~~~~~~~~~~
-..\src\manager\GSQLite.c:102:13: warning: 'GSQLite_Error' defined but not used [-Wunused-function]
- static void GSQLite_Error(char* dbName) {
-             ^~~~~~~~~~~~~
-..\src\manager\GSQLite.c:77:13: warning: 'GSQLite_PrepareV2' defined but not used [-Wunused-function]
- static void GSQLite_PrepareV2(char* dbName, const char* sql) {
-             ^~~~~~~~~~~~~~~~~
-..\src\manager\GSQLite.c:62:13: warning: 'GSQLite_Exec' defined but not used [-Wunused-function]
- static void GSQLite_Exec(char* dbName, const char* sql) {
-             ^~~~~~~~~~~~
 gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSQLite.o" "..\\src\\manager\\GProcessSQLite.c" 
-gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSetting.o" "..\\src\\manager\\GSetting.c" 
-gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketWindows.o" "..\\src\\manager\\GSocketWindows.c" 
-gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GString.o" "..\\src\\manager\\GString.c" 
-gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSocketServer.o" "..\\src\\manager\\GProcessSocketServer.c" 
-gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSocketUnix.o" "..\\src\\manager\\GSocketUnix.c" 
-gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSocketClient.o" "..\\src\\manager\\GProcessSocketClient.c" 
 gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
 
-10:59:59 Build Finished. 0 errors, 5 warnings. (took 7s.342ms)
+14:15:05 Build Finished. 0 errors, 0 warnings. (took 1s.945ms)
 
