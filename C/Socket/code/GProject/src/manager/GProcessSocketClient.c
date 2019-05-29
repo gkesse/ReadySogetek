@@ -4,7 +4,7 @@
 //===============================================
 static GProcessO* m_GProcessSocketClientO = 0;
 //===============================================
-void GProcessSocketClient_Run(int argc, char** argv);
+static void GProcessSocketClient_Run(int argc, char** argv);
 //===============================================
 GProcessO* GProcessSocketClient_New() {
     GProcessO* lParent = GProcess_New();
@@ -29,7 +29,7 @@ GProcessO* GProcessSocketClient() {
     return m_GProcessSocketClientO;
 }
 //===============================================
-void GProcessSocketClient_Run(int argc, char** argv) {
+static void GProcessSocketClient_Run(int argc, char** argv) {
     GSocket()->Start(2, 0);
     GSocket()->Socket(AF_INET, SOCK_STREAM, 0);
     GSocket()->Address(AF_INET, "127.0.0.1", 5566);

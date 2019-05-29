@@ -4,7 +4,7 @@
 //===============================================
 static GProcessO* m_GProcessConfigO = 0;
 //===============================================
-void GProcessConfig_Run(int argc, char** argv);
+static void GProcessConfig_Run(int argc, char** argv);
 //===============================================
 GProcessO* GProcessConfig_New() {
     GProcessO* lParent = GProcess_New();
@@ -29,7 +29,7 @@ GProcessO* GProcessConfig() {
     return m_GProcessConfigO;
 }
 //===============================================
-void GProcessConfig_Run(int argc, char** argv) {
+static void GProcessConfig_Run(int argc, char** argv) {
 	GConfig()->SetData("Nom", "KESSE");
 	GConfig()->SetData("Prenom", "Gerard");
 	GConfig()->SetData("Email", "gerard.kesse@readydev.com");

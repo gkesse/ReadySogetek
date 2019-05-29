@@ -4,19 +4,19 @@
 //===============================================
 static GSocketO* m_GSocketUnixO = 0;
 //===============================================
-void GSocketUnix_Start(const int major, const int minor);
-void GSocketUnix_Socket(const int addressFamily, const int type, const int protocol);
-void GSocketUnix_Address(const int addressFamily, const char* ipAddress, const int port);
-void GSocketUnix_Address2(const int addressFamily, const ulong ipAddress, const int port);
-void GSocketUnix_Bind();
-void GSocketUnix_Listen();
-int GSocketUnix_Accept();
-void GSocketUnix_Connect();
-void GSocketUnix_Send();
-void GSocketUnix_Recv();
-void GSocketUnix_Close();
-void GSocketUnix_Close2();
-void GSocketUnix_Clean();
+static void GSocketUnix_Start(const int major, const int minor);
+static void GSocketUnix_Socket(const int addressFamily, const int type, const int protocol);
+static void GSocketUnix_Address(const int addressFamily, const char* ipAddress, const int port);
+static void GSocketUnix_Address2(const int addressFamily, const ulong ipAddress, const int port);
+static void GSocketUnix_Bind();
+static void GSocketUnix_Listen();
+static int GSocketUnix_Accept();
+static void GSocketUnix_Connect();
+static void GSocketUnix_Send();
+static void GSocketUnix_Recv();
+static void GSocketUnix_Close();
+static void GSocketUnix_Close2();
+static void GSocketUnix_Clean();
 //===============================================
 GSocketO* GSocketUnix_New() {
 	GSocketO* lParent = GSocket_New();
@@ -53,80 +53,80 @@ GSocketO* GSocketUnix() {
 	return m_GSocketUnixO;
 }
 //===============================================
-void GSocketUnix_Start(const int major, const int minor) {
+static void GSocketUnix_Start(const int major, const int minor) {
 #if defined(__unix)
 	printf("[ SOCKET ] Start...\n");
 #endif
 }
 //===============================================
-void GSocketUnix_Socket(const int addressFamily, const int type, const int protocol) {
+static void GSocketUnix_Socket(const int addressFamily, const int type, const int protocol) {
 #if defined(__unix)
 	printf("[ SOCKET ] Socket...\n");
 #endif
 }
 //===============================================
-void GSocketUnix_Address(const int addressFamily, const char* ipAddress, const int port) {
+static void GSocketUnix_Address(const int addressFamily, const char* ipAddress, const int port) {
 #if defined(__unix)
 	printf("[ SOCKET ] Address...\n");
 #endif
 }
 //===============================================
-void GSocketUnix_Address2(const int addressFamily, const ulong ipAddress, const int port) {
+static void GSocketUnix_Address2(const int addressFamily, const ulong ipAddress, const int port) {
 #if defined(__unix)
 	printf("[ SOCKET ] Address2...\n");
 #endif
 }
 //===============================================
-void GSocketUnix_Bind() {
+static void GSocketUnix_Bind() {
 #if defined(__unix)
 	printf("[ SOCKET ] Bind2...\n");
 #endif
 }
 //===============================================
-void GSocketUnix_Listen() {
+static void GSocketUnix_Listen() {
 #if defined(__unix)
 	printf("[ SOCKET ] Listen...\n");
 #endif
 }
 //===============================================
-int GSocketUnix_Accept() {
+static int GSocketUnix_Accept() {
 #if defined(__unix)
 	printf("[ SOCKET ] Accept...\n");
 #endif
 	return 0;
 }
 //===============================================
-void GSocketUnix_Connect() {
+static void GSocketUnix_Connect() {
 #if defined(__unix)
 	printf("[ SOCKET ] Connect...\n");
 #endif
 }
 //===============================================
-void GSocketUnix_Send() {
+static void GSocketUnix_Send() {
 #if defined(__unix)
 	printf("[ SOCKET ] Send...\n");
 #endif
 }
 //===============================================
-void GSocketUnix_Recv() {
+static void GSocketUnix_Recv() {
 #if defined(__unix)
 	printf("[ SOCKET ] Recv...\n");
 #endif
 }
 //===============================================
-void GSocketUnix_Close() {
+static void GSocketUnix_Close() {
 #if defined(__unix)
 	printf("[ SOCKET ] Close...\n");
 #endif
 }
 //===============================================
-void GSocketUnix_Close2() {
+static void GSocketUnix_Close2() {
 #if defined(__unix)
 	printf("[ SOCKET ] Close2...\n");
 #endif
 }
 //===============================================
-void GSocketUnix_Clean() {
+static void GSocketUnix_Clean() {
 #if defined(__unix)
 	printf("[ SOCKET ] Clean...\n");
 #endif

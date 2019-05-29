@@ -14,11 +14,11 @@ GDEFINE_MAP(GCHAR_PTR, GCHAR_PTR, GProcessMap_GCHAR_PTR_GCHAR_PTR)
 //===============================================
 static GProcessO* m_GProcessMapO = 0;
 //===============================================
-void GProcessMap_Run(int argc, char** argv);
+static void GProcessMap_Run(int argc, char** argv);
 //===============================================
-int GProcessMap_MapEqual(char* str1, char* str2);
-void GProcessMap_MapShow(int key, char value);
-void GProcessMap_MapShow2(char* key, char* value);
+static int GProcessMap_MapEqual(char* str1, char* str2);
+static void GProcessMap_MapShow(int key, char value);
+static void GProcessMap_MapShow2(char* key, char* value);
 //===============================================
 GProcessO* GProcessMap_New() {
     GProcessO* lParent = GProcess_New();
@@ -43,7 +43,7 @@ GProcessO* GProcessMap() {
     return m_GProcessMapO;
 }
 //===============================================
-void GProcessMap_Run(int argc, char** argv) {
+static void GProcessMap_Run(int argc, char** argv) {
 	GMapO(GProcessMap_GINT_GCHAR)* lMap = GMap_New_GProcessMap_GINT_GCHAR();
 	lMap->SetData(lMap, 0, 'A', 0);
 	lMap->SetData(lMap, 1, 'B', 0);
@@ -63,17 +63,17 @@ void GProcessMap_Run(int argc, char** argv) {
 	lMap2->Delete(lMap2);
 }
 //===============================================
-int GProcessMap_MapEqual(char* str1, char* str2) {
+static int GProcessMap_MapEqual(char* str1, char* str2) {
 	int lStrcmp = strcmp(str1, str2);
 	if(lStrcmp == 0) return TRUE;
 	return FALSE;
 }
 //===============================================
-void GProcessMap_MapShow(int key, char value) {
+static void GProcessMap_MapShow(int key, char value) {
 	printf("%d = %c\n", key, value);
 }
 //===============================================
-void GProcessMap_MapShow2(char* key, char* value) {
+static void GProcessMap_MapShow2(char* key, char* value) {
 	printf("%s = %s\n", key, value);
 }
 //===============================================

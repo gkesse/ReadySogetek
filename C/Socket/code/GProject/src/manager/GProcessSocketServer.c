@@ -4,7 +4,7 @@
 //===============================================
 static GProcessO* m_GProcessSocketServerO = 0;
 //===============================================
-void GProcessSocketServer_Run(int argc, char** argv);
+static void GProcessSocketServer_Run(int argc, char** argv);
 //===============================================
 GProcessO* GProcessSocketServer_New() {
     GProcessO* lParent = GProcess_New();
@@ -29,7 +29,7 @@ GProcessO* GProcessSocketServer() {
     return m_GProcessSocketServerO;
 }
 //===============================================
-void GProcessSocketServer_Run(int argc, char** argv) {
+static void GProcessSocketServer_Run(int argc, char** argv) {
     GSocket()->Start(2, 0);
     GSocket()->Status();
     GSocket()->Major();

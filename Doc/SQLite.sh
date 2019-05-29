@@ -29,6 +29,4 @@ sqlite3 test.db
 .exit
 .mode column
 .headers on
-SELECT * FROM Cars;
-CREATE TABLE Images(Id INTEGER PRIMARY KEY, Data BLOB);
 

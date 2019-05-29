@@ -8,15 +8,15 @@ GDEFINE_MAP(GCHAR_PTR, GCHAR_PTR, GConfigTemplate_GCHAR_PTR_GCHAR_PTR)
 //===============================================
 static GConfigO* m_GConfigTemplateO = 0;
 //===============================================
-void GConfigTemplate_Clear();
-void GConfigTemplate_Remove(char* key);
-void GConfigTemplate_SetData(char* key, char* value);
-char* GConfigTemplate_GetData(char* key);
-void GConfigTemplate_Size();
-void GConfigTemplate_Show();
+static void GConfigTemplate_Clear();
+static void GConfigTemplate_Remove(char* key);
+static void GConfigTemplate_SetData(char* key, char* value);
+static char* GConfigTemplate_GetData(char* key);
+static void GConfigTemplate_Size();
+static void GConfigTemplate_Show();
 //===============================================
-int GConfigTemplate_MapEqual(char* key1, char* key2);
-void GConfigTemplate_MapShow(char* key, char* value);
+static int GConfigTemplate_MapEqual(char* key1, char* key2);
+static void GConfigTemplate_MapShow(char* key, char* value);
 //===============================================
 GConfigO* GConfigTemplate_New() {
 	GConfigO* lParent = GConfig_New();
@@ -48,49 +48,49 @@ GConfigO* GConfigTemplate() {
 	return m_GConfigTemplateO;
 }
 //===============================================
-void GConfigTemplate_Clear() {
+static void GConfigTemplate_Clear() {
 	GConfigTemplateO* lConfigTemplate = m_GConfigTemplateO->m_child;
 	GMapO(GConfigTemplate_GCHAR_PTR_GCHAR_PTR)* lDataMap = lConfigTemplate->m_dataMap;
 	lDataMap->Clear(lDataMap);
 }
 //===============================================
-void GConfigTemplate_Remove(char* key) {
+static void GConfigTemplate_Remove(char* key) {
 	GConfigTemplateO* lConfigTemplate = m_GConfigTemplateO->m_child;
 	GMapO(GConfigTemplate_GCHAR_PTR_GCHAR_PTR)* lDataMap = lConfigTemplate->m_dataMap;
 	lDataMap->Remove(lDataMap, key, GConfigTemplate_MapEqual);
 }
 //===============================================
-void GConfigTemplate_SetData(char* key, char* value) {
+static void GConfigTemplate_SetData(char* key, char* value) {
 	GConfigTemplateO* lConfigTemplate = m_GConfigTemplateO->m_child;
 	GMapO(GConfigTemplate_GCHAR_PTR_GCHAR_PTR)* lDataMap = lConfigTemplate->m_dataMap;
 	lDataMap->SetData(lDataMap, key, value, GConfigTemplate_MapEqual);
 }
 //===============================================
-char* GConfigTemplate_GetData(char* key) {
+static char* GConfigTemplate_GetData(char* key) {
 	GConfigTemplateO* lConfigTemplate = m_GConfigTemplateO->m_child;
 	GMapO(GConfigTemplate_GCHAR_PTR_GCHAR_PTR)* lDataMap = lConfigTemplate->m_dataMap;
 	return lDataMap->GetData(lDataMap, key, GConfigTemplate_MapEqual, 0);
 }
 //===============================================
-void GConfigTemplate_Size() {
+static void GConfigTemplate_Size() {
 	GConfigTemplateO* lConfigTemplate = m_GConfigTemplateO->m_child;
 	GMapO(GConfigTemplate_GCHAR_PTR_GCHAR_PTR)* lDataMap = lConfigTemplate->m_dataMap;
 	lDataMap->Size(lDataMap);
 }
 //===============================================
-void GConfigTemplate_Show() {
+static void GConfigTemplate_Show() {
 	GConfigTemplateO* lConfigTemplate = m_GConfigTemplateO->m_child;
 	GMapO(GConfigTemplate_GCHAR_PTR_GCHAR_PTR)* lDataMap = lConfigTemplate->m_dataMap;
 	lDataMap->Show(lDataMap, GConfigTemplate_MapShow);
 }
 //===============================================
-int GConfigTemplate_MapEqual(char* key1, char* key2) {
+static int GConfigTemplate_MapEqual(char* key1, char* key2) {
 	int lStrcmp = strcmp(key1, key2);
 	if(lStrcmp == 0) return TRUE;
 	return FALSE;
 }
 //===============================================
-void GConfigTemplate_MapShow(char* key, char* value) {
+static void GConfigTemplate_MapShow(char* key, char* value) {
 	printf("%s = %s\n", key, value);
 }
 //===============================================
