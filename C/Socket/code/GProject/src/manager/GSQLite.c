@@ -57,6 +57,16 @@ void GSQLite_Open(char* dbName, const char* path) {
 	lDbMap->SetData(lDbMap, dbName, lDb, GSQLite_MapEqual);
 }
 //===============================================
+void GSQLite_Exec(char* dbName, const char* sql) {
+	GMapO(GSQLite_GCHAR_PTR_GSQLITE_PTR)* lDbMap = m_GSQLiteO->m_dbMap;
+	sqlite3* lDb = lDbMap->GetData(lDbMap, dbName, GSQLite_MapEqual, 0);
+	char* lError;
+	sqlite3_exec(lDb, sql, 0, 0, &lError);
+	if(lError != 0) {
+		GConsole()->Print("[ SQLITE ] Exec Error: %s\n", lError);
+	}
+}
+//===============================================
 void GSQLite_PrepareV2(char* dbName, const char* sql) {
 	GMapO(GSQLite_GCHAR_PTR_GSQLITE_PTR)* lDbMap = m_GSQLiteO->m_dbMap;
 	GMapO(GSQLite_GCHAR_PTR_GSQLITE_STMT_PTR)* lStmtMap = m_GSQLiteO->m_stmtMap;
@@ -86,6 +96,12 @@ void GSQLite_Error(char* dbName) {
 	sqlite3* lDb = lDbMap->GetData(lDbMap, dbName, GSQLite_MapEqual, 0);
 	const char* lError = sqlite3_errmsg(lDb);
 	GConsole()->Print("[ SQLITE ] Error: %s\n", lError);
+}
+//===============================================
+void GSQLite_Finalize(char* dbName) {
+	GMapO(GSQLite_GCHAR_PTR_GSQLITE_STMT_PTR)* lStmtMap = m_GSQLiteO->m_stmtMap;
+	sqlite3_stmt* lStmt = lStmtMap->GetData(lStmtMap, dbName, GSQLite_MapEqual, 0);;
+	sqlite3_finalize(lStmt);
 }
 //===============================================
 void GSQLite_Close(char* dbName) {

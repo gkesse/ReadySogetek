@@ -16,6 +16,7 @@ struct _GSQLiteO {
     void (*Close)(char* dbName);
     GMapO(GSQLite_GCHAR_PTR_GSQLITE_PTR)* m_dbMap;
     GMapO(GSQLite_GCHAR_PTR_GSQLITE_STMT_PTR)* m_stmtMap;
+    char* m_error;
 };
 //===============================================
 GSQLiteO* GSQLite_New();
