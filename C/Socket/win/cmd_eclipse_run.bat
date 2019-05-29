@@ -7,4 +7,4 @@ echo.
 ..\code\GProject\Release\GProject.exe
 echo.
 
-pause
+::pause

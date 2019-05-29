@@ -12456,3 +12456,189 @@ Info: Internal Builder is used for build
 gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
 gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSQLite.o" "..\\src\\manager\\GProcessSQLite.c" 
 gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+14:31:50 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSQLite.o" "..\\src\\manager\\GProcessSQLite.c" 
+..\src\manager\GProcessSQLite.c: In function 'GProcessSQLite_Run':
+..\src\manager\GProcessSQLite.c:43:2: error: too few arguments to function 'GSQLite()->Exec'
+  GSQLite()->Exec("ELEPHANT", lCreateTable);
+  ^~~~~~~
+14:32:37 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSQLite.o" "..\\src\\manager\\GProcessSQLite.c" 
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+14:35:51 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSQLite.o" "..\\src\\manager\\GProcessSQLite.c" 
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+14:40:15 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSQLite.o" "..\\src\\manager\\GProcessSQLite.c" 
+..\src\manager\GProcessSQLite.c: In function 'GProcessSQLite_Run':
+..\src\manager\GProcessSQLite.c:43:30: warning: passing argument 2 of 'GSQLite()->Exec' from incompatible pointer type [-Wincompatible-pointer-types]
+  GSQLite()->Exec("ELEPHANT", lCreateTable, 0);
+                              ^~~~~~~~~~~~
+..\src\manager\GProcessSQLite.c:43:30: note: expected 'GSQLITE_CALLBACK' {aka 'int (*)(void *, int,  char **, char **)'} but argument is of type 'char *'
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+14:43:23 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSQLite.o" "..\\src\\manager\\GProcessSQLite.c" 
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+15:13:38 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+..\src\manager\GSQLite.c: In function 'GSQLite_ShowTableCallback':
+..\src\manager\GSQLite.c:225:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSQLite.o" "..\\src\\manager\\GProcessSQLite.c" 
+..\src\manager\GProcessSQLite.c: In function 'GProcessSQLite_Run':
+..\src\manager\GProcessSQLite.c:45:2: error: too few arguments to function 'GSQLite()->ShowTable'
+  GSQLite()->ShowTable();
+  ^~~~~~~
+15:13:49 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSQLite.o" "..\\src\\manager\\GProcessSQLite.c" 
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+15:15:33 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+15:16:04 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+Info: Nothing to build for GProject
+Info: Nothing to build for GProject
+15:17:02 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+..\src\manager\GSQLite.c:215:12: warning: 'GSQLite_ShowTableCallback' defined but not used [-Wunused-function]
+ static int GSQLite_ShowTableCallback(void *unused, int count, char **data, char **columns) {
+            ^~~~~~~~~~~~~~~~~~~~~~~~~
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+15:18:29 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+15:19:29 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+15:20:41 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+15:30:41 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSQLite.o" "..\\src\\manager\\GProcessSQLite.c" 
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+..\src\manager\GSQLite.c: In function 'GSQLite_ShowTableCallback':
+..\src\manager\GSQLite.c:222:9: warning: unused variable 'lField' [-Wunused-variable]
+   char* lField = fields[i];
+         ^~~~~~
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+15:31:01 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+15:31:10 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+15:38:54 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSQLite.o" "..\\src\\manager\\GProcessSQLite.c" 
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+15:39:35 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSQLite.o" "..\\src\\manager\\GProcessSQLite.c" 
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+15:39:49 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSQLite.o" "..\\src\\manager\\GProcessSQLite.c" 
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+15:40:29 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSQLite.o" "..\\src\\manager\\GProcessSQLite.c" 
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+15:40:41 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSQLite.o" "..\\src\\manager\\GProcessSQLite.c" 
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+15:44:44 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+..\src\manager\GSQLite.c: In function 'GSQLite_ShowTable':
+..\src\manager\GSQLite.c:217:12: error: invalid storage class for function 'GSQLite_ShowTableCallback'
+ static int GSQLite_ShowTableCallback(void* unused, int rows, char** values, char** fields) {
+            ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:228:12: error: invalid storage class for function 'GSQLite_MapEqual'
+ static int GSQLite_MapEqual(char* key1, char* key2) {
+            ^~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:232:1: error: expected declaration or statement at end of input
+ }
+ ^
+..\src\manager\GSQLite.c: At top level:
+..\src\manager\GSQLite.c:35:12: warning: 'GSQLite_ShowTableCallback' used but never defined
+ static int GSQLite_ShowTableCallback(void* unused, int rows, char** values, char** fields);
+            ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:37:12: warning: 'GSQLite_MapEqual' used but never defined
+ static int GSQLite_MapEqual(char* key1, char* key2);
+            ^~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:228:12: warning: 'GSQLite_MapEqual' defined but not used [-Wunused-function]
+ static int GSQLite_MapEqual(char* key1, char* key2) {
+            ^~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:217:12: warning: 'GSQLite_ShowTableCallback' defined but not used [-Wunused-function]
+ static int GSQLite_ShowTableCallback(void* unused, int rows, char** values, char** fields) {
+            ^~~~~~~~~~~~~~~~~~~~~~~~~
+15:45:29 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+..\src\manager\GSQLite.c: In function 'GSQLite_ShowTable':
+..\src\manager\GSQLite.c:217:12: error: invalid storage class for function 'GSQLite_ShowTableCallback'
+ static int GSQLite_ShowTableCallback(void* unused, int rows, char** values, char** fields) {
+            ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:228:12: error: invalid storage class for function 'GSQLite_MapEqual'
+ static int GSQLite_MapEqual(char* key1, char* key2) {
+            ^~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:232:1: error: expected declaration or statement at end of input
+ }
+ ^
+..\src\manager\GSQLite.c: At top level:
+..\src\manager\GSQLite.c:35:12: warning: 'GSQLite_ShowTableCallback' used but never defined
+ static int GSQLite_ShowTableCallback(void* unused, int rows, char** values, char** fields);
+            ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:37:12: warning: 'GSQLite_MapEqual' used but never defined
+ static int GSQLite_MapEqual(char* key1, char* key2);
+            ^~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:228:12: warning: 'GSQLite_MapEqual' defined but not used [-Wunused-function]
+ static int GSQLite_MapEqual(char* key1, char* key2) {
+            ^~~~~~~~~~~~~~~~
+..\src\manager\GSQLite.c:217:12: warning: 'GSQLite_ShowTableCallback' defined but not used [-Wunused-function]
+ static int GSQLite_ShowTableCallback(void* unused, int rows, char** values, char** fields) {
+            ^~~~~~~~~~~~~~~~~~~~~~~~~
+15:45:58 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
+15:49:58 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+..\src\manager\GSQLite.c: In function 'GSQLite_ShowTables':
+..\src\manager\GSQLite.c:212:27: error: 'GSQLite_ShowTableCallback' undeclared (first use in this function); did you mean 'GSQLite_ShowTablesCallback'?
+  m_GSQLiteO->Exec(dbName, GSQLite_ShowTableCallback,
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+                           GSQLite_ShowTablesCallback
+..\src\manager\GSQLite.c:212:27: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+..\src\manager\GSQLite.c:218:12: warning: 'GSQLite_ShowTablesCallback' defined but not used [-Wunused-function]
+ static int GSQLite_ShowTablesCallback(void* unused, int rows, char** values, char** fields) {
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~
+15:50:08 **** Incremental Build of configuration Release for project GProject ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GProcessSQLite.o" "..\\src\\manager\\GProcessSQLite.c" 
+gcc "-IC:\\Users\\gerard\\Downloads\\Gerard\\Programs\\SOGETEK\\C\\Socket\\code\\GProject\\src\\manager" "-IC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -O3 -Wall -c -fmessage-length=0 -o "src\\manager\\GSQLite.o" "..\\src\\manager\\GSQLite.c" 
+gcc "-LC:\\Users\\gerard\\Downloads\\Gerard\\sqlite-amalgamation-3280000" -o GProject.exe "src\\main.o" "src\\manager\\GConfig.o" "src\\manager\\GConfigNormal.o" "src\\manager\\GConfigTemplate.o" "src\\manager\\GConsole.o" "src\\manager\\GProcess.o" "src\\manager\\GProcessConfig.o" "src\\manager\\GProcessMap.o" "src\\manager\\GProcessSQLite.o" "src\\manager\\GProcessSocketClient.o" "src\\manager\\GProcessSocketServer.o" "src\\manager\\GSQLite.o" "src\\manager\\GSetting.o" "src\\manager\\GSocket.o" "src\\manager\\GSocketUnix.o" "src\\manager\\GSocketWindows.o" "src\\manager\\GString.o" -lsqlite3 -lws2_32 
