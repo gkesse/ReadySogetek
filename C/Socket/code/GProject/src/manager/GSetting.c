@@ -20,11 +20,10 @@ void GSetting_Delete() {
     if(lObj != 0) {
         if(lObj->m_child != 0) {
             free(lObj->m_child);
-            lObj->m_child = 0;
         }
         free(lObj);
-        lObj = 0;
     }
+    m_GSettingO = 0;
 }
 //===============================================
 GSettingO* GSetting() {

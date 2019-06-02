@@ -20,6 +20,7 @@ GProcessO* GProcessSQLite_New() {
 //===============================================
 void GProcessSQLite_Delete(GProcessO* obj) {
 	GProcess_Delete(obj);
+	m_GProcessSQLiteO = 0;
 }
 //===============================================
 GProcessO* GProcessSQLite() {

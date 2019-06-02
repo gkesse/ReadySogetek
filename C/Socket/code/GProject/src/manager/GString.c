@@ -13,7 +13,6 @@ static void GString_Free2(char** ptr, const int size);
 //===============================================
 GStringO* GString_New() {
     GStringO* lObj = (GStringO*)malloc(sizeof(GStringO));
-    lObj->m_child = 0;
     lObj->Delete = GString_Delete;
     lObj->Size = GString_Size;
     lObj->Is_Equal = GString_Is_Equal;
@@ -30,13 +29,9 @@ GStringO* GString_New() {
 void GString_Delete() {
     GStringO* lObj = GString();
     if(lObj != 0) {
-        if(lObj->m_child != 0) {
-            free(lObj->m_child);
-            lObj->m_child = 0;
-        }
         free(lObj);
-        lObj = 0;
     }
+    m_GStringO = 0;
 }
 //===============================================
 GStringO* GString() {

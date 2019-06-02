@@ -44,6 +44,7 @@ GSocketO* GSocketUnix_New() {
 //===============================================
 void GSocketUnix_Delete(GSocketO* obj) {
 	GSocket_Delete(obj);
+	m_GSocketUnixO = 0;
 }
 //===============================================
 GSocketO* GSocketUnix() {

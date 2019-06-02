@@ -1,25 +1,20 @@
 //===============================================
-#ifndef _GConfig_
-#define _GConfig_
+#ifndef _GBase_
+#define _GBase_
 //===============================================
 #include "GInclude.h"
 //===============================================
-typedef struct _GConfigO GConfigO;
+typedef struct _GBaseO GBaseO;
 //===============================================
-struct _GConfigO {
-    void* m_child;
+struct _GBaseO {
     void (*Delete)();
-    void (*Clear)();
-    void (*Remove)(char* key);
-    void (*SetData)(char* key, char* value);
-    char* (*GetData)(char* key);
-    int (*Size)();
-    void (*Show)();
+    int (*FromBinary)(char* binary);
+    void (*ToBinary)(const int decimal, char* binary);
 };
 //===============================================
-GConfigO* GConfig_New();
-void GConfig_Delete();
-GConfigO* GConfig();
+GBaseO* GBase_New();
+void GBase_Delete();
+GBaseO* GBase();
 //===============================================
 #endif
 //===============================================

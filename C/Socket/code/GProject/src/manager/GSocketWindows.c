@@ -60,6 +60,7 @@ GSocketO* GSocketWindows_New() {
 //===============================================
 void GSocketWindows_Delete(GSocketO* obj) {
 	GSocket_Delete(obj);
+	m_GSocketWindowsO = 0;
 }
 //===============================================
 GSocketO* GSocketWindows() {

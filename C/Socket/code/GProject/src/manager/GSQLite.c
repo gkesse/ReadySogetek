@@ -70,8 +70,8 @@ void GSQLite_Delete() {
     GSQLiteO* lObj = GSQLite();
     if(lObj != 0) {
         free(lObj);
-        lObj = 0;
     }
+    m_GSQLiteO = 0;
 }
 //===============================================
 GSQLiteO* GSQLite() {

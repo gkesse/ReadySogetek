@@ -22,7 +22,7 @@
 			GVALUE (*GetData)(GMapO_##GTYPE* obj, GKEY key, GEQUAL_##GTYPE equal, GVALUE defaultValue); \
 			void (*Clear)(GMapO_##GTYPE* obj); \
 			void (*Remove)(GMapO_##GTYPE* obj, GKEY key, GEQUAL_##GTYPE equal); \
-			void (*Size)(GMapO_##GTYPE* obj); \
+			int (*Size)(GMapO_##GTYPE* obj); \
 			void (*Show)(GMapO_##GTYPE* obj, GSHOW_##GTYPE show); \
 			GMapNodeO_##GTYPE* m_head; \
 		}; \
@@ -34,7 +34,7 @@
 		static void GMap_RemoveNode_##GTYPE(GMapNodeO_##GTYPE* node); \
 		static void GMap_SetData_##GTYPE(GMapO_##GTYPE* obj, GKEY key, GVALUE value, GEQUAL_##GTYPE equal); \
 		static GVALUE GMap_GetData_##GTYPE(GMapO_##GTYPE* obj, GKEY key, GEQUAL_##GTYPE equal, GVALUE defaultValue); \
-		static void GMap_Size_##GTYPE(GMapO_##GTYPE* obj); \
+		static int GMap_Size_##GTYPE(GMapO_##GTYPE* obj); \
 		static void GMap_Show_##GTYPE(GMapO_##GTYPE* obj, GSHOW_##GTYPE show);
 //===============================================
 #define GDEFINE_MAP(GKEY, GVALUE, GTYPE) \
@@ -49,6 +49,7 @@
 			lObj->GetData = GMap_GetData_##GTYPE; \
 			lObj->Size = GMap_Size_##GTYPE; \
 			lObj->Show = GMap_Show_##GTYPE; \
+			\
 			lObj->m_head = 0; \
 			return lObj; \
 		} \
@@ -57,7 +58,6 @@
 			if(obj != 0) { \
 				obj->Clear(obj); \
 				free(obj); \
-				obj = 0; \
 			} \
 		} \
 		\
@@ -94,7 +94,6 @@
 		static void GMap_RemoveNode_##GTYPE(GMapNodeO_##GTYPE* node) { \
 			if(node != 0) { \
 				free(node); \
-				node = 0; \
 			} \
 		} \
 		\
@@ -139,7 +138,7 @@
 			return defaultValue; \
 		} \
 		\
-		static void GMap_Size_##GTYPE(GMapO_##GTYPE* obj) { \
+		static int GMap_Size_##GTYPE(GMapO_##GTYPE* obj) { \
 			GMapNodeO_##GTYPE* lNext = obj->m_head; \
 			int lSize = 0; \
 			\
@@ -147,7 +146,8 @@
 				lSize++; \
 				lNext = lNext->m_next; \
 			} \
-			printf("[ SIZE ] %d...\n", lSize); \
+			printf("Size: %d\n", lSize); \
+			return lSize; \
 		} \
 		\
 		static void GMap_Show_##GTYPE(GMapO_##GTYPE* obj, GSHOW_##GTYPE show) { \
@@ -159,7 +159,6 @@
 				show(lKey, lValue); \
 				lNext = lNext->m_next; \
 			} \
-			printf("\n"); \
 		}
 //===============================================
 #define GMapO(GTYPE) \

@@ -1,25 +1,21 @@
 //===============================================
-#ifndef _GConfig_
-#define _GConfig_
+#ifndef _GKeyboard_
+#define _GKeyboard_
 //===============================================
 #include "GInclude.h"
 //===============================================
-typedef struct _GConfigO GConfigO;
+typedef struct _GKeyboardO GKeyboardO;
 //===============================================
-struct _GConfigO {
-    void* m_child;
+struct _GKeyboardO {
     void (*Delete)();
-    void (*Clear)();
-    void (*Remove)(char* key);
-    void (*SetData)(char* key, char* value);
-    char* (*GetData)(char* key);
-    int (*Size)();
-    void (*Show)();
+    int (*Input)(const char* template, ...);
+    char* (*Line)(char* str, int size, FILE* stream);
+    int (*Clear)(FILE* stream);
 };
 //===============================================
-GConfigO* GConfig_New();
-void GConfig_Delete();
-GConfigO* GConfig();
+GKeyboardO* GKeyboard_New();
+void GKeyboard_Delete();
+GKeyboardO* GKeyboard();
 //===============================================
 #endif
 //===============================================

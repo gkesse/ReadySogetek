@@ -14,8 +14,8 @@ void GConsole_Delete() {
     GConsoleO* lObj = GConsole();
     if(lObj != 0) {
         free(lObj);
-        lObj = 0;
     }
+    m_GConsoleO = 0;
 }
 //===============================================
 GConsoleO* GConsole() {

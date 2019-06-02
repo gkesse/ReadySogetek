@@ -7,7 +7,6 @@
 typedef struct _GStringO GStringO;
 //===============================================
 struct _GStringO {
-    void* m_child;
     void (*Delete)();
     int (*Size)(const char* str);
     int (*Is_Equal)(const char* str1, const char* str2);

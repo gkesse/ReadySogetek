@@ -20,6 +20,7 @@ GProcessO* GProcessSocketServer_New() {
 //===============================================
 void GProcessSocketServer_Delete(GProcessO* obj) {
     GProcess_Delete(obj);
+    m_GProcessSocketServerO = 0;
 }
 //===============================================
 GProcessO* GProcessSocketServer() {

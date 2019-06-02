@@ -1,6 +1,7 @@
 //===============================================
 #include "GProcessMap.h"
 #include "GMap.h"
+#include "GConsole.h"
 //===============================================
 typedef int GINT;
 typedef char GCHAR;
@@ -34,6 +35,7 @@ GProcessO* GProcessMap_New() {
 //===============================================
 void GProcessMap_Delete(GProcessO* obj) {
     GProcess_Delete(obj);
+    m_GProcessMapO = 0;
 }
 //===============================================
 GProcessO* GProcessMap() {
@@ -51,6 +53,8 @@ static void GProcessMap_Run(int argc, char** argv) {
 	lMap->SetData(lMap, 3, 'D', 0);
 	lMap->Show(lMap, GProcessMap_MapShow);
 	lMap->Delete(lMap);
+
+	GConsole()->Print("\n");
 
 	GMapO(GProcessMap_GCHAR_PTR_GCHAR_PTR)* lMap2 = GMap_New_GProcessMap_GCHAR_PTR_GCHAR_PTR();
 	lMap2->SetData(lMap2, "Nom", "KESSE", GProcessMap_MapEqual);

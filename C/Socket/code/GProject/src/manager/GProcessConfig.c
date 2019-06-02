@@ -30,13 +30,13 @@ GProcessO* GProcessConfig() {
 }
 //===============================================
 static void GProcessConfig_Run(int argc, char** argv) {
-	GConfig()->SetData("Nom", "KESSE");
-	GConfig()->SetData("Prenom", "Gerard");
-	GConfig()->SetData("Email", "gerard.kesse@readydev.com");
-	GConfig()->SetData("Diplome", "Ingenieur");
-	GConfig()->SetData("Formation", "Informatique Industrielle");
-	GConfig()->SetData("Ecole", "Polytech'Montpellier");
-	GConfig()->Show();
-	GConfig()->Delete();
+    GConfig()->SetData("Nom", "KESSE");
+    GConfig()->SetData("Prenom", "Gerard");
+    GConfig()->SetData("Email", "gerard.kesse@readydev.com");
+    GConfig()->SetData("Diplome", "Ingenieur");
+    GConfig()->SetData("Formation", "Informatique Industrielle");
+    GConfig()->SetData("Ecole", "Polytech'Montpellier");
+    GConfig()->Show();
+    GConfig()->Delete();
 }
 //===============================================
